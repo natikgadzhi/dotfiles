@@ -1,0 +1,18 @@
+[user]
+	name = Nate Gadzhibalaev
+	email = nate@respawn.io
+[push]
+	default = matching
+[github]
+	user = xnutsive
+[ghi]
+	token = !security find-internet-password -a xnutsive -s github.com -l 'ghi token' -w
+[core]
+	editor = vim
+	autocrlf = false
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[pull]
+	rebase = true
