@@ -1,7 +1,7 @@
 [user]
 	name = Nate Gadzhibalaev
 	email = nate@respawn.io
-	signingKey = 00CD1494367612CD
+	signingKey = F1F1B1AEE21A2EF6
 [push]
 	default = matching
 [github]
