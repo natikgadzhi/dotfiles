@@ -1,0 +1,21 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.config/:
+      glob: true
+      path: config/*
+      relink: true
+
+- create:
+
+- shell:
+  - [sudo apt-get install fish, Installing fish]
+  - [chsh -s $(which fish), Making fish the default shell]
+
