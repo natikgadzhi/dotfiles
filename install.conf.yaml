@@ -5,15 +5,22 @@
 - clean: ['~']
 
 - link:
-    ~/.tmux.conf: tmux.conf
-    ~/.vim: vim
-    ~/.vimrc: vimrc
+    ~/.tmux.conf: 
+      path: .tmux.conf
+      relink: true
+    ~/.tmux-status.conf: 
+      path: .tmux-status.conf
+      relink: true
+    ~/.vim: 
+      path: .vim
+      relink: true
+    ~/.vimrc: 
+      path: .vimrc
+      relink: true
     ~/.config/:
       glob: true
-      path: config/*
+      path: .config/*
       relink: true
-
-- create:
 
 - shell:
   - [sudo apt-get install fish, Installing fish]
