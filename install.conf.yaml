@@ -23,6 +23,6 @@
       relink: true
 
 - shell:
-  - [sudo apt-get install fish, Installing fish]
+  - [sudo apt-get install fish -y, Installing fish]
   - [chsh -s $(which fish), Making fish the default shell]
 
