@@ -3,6 +3,8 @@ set EDITOR vim
 set VISUAL vim
 set GIT_EDITOR vim
 
+set -xg GPG_TTY (tty)
+
 # LC_CTYPE bug
 set LC_CTYPE "en_US.UTF-8"
 set LC_ALL "en_US"
