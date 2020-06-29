@@ -25,4 +25,5 @@
 - shell:
   - [sudo apt-get install fish -y, Installing fish]
   - [chsh -s $(which fish), Making fish the default shell]
+  - [vim +'PlugInstall --sync' +qa, Install VIM plugins]
 
