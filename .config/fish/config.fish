@@ -56,7 +56,8 @@ function git_fish_prompt
   end
 end
 
-functions -c fish_prompt __orig_fish_prompt
+if not type -q __orig_fish_prompt; functions -c fish_prompt __orig_fish_prompt; end
+
 functions -e fish_prompt
 functions -c git_fish_prompt fish_prompt
 
@@ -65,5 +66,7 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/xnutsive/code/google-cloud-sdk/path.fish.inc' ]; . '/Users/xnutsive/code/google-cloud-sdk/path.fish.inc'; end
 
-set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/python@3.8/bin" $fish_user_paths
+# Only set some paths if those dirs exist
+# 
+if [ -d "/usr/local/sbin" ]; set -g fish_user_paths "/usr/local/sbin" $fish_user_paths; end
+if [ -d "/usr/local/opt/python@3.8/bin" ]; set -g fish_user_paths "/usr/local/opt/python@3.8/bin" $fish_user_paths; end
