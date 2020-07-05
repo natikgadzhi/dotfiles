@@ -8,9 +8,6 @@
     ~/.tmux.conf: 
       path: .tmux.conf
       relink: true
-    ~/.tmux-status.conf: 
-      path: .tmux-status.conf
-      relink: true
     ~/.vim: 
       path: .vim
       relink: true
