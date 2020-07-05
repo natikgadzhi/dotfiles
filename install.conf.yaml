@@ -19,5 +19,5 @@
       path: .config/*
       relink: true
 
-- shell:
+- shell: []
 
