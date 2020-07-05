@@ -1,0 +1,13 @@
+.aws/
+.boto
+.bundle/
+.docker/
+.ipython/
+.jupyter/
+.kaggle/
+Library/
+.DS_Store
+.vim/plugged
+.vim/.netrwhist
+.tmux-status.conf
+
