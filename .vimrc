@@ -251,9 +251,9 @@ let g:ale_linters = {
 \}
 
 let g:ale_fixers = {
-\   'python': ['black', 'flake8']
+\   'python': ['black', 'flake8'],
+\   '*': ['prettier', 'remove_trailing_lines', 'trim_whitespace']
 \}
-
 
 "" Tabs / buffers
 "
@@ -306,7 +306,4 @@ let g:tmux_navigator_save_on_switch = 1
 
 " Disable tmux navigator when zooming the Vim pane
 let g:tmux_navigator_disable_when_zoomed = 1
-
-
-
 
