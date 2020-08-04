@@ -34,6 +34,7 @@ if not contains "node_modules/.bin" $PATH
   set -xg PATH node_modules/.bin $PATH
 end
 
+alias k="kubectl"
 # Git aliases
 alias gs="git status"
 # alias gco="git checkout"
