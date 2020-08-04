@@ -245,6 +245,8 @@ let g:ale_sign_warning = '-'
 let g:ale_set_highlights = 1 
 let g:ale_python_auto_pipenv = 1
 
+let g:ale_fix_on_save = 1
+
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'python': ['flake8']
