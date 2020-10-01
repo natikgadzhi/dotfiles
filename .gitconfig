@@ -1,7 +1,7 @@
 [user]
 	name = Nate Gadzhibalaev
 	email = nate@respawn.io
-	signingKey = F1F1B1AEE21A2EF6
+	signingKey = 06A46263356EDAC3
 [push]
 	default = matching
 [github]
@@ -19,3 +19,5 @@
 	rebase = true
 [commit]
 	gpgsign = true
+[credential]
+	helper = osxkeychain

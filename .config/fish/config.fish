@@ -6,12 +6,15 @@ set GIT_EDITOR vim
 # When GPG wants the key passphrase, but can't figure out which TTY to use to get it.
 set -xg GPG_TTY (tty)
 
+gpgconf --launch gpg-agent
+set SSH_AUTH_SOCK $HOME/.gnupg/S.gpg-agent.ssh
+
 # LC_CTYPE bug
 set LC_CTYPE "en_US.UTF-8"
 set LC_ALL "en_US"
 
 # Only set some paths if those dirs exist
-# 
+#
 if [ -d "/usr/local/sbin" ]; set -g fish_user_paths "/usr/local/sbin" $fish_user_paths; end
 if [ -d "/usr/local/opt/python@3.8/bin" ]; set -g fish_user_paths "/usr/local/opt/python@3.8/bin" $fish_user_paths; end
 
@@ -73,4 +76,3 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/xnutsive/code/google-cloud-sdk/path.fish.inc' ]; . '/Users/xnutsive/code/google-cloud-sdk/path.fish.inc'; end
-
