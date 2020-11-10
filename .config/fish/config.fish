@@ -5,9 +5,9 @@ set GIT_EDITOR vim
 
 # When GPG wants the key passphrase, but can't figure out which TTY to use to get it.
 set -xg GPG_TTY (tty)
-
+set -e SSH_AGENT_PID
+set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
-set SSH_AUTH_SOCK $HOME/.gnupg/S.gpg-agent.ssh
 
 # LC_CTYPE bug
 set LC_CTYPE "en_US.UTF-8"
@@ -76,3 +76,8 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/xnutsive/code/google-cloud-sdk/path.fish.inc' ]; . '/Users/xnutsive/code/google-cloud-sdk/path.fish.inc'; end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /usr/local/Caskroom/miniconda/base/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<

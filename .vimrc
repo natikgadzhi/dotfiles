@@ -23,7 +23,7 @@ if has("gui_running")
 endif
 
 
-"" Performance 
+"" Performance
 "
 set ttyfast
 set lazyredraw
@@ -58,7 +58,7 @@ nnoremap <C-H> <C-W><C-H>
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor\ --vimgrep
-  let g:ackprg = 'ag --vimgrep' 
+  let g:ackprg = 'ag --vimgrep'
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -73,7 +73,7 @@ endif
 nnoremap K :Ack "<C-R><C-W>" <CR>:cw<CR>
 
 
-" Jump to defenition (ctags) 
+" Jump to defenition (ctags)
 " and jump to an open buffer with ctrlp
 "
 command! MakeTags !ctags -R . --exclude coverage --exclude .git
@@ -87,6 +87,7 @@ autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype coffeescript setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype jade setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype java setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype swift setlocal ts=4 sw=4 sts=0 expandtab
 
 
 "" Don't use ~, .swp and all that bullshit.
@@ -183,6 +184,8 @@ Plug 'tpope/vim-bundler'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+Plug 'keith/swift.vim'
+
 " Clojure
 Plug 'guns/vim-clojure-static', {'for': 'clojure' }
 Plug 'kien/rainbow_parentheses.vim', {'for': 'clojure' }
@@ -204,7 +207,7 @@ call plug#end()
 filetype plugin indent on
 
 "" Search with CtrlP
-" 
+"
 nnoremap <C-f> :CtrlPag<cr>
 vnoremap <C-f> :CtrlPagVisual<cr>
 nnoremap <leader>ca :CtrlPagLocate
@@ -240,9 +243,9 @@ endif
 "" Ale Linters
 "
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_sign_error = '>'
-let g:ale_sign_warning = '-'
-let g:ale_set_highlights = 1 
+let g:ale_sign_error = '🔴'
+let g:ale_sign_warning = '🟡'
+let g:ale_set_highlights = 1
 let g:ale_python_auto_pipenv = 1
 
 let g:ale_fix_on_save = 1
@@ -308,4 +311,3 @@ let g:tmux_navigator_save_on_switch = 1
 
 " Disable tmux navigator when zooming the Vim pane
 let g:tmux_navigator_disable_when_zoomed = 1
-
