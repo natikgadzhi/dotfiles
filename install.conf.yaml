@@ -1,23 +1,22 @@
 - defaults:
     link:
+      create: true
       relink: true
+      force: true
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
-    ~/.tmux.conf: 
+    ~/.tmux.conf:
       path: .tmux.conf
-      relink: true
-    ~/.vim: 
+    ~/.vim:
       path: .vim
-      relink: true
-    ~/.vimrc: 
+    ~/.vimrc:
       path: .vimrc
-      relink: true
+    ~/.gitconfig:
+      path: .gitconfig
     ~/.config/:
       glob: true
       path: .config/*
-      relink: true
 
 - shell: []
-
