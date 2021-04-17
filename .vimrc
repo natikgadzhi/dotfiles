@@ -125,10 +125,10 @@ endif
 "
 " You should not turn this setting on if you wish to use ALE as a completion
 " source for other completion plugins, like Deoplete.
-let g:ale_completion_enabled = 1
+" let g:ale_completion_enabled = 1
 " Disable vim-go completion by default and handle it with ALE
-let g:go_code_completion_enabled = 0
-set omnifunc=ale#completion#OmniFunc
+" let g:go_code_completion_enabled =
+" set omnifunc=ale#completion#OmniFunc
 
 set mouse=a
 set ttymouse=xterm
@@ -241,7 +241,7 @@ if exists('&signcolumn')  " Vim 7.4.2201
   set signcolumn=yes
 else
   let g:gitgutter_sign_column_always = 1
-endif
+ endif
 
 "" vim-go config
 "

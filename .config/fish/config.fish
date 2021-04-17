@@ -15,10 +15,8 @@ set LC_ALL "en_US"
 
 # Only set some paths if those dirs exist
 #
-if [ -d "/usr/local/sbin" ]; set -g fish_user_paths "/usr/local/sbin" $fish_user_paths; end
-if [ -d "/usr/local/opt/python@3.8/bin" ]; set -g fish_user_paths "/usr/local/opt/python@3.8/bin" $fish_user_paths; end
-
-if [ -d "~/.local/bin" ]; set -g fish_user_paths "~/.local/bin" $fish_user_paths; end
+if [ -d "/opt/homebrew/bin" ]; set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths; end
+if [ -d "/opt/homebrew/sbin" ]; set -g fish_user_paths "/opt/homebrew/sbin" $fish_user_paths; end
 
 # rbenv
 if test -d ~/.rbenv
@@ -76,8 +74,3 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/xnutsive/code/google-cloud-sdk/path.fish.inc' ]; . '/Users/xnutsive/code/google-cloud-sdk/path.fish.inc'; end
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-eval /usr/local/Caskroom/miniconda/base/bin/conda "shell.fish" "hook" $argv | source
-# <<< conda initialize <<<

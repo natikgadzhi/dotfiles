@@ -5,7 +5,7 @@
 [push]
 	default = matching
 [github]
-	user = xnutsive
+	user = nategadzhi
 [ghi]
 	token = !security find-internet-password -a xnutsive -s github.com -l 'ghi token' -w
 [core]
