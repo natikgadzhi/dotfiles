@@ -125,10 +125,10 @@ endif
 "
 " You should not turn this setting on if you wish to use ALE as a completion
 " source for other completion plugins, like Deoplete.
-" let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 1
 " Disable vim-go completion by default and handle it with ALE
 " let g:go_code_completion_enabled =
-" set omnifunc=ale#completion#OmniFunc
+set omnifunc=ale#completion#OmniFunc
 
 set mouse=a
 set ttymouse=xterm

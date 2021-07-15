@@ -18,6 +18,9 @@ set LC_ALL "en_US"
 if [ -d "/opt/homebrew/bin" ]; set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths; end
 if [ -d "/opt/homebrew/sbin" ]; set -g fish_user_paths "/opt/homebrew/sbin" $fish_user_paths; end
 
+if [ -d "/usr/local/go/bin" ]; set -g fish_user_paths "/usr/local/go/bin" $fish_user_paths; end
+if [ -d "~/go/bin" ]; set -g fish_user_paths "~/go/bin" $fish_user_paths; end
+
 # rbenv
 if test -d ~/.rbenv
   source (rbenv init -|psub)
@@ -42,6 +45,8 @@ alias gs="git status"
 # alias gb="git branch"
 # alias gp="git push"
 # alias gl="git pull"
+
+alias otp="ykman oath accounts code linkedin | grep -oE '([0-9]{6})' |tr -d \\n | pbcopy"
 
 set fish_git_dirty_color red
 set fish_git_not_dirty_color white

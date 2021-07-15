@@ -9,5 +9,16 @@ Library/
 .DS_Store
 .vim/plugged
 .vim/.netrwhist
-.tmux-status.conf
 
+# Too noisy
+.tmux-status.conf
+.wget-hsts
+
+# Yarnrc is mostly useless to me
+.yarnrc
+
+# These might contain credentials or tokens:
+.netrc
+.config/hub
+.ngrok2
+.kube
