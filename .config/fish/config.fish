@@ -46,8 +46,6 @@ alias gs="git status"
 # alias gp="git push"
 # alias gl="git pull"
 
-alias otp="ykman oath accounts code linkedin | grep -oE '([0-9]{6})' |tr -d \\n | pbcopy"
-
 set fish_git_dirty_color red
 set fish_git_not_dirty_color white
 
