@@ -76,7 +76,7 @@ nnoremap K :Ack "<C-R><C-W>" <CR>:cw<CR>
 " Jump to defenition (ctags)
 " and jump to an open buffer with ctrlp
 "
-command! MakeTags !ctags -R . --exclude coverage --exclude .git
+command! MakeTags !ctags -R . --exclude coverage --exclude .git --exclude note_modules/*
 nnoremap <C-d> :CtrlPTag<cr>
 nnoremap <C-b> :CtrlPBuffer<cr>
 
@@ -126,6 +126,7 @@ endif
 " You should not turn this setting on if you wish to use ALE as a completion
 " source for other completion plugins, like Deoplete.
 let g:ale_completion_enabled = 1
+
 " Disable vim-go completion by default and handle it with ALE
 " let g:go_code_completion_enabled =
 set omnifunc=ale#completion#OmniFunc
@@ -146,12 +147,15 @@ Plug 'kien/ctrlp.vim'
 Plug 'lokikl/vim-ctrlp-ag'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'mileszs/ack.vim'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-vinegar' "Netrw
-Plug 'chriskempson/base16-vim'
 Plug 'tmhedberg/SimpylFold'
+
+" Themes
+Plug 'ghifarit53/tokyonight-vim'
+Plug 'chriskempson/base16-vim'
 
 " Tmux integration <3
 Plug 'christoomey/vim-tmux-navigator'
@@ -202,8 +206,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
 Plug 'airblade/vim-gitgutter'
 
-
-
 " Initialize plugin system
 call plug#end()
 
@@ -251,10 +253,12 @@ let g:go_info_mode='gopls'
 "" Ale Linters
 "
 let g:ale_lint_on_text_changed = 'never'
-let g:ale_sign_error = '🔺'
-let g:ale_sign_warning = '⚠'
+let g:ale_sign_error = 'X'
+let g:ale_sign_warning = 'W'
+
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
+
 let g:ale_set_highlights = 1
 let g:ale_python_auto_pipenv = 1
 
@@ -281,6 +285,12 @@ let g:airline#extensions#tabline#enabled = 1
 "" Colorscheme
 "
 set background=dark
+set termguicolors
+
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
 
 "" Airline
 " Powerline characters might cause remote machines to render weird chars
@@ -292,7 +302,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tmuxline = 1
 let g:airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
 
-let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'tokyonight'
 
 let g:tmuxline_preset = {
       \'a'    : '#S',
