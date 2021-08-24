@@ -22,3 +22,6 @@ Library/
 .config/hub
 .ngrok2
 .kube
+
+# nvim undo and tem files
+undodir
