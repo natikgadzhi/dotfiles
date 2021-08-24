@@ -38,6 +38,11 @@ if not contains "node_modules/.bin" $PATH
   set -xg PATH node_modules/.bin $PATH
 end
 
+# Add gh completions
+if [ -x (which gh) ]
+  eval (gh completion -s fish)
+end
+
 alias k="kubectl"
 # Git aliases
 alias gs="git status"
