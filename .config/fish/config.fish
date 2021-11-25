@@ -50,6 +50,7 @@ alias gs="git status"
 # alias gb="git branch"
 # alias gp="git push"
 # alias gl="git pull"
+alias b="bundle exec"
 
 set fish_git_dirty_color red
 set fish_git_not_dirty_color white
@@ -83,39 +84,62 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/xnutsive/code/google-cloud-sdk/path.fish.inc' ]; . '/Users/xnutsive/code/google-cloud-sdk/path.fish.inc'; end
 
+ulimit -n 2048
 
-# TokyoNight Color Palette
-set -l foreground c0caf5
-set -l selection 33467C
-set -l comment 565f89
-set -l red f7768e
-set -l orange ff9e64
-set -l yellow e0af68
-set -l green 9ece6a
-set -l purple 9d7cd8
-set -l cyan 7dcfff
-set -l pink bb9af7
+set --universal fish_color_autosuggestion 4D5566 # ayu:common.ui        autosuggestions
+set --universal fish_color_command        39BAE6 # ayu:syntax.tag       commands
+set --universal fish_color_comment        626A73 # ayu:syntax.comment   code comments
+set --universal fish_color_cwd            59C2FF # ayu:syntax.entity    current working directory in the default prompt
+set --universal fish_color_end            F29668 # ayu:syntax.operator  process separators like ';' and '&'
+set --universal fish_color_error          FF3333 # ayu:syntax.error     highlight potential errors
+set --universal fish_color_escape         95E6CB # ayu:syntax.regexp    highlight character escapes like '\n' and '\x70'
+set --universal fish_color_match          F07178 # ayu:syntax.markup    highlight matching parenthesis
+set --universal fish_color_normal         B3B1AD # ayu:common.fg        default color
+set --universal fish_color_operator       E6B450 # ayu:syntax.accent    parameter expansion operators like '*' and '~'
+set --universal fish_color_param          B3B1AD # ayu:common.fg        regular command parameters
+set --universal fish_color_quote          C2D94C # ayu:syntax.string    quoted blocks of text
+set --universal fish_color_redirection    FFEE99 # ayu:syntax.constant  IO redirections
+set --universal fish_color_search_match   --background E6B450 # ayu:syntax.accent    highlight history search matches and the selected pager item (must be a background)
+set --universal fish_color_selection      E6B450 # ayu:syntax.accent    when selecting text (in vi visual mode)
 
-# Syntax Highlighting Colors
-set -g fish_color_normal $foreground
-set -g fish_color_command $cyan
-set -g fish_color_keyword $pink
-set -g fish_color_quote $yellow
-set -g fish_color_redirection $foreground
-set -g fish_color_end $orange
-set -g fish_color_error $red
-set -g fish_color_param $purple
-set -g fish_color_comment $comment
-set -g fish_color_selection --background=$selection
-set -g fish_color_search_match --background=$selection
-set -g fish_color_operator $green
-set -g fish_color_escape $pink
-set -g fish_color_autosuggestion $comment
+# color for fish default prompts item
+set --universal fish_color_cancel         0A0E14 # ayu:common.bg        the '^C' indicator on a canceled command
+set --universal fish_color_host           FFEE99 # ayu:syntax.constant  current host system in some of fish default prompts
+set --universal fish_color_host_remote    FFEE99 # ayu:syntax.constant  current host system in some of fish default prompts, if fish is running remotely (via ssh or similar)
+set --universal fish_color_user           FF8F40 # ayu:syntax.keyword   current username in some of fish default prompts
 
-# Completion Pager Colors
-set -g fish_pager_color_progress $comment
-set -g fish_pager_color_prefix $cyan
-set -g fish_pager_color_completion $foreground
-set -g fish_pager_color_description $comment
+# # TokyoNight Color Palette
+# set -l foreground c0caf5
+# set -l selection 33467C
+# set -l comment 565f89
+# set -l red f7768e
+# set -l orange ff9e64
+# set -l yellow e0af68
+# set -l green 9ece6a
+# set -l purple 9d7cd8
+# set -l cyan 7dcfff
+# set -l pink bb9af7
+
+# # Syntax Highlighting Colors
+# set -g fish_color_normal $foreground
+# set -g fish_color_command $cyan
+# set -g fish_color_keyword $pink
+# set -g fish_color_quote $yellow
+# set -g fish_color_redirection $foreground
+# set -g fish_color_end $orange
+# set -g fish_color_error $red
+# set -g fish_color_param $purple
+# set -g fish_color_comment $comment
+# set -g fish_color_selection --background=$selection
+# set -g fish_color_search_match --background=$selection
+# set -g fish_color_operator $green
+# set -g fish_color_escape $pink
+# set -g fish_color_autosuggestion $comment
+
+# # Completion Pager Colors
+# set -g fish_pager_color_progress $comment
+# set -g fish_pager_color_prefix $cyan
+# set -g fish_pager_color_completion $foreground
+# set -g fish_pager_color_description $comment
 
 
