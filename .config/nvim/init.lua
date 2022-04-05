@@ -81,17 +81,24 @@ packer.startup(function()
     }
   }
 
+  use {
+    'hoob3rt/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true},
+  }
+
   -- themes
-  use 'folke/tokyonight.nvim'
+  use 'projekt0n/github-nvim-theme'
 
   -- sneaking some formatting in here too
-  use {'prettier/vim-prettier', run = 'yarn install' }
+  use {
+    'prettier/vim-prettier',
+    run = 'yarn install'
+  }
 
   -- LSP support
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-compe'
   use 'anott03/nvim-lspinstall'
-  use 'glepnir/lspsaga.nvim'
 
   -- fuzzy search
   use 'nvim-lua/popup.nvim'
@@ -99,12 +106,6 @@ packer.startup(function()
   use 'nvim-lua/telescope.nvim'
   use 'jremmen/vim-ripgrep'
 
-  use {
-    'hoob3rt/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
-
-  use 'b3nj5m1n/kommentary'
   use 'tpope/vim-surround'
   use 'tpope/vim-vinegar'
 
@@ -126,10 +127,60 @@ require 'go'.setup({
   dap_debug = true,
 })
 
-vim.g.tokyonight_style = "night"
-vim.g.colors_name = 'tokyonight'
+require("lualine").setup({
+  options = { theme = "github", lower = true, section_separators = '|' },
+  sections = {
+    lualine_a = {{'mode', lower = false}},
+    lualine_b = {'branch'}, 
+    lualine_c = { { 'diagnostics', 
+        sources = { 'nvim_diagnostic' },
+        symbols = { error = ' ', warn = ' ', info = ' ' }
+      }},
+    lualine_x = {'filetype'},
+    lualine_y = {{
+      function()
+        local msg = 'No Active Lsp'
+        local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+        local clients = vim.lsp.get_active_clients()
+        if next(clients) == nil then
+          return msg
+        end
+        for _, client in ipairs(clients) do
+          local filetypes = client.config.filetypes
+          if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+            return client.name
+          end
+        end
+        return msg
+      end,
+      icon = ' '
+    }},
+    lualine_z = {}
+  },
+  tabline = {
+    lualine_a = {
+      { 'buffers',
+      show_filename_only = true,
+      show_modified_status = true,
+      mode = 0, 
+      separator = nil
+      }
+    },
+    lualine_b = {},
+    lualine_c = {},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {}
+  },
+})
 
--- syntax highlighting 
+require("github-theme").setup({
+  theme_style = "dark_default",
+  sidebars = {"qf", "vista_kind", "terminal", "packer"},
+})
+
+
+-- syntax highlighting
 local configs = require'nvim-treesitter.configs'
 configs.setup {
   ensure_installed = "maintained",
@@ -150,38 +201,14 @@ local on_attach = function(client, bufnr)
   local opts = { noremap=true, silent=true }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
   buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
   buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 
-  buf_set_keymap('n', '<space>e', [[<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<CR>]], opts)
-  buf_set_keymap('n', '[e', [[<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>]], opts)
-  buf_set_keymap('n', ']e', [[<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>]], opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-
-  -- Items already using Saga
-
-  buf_set_keymap('n', 'gd', [[<cmd>lua require'lspsaga.provider'.preview_definition()<CR>]], opts)
-
-  -- See code actions on a word or a range
-  buf_set_keymap('n', '<leader>ca', [[<cmd>lua require('lspsaga.codeaction').code_action()<CR>]], opts)
-  buf_set_keymap('v', '<leader>ca', [[:<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>]], opts)
-  -- Code Actions: Rename
-  buf_set_keymap('n', '<leader>cr', [[<cmd>lua require('lspsaga.rename').rename()<CR>]], opts)
-
-  -- See hover actions
-  buf_set_keymap('n', 'gh', [[<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>]], opts)
-
-  -- Hover doc
-  buf_set_keymap('n', 'K', [[<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>]], opts)
-  
-  -- Show func signature
-  buf_set_keymap('n', 'gs', [[<cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>]], opts)
-
 
 
   require('vim.lsp.protocol').CompletionItemKind = {
@@ -310,36 +337,26 @@ vim.api.nvim_set_keymap('i', '<cr>', 'compe#confirm("<cr>")', { expr = true })
 vim.api.nvim_set_keymap('i', '<c-space>', 'compe#complete()', { expr = true })
 
 
--- LSP server UI
-local saga = require 'lspsaga'
-saga.init_lsp_saga {
-  error_sign = '→',
-  warn_sign = '→',
-  hint_sign = '→',
-  infor_sign = '→',
-  border_style = "round",
-}
-
--- lualine
-require'lualine'.setup {
-  options = {lower = true, theme='tokyonight'},
-  sections = {lualine_a = {{'mode', lower = false}}, lualine_b = {'branch'}, lualine_y={}}
-}
-
 -- git gutter
 require('gitsigns').setup()
 
 -- fuzzy search keymaps
+-- fuzzy open file
 set_keymap('n', '<C-p>', ':lua require"telescope.builtin".find_files()<CR>')
 
+-- fuzzy search in workspace
+set_keymap('n', '<C-F>', ':lua require"telescope.builtin".live_grep()<CR>')
+set_keymap('n', '<C-t>', ':lua require"telescope.builtin".lsp_dynamic_workspace_symbols()<CR>')
+
+
 set_keymap('n', '<leader>sf', [[<cmd>lua require('telescope.builtin').find_files({previewer = false})<CR>]])
-set_keymap('n', '<leader>sb', [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>]])
 set_keymap('n', '<leader>sh', [[<cmd>lua require('telescope.builtin').help_tags()<CR>]])
-set_keymap('n', '<leader>st', [[<cmd>lua require('telescope.builtin').tags()<CR>]])
-set_keymap('n', '<leader>sd', [[<cmd>lua require('telescope.builtin').grep_string()<CR>]])
 set_keymap('n', '<leader>sp', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]])
 set_keymap('n', '<leader>so', [[<cmd>lua require('telescope.builtin').tags{ only_current_buffer = true }<CR>]])
 set_keymap('n', '<leader>?', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
+set_keymap('n', '<leader>sb', [[<cmd>lua require('telescope.builtin').buffers({previewer = false})<CR>]])
+set_keymap('n', '<leader>sd', [[<cmd>lua require('telescope.builtin').lsp_definitions()<CR>]])
+set_keymap('n', '<leader>sr', [[<cmd>lua require('telescope.builtin').lsp_references()<CR>]])
 
 
 -- Navigate between splits

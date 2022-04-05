@@ -69,81 +69,110 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["go.nvim"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/go.nvim"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/go.nvim",
+    url = "https://github.com/ray-x/go.nvim"
   },
   kommentary = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/kommentary"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/kommentary",
+    url = "https://github.com/b3nj5m1n/kommentary"
   },
   ["lspsaga.nvim"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/hoob3rt/lualine.nvim"
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/nvim-compe",
+    url = "https://github.com/hrsh7th/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-lspinstall"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/nvim-lspinstall",
+    url = "https://github.com/anott03/nvim-lspinstall"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/telescope.nvim"
-  },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-lua/telescope.nvim"
   },
   ["vim-polyglot"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/vim-polyglot"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/vim-polyglot",
+    url = "https://github.com/sheerun/vim-polyglot"
   },
   ["vim-prettier"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/vim-prettier"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/vim-prettier",
+    url = "https://github.com/prettier/vim-prettier"
   },
   ["vim-rails"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/vim-rails"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/vim-rails",
+    url = "https://github.com/tpope/vim-rails"
   },
   ["vim-ripgrep"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/vim-ripgrep"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/vim-ripgrep",
+    url = "https://github.com/jremmen/vim-ripgrep"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,
-    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["vim-vinegar"] = {
+    loaded = true,
+    path = "/Users/xnutsive/.local/share/nvim/site/pack/packer/start/vim-vinegar",
+    url = "https://github.com/tpope/vim-vinegar"
   }
 }
 
