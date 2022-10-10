@@ -4,6 +4,7 @@
 	signingKey = 06A46263356EDAC3
 [push]
 	default = matching
+	autoSetupRemote = true
 [github]
 	user = nategadzhi
 [ghi]
