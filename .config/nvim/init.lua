@@ -70,7 +70,11 @@ set_keymap('n', '<Leader>y', '"*y')
 --- startup and add configure plugins
 packer.startup(function()
   local use = use
-  use 'nvim-treesitter/nvim-treesitter'
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+
   use 'sheerun/vim-polyglot'
   use 'tpope/vim-rails'
   use 'ray-x/go.nvim'
@@ -128,7 +132,7 @@ require 'go'.setup({
 })
 
 require("lualine").setup({
-  options = { theme = "github", lower = true, section_separators = '|' },
+  options = { theme = "github_dark", lower = true },
   sections = {
     lualine_a = {{'mode', lower = false}},
     lualine_b = {'branch'}, 
@@ -139,7 +143,7 @@ require("lualine").setup({
     lualine_x = {'filetype'},
     lualine_y = {{
       function()
-        local msg = 'No Active Lsp'
+        local msg = 'None'
         local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
         local clients = vim.lsp.get_active_clients()
         if next(clients) == nil then
@@ -183,7 +187,16 @@ require("github-theme").setup({
 -- syntax highlighting
 local configs = require'nvim-treesitter.configs'
 configs.setup {
-  ensure_installed = "maintained",
+  -- A list of parser names, or "all"
+  ensure_installed = { "python", "ruby", "javascript", "typescript", "lua", "bash" },
+
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = false,
+
+  -- Automatically install missing parsers when entering buffer
+  -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+  auto_install = true,
+
   highlight = {
     enable = true,
   }
@@ -242,7 +255,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'rust_analyzer', 'tsserver', 'gopls' }
+local servers = { 'pyright', 'tsserver', 'gopls' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
@@ -252,22 +265,6 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-nvim_lsp.solargraph.setup {
-  on_attach = on_attach,
-  filetypes = {"ruby", "rakefile"},
-  root_dir = nvim_lsp.util.root_pattern("Gemfile", ".git", "."),
-  settings = {
-    solargraph = {
-      autoformat = true,
-      completion = true,
-      diagnostic = true,
-      folding = true,
-      references = true,
-      rename = true,
-      symbols = true
-    }
-  }
-}
 
 -- Compe setup
 require'compe'.setup {
