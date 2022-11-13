@@ -17,7 +17,7 @@
 
 # global settings
 yabai -m config mouse_follows_focus          off
-yabai -m config focus_follows_mouse          off
+yabai -m config focus_follows_mouse          on
 yabai -m config window_origin_display        default
 yabai -m config window_placement             second_child
 yabai -m config window_topmost               on
@@ -40,25 +40,34 @@ yabai -m config mouse_drop_action            swap
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  10
-yabai -m config bottom_padding               10
-yabai -m config left_padding                 10
-yabai -m config right_padding                10
-yabai -m config window_gap                   10
+yabai -m config top_padding                  6
+yabai -m config bottom_padding               6
+yabai -m config left_padding                 6
+yabai -m config right_padding                6
+yabai -m config window_gap                   6
 
 
 # rules to ignore some apps in tiling
+
+# Finder, Safari, and Mail.app settings windows
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
-yabai -m rule --add label="Messages" app="Messages" manage=off
+
+# Mac OS Ventura renamed System Preferences to Settings
 yabai -m rule --add label="System Preferences" app="^System Preferences$" title=".*" manage=off
+yabai -m rule --add label="System Settings" app="System Settings" manage=off
+yabai -m rule --add label="Mail.app" app="Mail" title="^(General|Accounts|Junk|Fonts|Viewing|Composing|Signatures|Rules|Extensions|Privacy)" manage=off
+
+yabai -m rule --add label="Messages" app="Messages" manage=off
 yabai -m rule --add label="App Store" app="^App Store$" manage=off
 yabai -m rule --add label="Activity Monitor" app="^Activity Monitor$" manage=off
 yabai -m rule --add label="Calculator" app="^Calculator$" manage=off
 yabai -m rule --add label="Dictionary" app="^Dictionary$" manage=off
 yabai -m rule --add label="Software Update" title="Software Update" manage=off
 yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
-yabai -m rule --add label="Firefox" app="Firefox" title="^Sign in -" manage=off
+
+
+yabai -m rule --add label="Firefox" app="Firefox" title="^Sign\ in\ -" manage=off
 yabai -m rule --add label="Simulator" app="Simulator" manage=off
 yabai -m rule --add label="Zoom" app="zoom.us" manage=off
 yabai -m rule --add label="Zoom Meeting" app="zoom.us" title="^Zoom Meeting" manage=on
@@ -68,6 +77,8 @@ yabai -m rule --add label="Logi Options" app="Logi Options+" manage=off
 yabai -m rule --add label="Archive Utility" app="Archive Utility" manage=off
 yabai -m rule --add label="Mullvad VPN" app="Mullvad VPN" manage=off
 yabai -m rule --add label="Daisy Disk" app="Daisy Disk" manage=off
+yabai -m rule --add label="Battle.net" app="Battle.net" manage=off
+yabai -m rule --add label="Loom" app="Loom" manage=off
 
 
 echo "yabai configuration loaded.."

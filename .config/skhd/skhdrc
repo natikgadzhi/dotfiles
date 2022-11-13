@@ -42,6 +42,8 @@ alt - k : yabai -m window --resize top:0:-50; \
                   yabai -m window --resize bottom:0:-50
 alt - l : yabai -m window --resize right:50:0; \
                   yabai -m window --resize left:50:0
+                  
+alt - e : yabai -m window --ratio abs:0.7
 
 # Equalize size of windows
 alt - e : yabai -m space --balance
