@@ -13,6 +13,7 @@ Library/
 # Too noisy
 .tmux-status.conf
 .wget-hsts
+.htoprc
 
 # Yarnrc is mostly useless to me
 .yarnrc

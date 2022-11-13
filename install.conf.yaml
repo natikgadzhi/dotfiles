@@ -16,5 +16,7 @@
       path: .config/*
     ~/.gnupg/gpg-agent.conf:
       path: gpg-agent.conf
+    ~/.ansible.cfg:
+      path: .ansible.cfg
 
 - shell: []
