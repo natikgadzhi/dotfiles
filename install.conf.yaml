@@ -9,14 +9,12 @@
 - link:
     ~/.tmux.conf:
       path: .tmux.conf
-    ~/.vim:
-      path: .vim
-    ~/.vimrc:
-      path: .vimrc
     ~/.gitconfig:
       path: .gitconfig
     ~/.config/:
       glob: true
       path: .config/*
+    ~/.gnupg/gpg-agent.conf:
+      path: gpg-agent.conf
 
 - shell: []
