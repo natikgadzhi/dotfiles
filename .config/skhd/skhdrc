@@ -3,12 +3,6 @@
 # Put the system to sleep
 cmd + shift + ctrl - escape : osascript -e 'tell application "Finder" to sleep'
 
-# Spotify
-# cmd + ctrl - 0x6C : osascript -e 'tell application "Spotify" to previous track'
-# cmd + crtl - 0x6D : osascript -e 'tell application "Spotify" to playpause'
-# cmd + ctrl - 0x6E : osascript -e 'tell application "Spotify" to next track'
-#
-
 # Yabai settings below
 #
 
@@ -48,9 +42,6 @@ alt - e : yabai -m window --ratio abs:0.7
 # Equalize size of windows
 alt - e : yabai -m space --balance
 shift + alt - e: yabai -m space --layout bsp
-
-# Enable / Disable gaps in current workspace
-lctrl + alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
 # Rotate windows clockwise and anticlockwise
 alt - r         : yabai -m space --rotate 270

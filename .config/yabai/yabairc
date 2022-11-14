@@ -79,6 +79,11 @@ yabai -m rule --add label="Mullvad VPN" app="Mullvad VPN" manage=off
 yabai -m rule --add label="Daisy Disk" app="Daisy Disk" manage=off
 yabai -m rule --add label="Battle.net" app="Battle.net" manage=off
 yabai -m rule --add label="Loom" app="Loom" manage=off
+yabai -m rule --add label="Spaceman" app="Spaceman" manage=off
+yabai -m rule --add label="Lunar" app="Lunar" manage=off
+
+yabai -m rule --add label="Fantastical Settings" app="Fantastical" title="^(General|Appearance|Alerts|Accounts|Calendars|Openings|Weather|Advanced)" manage=off
+yabai -m rule --add label="Fantastical Helper" app="Fantastical Helper" manage=off
 
 
 echo "yabai configuration loaded.."
