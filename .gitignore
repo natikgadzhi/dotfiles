@@ -10,6 +10,9 @@ Library/
 .vim/plugged
 .vim/.netrwhist
 
+# Compiled nvim plugin bundle
+.config/nvim/plugin/packer_compiled.lua
+
 # Too noisy
 .tmux-status.conf
 .wget-hsts

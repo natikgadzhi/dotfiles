@@ -46,6 +46,11 @@ vim.wo.wrap = false
 
 --Enable mouse mode
 vim.o.mouse = 'a'
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- Key map shortcut
 local set_keymap = function(mode, key, result)
@@ -70,14 +75,19 @@ set_keymap('n', '<Leader>y', '"*y')
 --- startup and add configure plugins
 packer.startup(function()
   local use = use
+  
+  use 'wbthomason/packer.nvim'
+  
+  -- Syntax highlighting based on LSPs
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
 
-  use 'sheerun/vim-polyglot'
-  use 'tpope/vim-rails'
+  -- Go support is setup separately from LSPconfig.
+  -- Might make sense to remove this and use LSP instead
   use 'ray-x/go.nvim'
+
   use {
     'lewis6991/gitsigns.nvim',
     requires = {
@@ -87,17 +97,20 @@ packer.startup(function()
 
   use {
     'hoob3rt/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true},
+    requires = {
+      'kyazdani42/nvim-web-devicons', opt = true
+    }
   }
 
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+  }
+  
   -- themes
   use 'projekt0n/github-nvim-theme'
-
-  -- sneaking some formatting in here too
-  use {
-    'prettier/vim-prettier',
-    run = 'yarn install'
-  }
 
   -- LSP support
   use 'neovim/nvim-lspconfig'
@@ -108,12 +121,13 @@ packer.startup(function()
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/telescope.nvim'
-  use 'jremmen/vim-ripgrep'
 
   use 'tpope/vim-surround'
   use 'tpope/vim-vinegar'
 
   use 'christoomey/vim-tmux-navigator'
+
+  use 'terrortylor/nvim-comment'
 
   end
 )
@@ -345,12 +359,10 @@ set_keymap('n', '<C-p>', ':lua require"telescope.builtin".find_files()<CR>')
 set_keymap('n', '<C-F>', ':lua require"telescope.builtin".live_grep()<CR>')
 set_keymap('n', '<C-t>', ':lua require"telescope.builtin".lsp_dynamic_workspace_symbols()<CR>')
 
-
 set_keymap('n', '<leader>sf', [[<cmd>lua require('telescope.builtin').find_files({previewer = false})<CR>]])
 set_keymap('n', '<leader>sh', [[<cmd>lua require('telescope.builtin').help_tags()<CR>]])
 set_keymap('n', '<leader>sp', [[<cmd>lua require('telescope.builtin').live_grep()<CR>]])
 set_keymap('n', '<leader>so', [[<cmd>lua require('telescope.builtin').tags{ only_current_buffer = true }<CR>]])
-set_keymap('n', '<leader>?', [[<cmd>lua require('telescope.builtin').oldfiles()<CR>]])
 set_keymap('n', '<leader>sb', [[<cmd>lua require('telescope.builtin').buffers({previewer = false})<CR>]])
 set_keymap('n', '<leader>sd', [[<cmd>lua require('telescope.builtin').lsp_definitions()<CR>]])
 set_keymap('n', '<leader>sr', [[<cmd>lua require('telescope.builtin').lsp_references()<CR>]])
