@@ -19,4 +19,9 @@
     ~/.ansible.cfg:
       path: .ansible.cfg
 
-- shell: []
+# These shell commands setup additional software, and lots of them assume we're running on Mac OS.
+# In theory, this is better extracted into an Ansible playbook, and conditionally executed
+- shell:
+  # tell iTerm2 to use the provided configuration
+  - defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "/Users/nategadzhi/.config/iterm2"
+  - defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
