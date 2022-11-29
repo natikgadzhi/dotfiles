@@ -75,9 +75,9 @@ set_keymap('n', '<Leader>y', '"*y')
 --- startup and add configure plugins
 packer.startup(function()
   local use = use
-  
+
   use 'wbthomason/packer.nvim'
-  
+
   -- Syntax highlighting based on LSPs
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -103,12 +103,18 @@ packer.startup(function()
   }
 
   use {
+    'akinsho/bufferline.nvim',
+    tag = "v3.*",
+    requires = 'nvim-tree/nvim-web-devicons'
+  }
+
+  use {
     'nvim-tree/nvim-tree.lua',
     requires = {
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
   }
-  
+
   -- themes
   use 'projekt0n/github-nvim-theme'
 
@@ -146,11 +152,16 @@ require 'go'.setup({
 })
 
 require("lualine").setup({
-  options = { theme = "github_dark", lower = true },
+  options = {
+    theme = "github_dark",
+    lower = true,
+    disabled_filetypes = { 'packer', 'NVimTree' },
+    globalstatus = true,
+  },
   sections = {
     lualine_a = {{'mode', lower = false}},
-    lualine_b = {'branch'}, 
-    lualine_c = { { 'diagnostics', 
+    lualine_b = {'branch'},
+    lualine_c = { { 'diagnostics',
         sources = { 'nvim_diagnostic' },
         symbols = { error = ' ', warn = ' ', info = ' ' }
       }},
@@ -175,28 +186,16 @@ require("lualine").setup({
     }},
     lualine_z = {}
   },
-  tabline = {
-    lualine_a = {
-      { 'buffers',
-      show_filename_only = true,
-      show_modified_status = true,
-      mode = 0, 
-      separator = nil
-      }
-    },
-    lualine_b = {},
-    lualine_c = {},
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = {}
-  },
 })
+
+require("bufferline").setup{}
 
 require("github-theme").setup({
   theme_style = "dark_default",
   sidebars = {"qf", "vista_kind", "terminal", "packer"},
 })
 
+require("nvim-tree").setup{}
 
 -- syntax highlighting
 local configs = require'nvim-treesitter.configs'
