@@ -4,11 +4,12 @@
 .docker/
 .ipython/
 .jupyter/
-.kaggle/
-Library/
 .DS_Store
 .vim/plugged
 .vim/.netrwhist
+
+# iTerm2 makes sockets and puts them in it's config path
+.config/iterm2/AppSupport
 
 # Compiled nvim plugin bundle
 .config/nvim/plugin/packer_compiled.lua
