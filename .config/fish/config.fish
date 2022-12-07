@@ -15,6 +15,8 @@ if [ -d "/opt/homebrew/sbin" ]; set -g fish_user_paths "/opt/homebrew/sbin" $fis
 if [ -d "/usr/local/go/bin" ]; set -g fish_user_paths "/usr/local/go/bin" $fish_user_paths; end
 if [ -d (echo ~)"/go/bin" ]; set -g fish_user_paths (echo ~)"/go/bin" $fish_user_paths; end
 
+if [ -d (echo ~)"/.local/bin" ]; set -g fish_user_paths (echo ~)"/.local/bin" $fish_user_paths; end
+
 # When GPG wants the key passphrase, but can't figure out which TTY to use to get it.
 set -xg GPG_TTY (tty)
 set -e SSH_AGENT_PID
