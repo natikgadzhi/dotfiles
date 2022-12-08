@@ -19,6 +19,14 @@
     ~/.ansible.cfg:
       path: .ansible.cfg
 
+    # These two launchctl agents are only required on Mac OS
+    # to make gpg-agent play nice with ssh auth in apps that don't start
+    # from shell with it's environment.
+    ~/Library/LaunchAgents/homebrew.gpg.gpg-agent.plist:
+      path: Library/LaunchAgents/homebrew.gpg.gpg-agent.plist
+    ~/Library/LaunchAgents/link-ssh-auth-sock.plist:
+      path: Library/LaunchAgents/link-ssh-auth-sock.plist
+
 # These shell commands setup additional software, and lots of them assume we're running on Mac OS.
 # In theory, this is better extracted into an Ansible playbook, and conditionally executed
 - shell:
