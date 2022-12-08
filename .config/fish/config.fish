@@ -18,10 +18,10 @@ if [ -d (echo ~)"/go/bin" ]; set -g fish_user_paths (echo ~)"/go/bin" $fish_user
 if [ -d (echo ~)"/.local/bin" ]; set -g fish_user_paths (echo ~)"/.local/bin" $fish_user_paths; end
 
 # When GPG wants the key passphrase, but can't figure out which TTY to use to get it.
-set -xg GPG_TTY (tty)
 set -e SSH_AGENT_PID
 set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
+set -xg GPG_TTY (tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # rbenv
 if test -d ~/.rbenv
