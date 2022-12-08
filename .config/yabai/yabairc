@@ -74,7 +74,7 @@ yabai -m rule --add label="1Password" app="1Password" manage=off
 yabai -m rule --add label="Logi Options" app="Logi Options+" manage=off
 yabai -m rule --add label="Archive Utility" app="Archive Utility" manage=off
 yabai -m rule --add label="Mullvad VPN" app="Mullvad VPN" border=off manage=off
-yabai -m rule --add label="Daisy Disk" app="Daisy Disk" manage=off
+yabai -m rule --add label="Daisy Disk" app="DaisyDisk" manage=off
 yabai -m rule --add label="Battle.net" app="Battle.net" manage=off
 yabai -m rule --add label="Loom" app="Loom" manage=off
 yabai -m rule --add label="Spaceman" app="Spaceman" manage=off
