@@ -1,11 +1,16 @@
 # dotfiles
 
-After cloning this repository, run `./install` to apply the dotfiles.
+After cloning this repository, run `./install` to apply the dotfiles, that will work for both Mac and Linux boxes.
 
-After installing Homebrew, run `brew bundle install` in this directory to install all software. This configuration does not support App Store applications yet, so some apps will be missing.
+
+## Mac
+
+This repository is structured to provide a way to roll dotfiles for generic Unix boxes, and then some extra settings for Mac systems:
+
+- `./install` to setup dotfiles.
+- `brew bundle install` to install most apps on a Mac. This will install apps from both Casks, and Mac App Store.
+- `mackup restore` will restore most Mac-specific settings from this repository. Settings are backed up in `mackup` folder.
 
 ## Raycast
-
-Raycast does not support automatic settings import or using settings from file. So you'll have to apply the settings manually.
 
 **Note**: Raycast config is using `yubico-auth.sh` script command that is currently just a shell file in this repo, but should be put in `~/src/raycast/` to work correctly.
