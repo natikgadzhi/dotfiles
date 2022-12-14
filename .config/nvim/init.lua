@@ -46,11 +46,6 @@ vim.wo.wrap = false
 
 --Enable mouse mode
 vim.o.mouse = 'a'
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 
 -- Key map shortcut
 local set_keymap = function(mode, key, result)
@@ -84,6 +79,8 @@ packer.startup(function()
     run = ':TSUpdate'
   }
 
+  use { 'numToStr/Comment.nvim' }
+
   -- Go support is setup separately from LSPconfig.
   -- Might make sense to remove this and use LSP instead
   use 'ray-x/go.nvim'
@@ -102,21 +99,9 @@ packer.startup(function()
     }
   }
 
-  use {
-    'akinsho/bufferline.nvim',
-    tag = "v3.*",
-    requires = 'nvim-tree/nvim-web-devicons'
-  }
-
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-  }
-
   -- themes
   use 'projekt0n/github-nvim-theme'
+  use { "catppuccin/nvim", as = "catppuccin" } 
 
   -- LSP support
   use 'neovim/nvim-lspconfig'
@@ -126,14 +111,18 @@ packer.startup(function()
   -- fuzzy search
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
-  use 'nvim-lua/telescope.nvim'
+  use { 
+    'nvim-lua/telescope.nvim',
+    requires = {
+      {'BurntSushi/ripgrep'},
+      {'sharkdp/fd'}
+    },
+  }
 
   use 'tpope/vim-surround'
   use 'tpope/vim-vinegar'
 
   use 'christoomey/vim-tmux-navigator'
-
-  use 'terrortylor/nvim-comment'
 
   end
 )
@@ -153,7 +142,7 @@ require 'go'.setup({
 
 require("lualine").setup({
   options = {
-    theme = "github_dark",
+    theme = "catppuccin",
     lower = true,
     disabled_filetypes = { 'packer', 'NVimTree' },
     globalstatus = true,
@@ -186,16 +175,71 @@ require("lualine").setup({
     }},
     lualine_z = {}
   },
+  tabline = {
+    lualine_a = {'buffers'},
+    lualine_b = {'branch'},
+    lualine_c = {'filename'},
+    lualine_x = {},
+    lualine_y = {},
+    lualine_z = {'tabs'}
+  }
 })
-
-require("bufferline").setup{}
 
 require("github-theme").setup({
   theme_style = "dark_default",
   sidebars = {"qf", "vista_kind", "terminal", "packer"},
 })
 
-require("nvim-tree").setup{}
+require("catppuccin").setup {
+	flavour = "mocha", -- latte, frappe, macchiato, mocha
+	term_colors = true,
+	transparent_background = false,
+	no_italic = false,
+	no_bold = false,
+	styles = {
+		comments = {},
+		conditionals = {},
+		loops = {},
+		functions = {},
+		keywords = {},
+		strings = {},
+		variables = {},
+		numbers = {},
+		booleans = {},
+		properties = {},
+		types = {},
+	},
+	color_overrides = {
+		latte = {
+			-- base = "#E1EEF5",
+		},
+		mocha = {
+      -- base = "#000000",
+		},
+	},
+	highlight_overrides = {
+		latte = function(_)
+			return {
+				NvimTreeNormal = { bg = "#D1E5F0" },
+			}
+		end,
+		mocha = function(C)
+			return {
+				TabLineSel = { bg = C.pink },
+				NvimTreeNormal = { bg = C.none },
+				CmpBorder = { fg = C.surface2 },
+				Pmenu = { bg = C.none },
+				NormalFloat = { bg = C.none },
+				TelescopeBorder = { link = "FloatBorder" },
+			}
+		end,
+	},
+}
+
+vim.cmd.colorscheme "catppuccin"
+
+
+require('Comment').setup()
 
 -- syntax highlighting
 local configs = require'nvim-treesitter.configs'
