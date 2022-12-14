@@ -1,0 +1,150 @@
+{
+  "solargraph.useBundler": true,
+  "git.allowNoVerifyCommit": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontSize": 16,
+  "python.autoComplete.extraPaths": [
+    ".venv"
+  ],
+  "editor.minimap.enabled": false,
+  "prettier.documentSelectors": [
+    "*.md"
+  ],
+  "editor.minimap.maxColumn": 80,
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on"
+  },
+  "editor.renderLineHighlight": "none",
+  "solargraph.formatting": true,
+  "debug.console.fontSize": 16,
+  "git.enableCommitSigning": true,
+  "editor.suggestSelection": "first",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "go.lintTool": "golint",
+  "python.analysis.extraPaths": [
+    ".venv"
+  ],
+  "editor.definitionLinkOpensInPeek": true,
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
+  },
+  "gopls": {
+    "formatting.gofumpt": true
+  },
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.accessibilitySupport": "off",
+  "editor.fontWeight": "400",
+  "editor.fontLigatures": true,
+  "remote.SSH.connectTimeout": 30,
+  "oneDarkPro.vivid": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.suggest.showStatusBar": true,
+  "files.exclude": {
+    "**/.ipynb_checkpoints": true
+  },
+  "explorer.confirmDragAndDrop": false,
+  "editor.inlineSuggest.enabled": true,
+  "jupyter.sendSelectionToInteractiveWindow": false,
+  "go.toolsManagement.autoUpdate": true,
+  "prettier.proseWrap": "always",
+  "editor.formatOnSaveMode": "file",
+  "go.enableCodeLens": {},
+  "window.titleSeparator": " • ",
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "editor.fontSize": 16,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": false,
+    "go": true,
+    "python": true,
+    "proto3": false
+  },
+  "git.autofetch": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "solargraph.checkGemVersion": false,
+  "solargraph.transport": "stdio",
+  "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.preferredLightColorTheme": "GitHub Light Default",
+  "editor.guides.indentation": false,
+  "editor.mouseWheelScrollSensitivity": 0.7,
+  "editor.smoothScrolling": true,
+  "workbench.fontAliasing": "antialiased",
+  "window.autoDetectColorScheme": true,
+  "explorer.confirmDelete": false,
+  "telemetry.telemetryLevel": "off",
+  "customizeUI.font.regular": "Jetbrains Mono",
+  "[ruby]": {
+    "editor.defaultFormatter": "castwide.solargraph"
+  },
+  "python.formatting.provider": "yapf",
+  "window.nativeTabs": true,
+  "customizeUI.activityBar": "regular",
+  "customizeUI.font.monospace": "Jetbrains Mono",
+  "customizeUI.titleBar": "inline",
+  "customizeUI.fontSizeMap": {
+    "13px": "13px",
+    "monospace": "13px"
+  },
+  "ruby.intellisense": "rubyLocate",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.fontWeightBold": "normal",
+  "workbench.startupEditor": "none",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": true,
+  "cmake.configureOnOpen": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "redhat.telemetry.enabled": false,
+  "remote.SSH.remotePlatform": {
+    "rpi": "linux"
+  },
+  "prettier.bracketSameLine": true,
+  "remote.SSH.enableRemoteCommand": true,
+  "python.terminal.focusAfterLaunch": true,
+  "remote.SSH.showLoginTerminal": true,
+  "remote.SSH.useLocalServer": false,
+  // ...your other settings...
+  "catppuccin.colorOverrides": {
+    // make Mocha "OLEDppuccin" - use black editor background
+    // "mocha": {
+    //   "base": "#050505",
+    //   "mantle": "#010101",
+    //   "crust": "#020202"
+    // }
+  },
+  "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+  "C_Cpp.formatting": "disabled",
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "errorLens.enabledDiagnosticLevels": [
+    "error",
+    "info"
+  ]
+}
