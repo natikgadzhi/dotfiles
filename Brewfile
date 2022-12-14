@@ -1,13 +1,18 @@
+tap "felixkratz/formulae"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
+brew "ansible"
 brew "bat"
+brew "cmake"
 brew "direnv"
 brew "duf"
 brew "exa"
+brew "fd"
 brew "fish"
 brew "fisher"
 brew "fzf"
@@ -16,14 +21,19 @@ brew "git"
 brew "gnupg"
 brew "go"
 brew "hopenpgp-tools"
+brew "llvm"
 brew "lsd"
+brew "mas"
 brew "neovim"
+brew "ninja"
 brew "pinentry-mac"
 brew "protobuf"
 brew "python@3.10"
 brew "ruby-build"
 brew "rbenv"
+brew "ripgrep"
 brew "starship"
+brew "swiftlint"
 brew "tmux"
 brew "tree"
 brew "typescript"
@@ -31,8 +41,10 @@ brew "wget"
 brew "yarn"
 brew "ykman"
 brew "ykpers"
+brew "felixkratz/formulae/sketchybar"
+brew "heroku/brew/heroku"
 brew "koekeishiya/formulae/skhd"
-brew "koekeishiya/formulae/yabai"
+brew "koekeishiya/formulae/yabai", args: ["HEAD"]
 cask "1password"
 cask "firefox"
 cask "font-fira-code"
@@ -47,7 +59,22 @@ cask "lunar"
 cask "microsoft-teams"
 cask "obsidian"
 cask "raycast"
+cask "spaceman"
 cask "spotify"
+cask "via"
 cask "visual-studio-code"
 cask "webex"
 cask "zoom"
+mas "AdGuard for Safari", id: 1440147259
+mas "Bear", id: 1091189122
+mas "Cardhop", id: 1290358394
+mas "DaisyDisk", id: 411643860
+mas "Developer", id: 640199958
+mas "Fantastical", id: 975937182
+mas "Hyperspace Desktop", id: 1454139710
+mas "Mastonaut", id: 1450757574
+mas "Pixelmator Pro", id: 1289583905
+mas "Playgrounds", id: 1496833156
+mas "Slack", id: 803453959
+mas "Things", id: 904280696
+mas "Xcode", id: 497799835
