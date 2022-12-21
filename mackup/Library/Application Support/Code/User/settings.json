@@ -5,13 +5,9 @@
   "terminal.integrated.fontFamily": "JetBrains Mono",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 16,
-  "python.autoComplete.extraPaths": [
-    ".venv"
-  ],
+  "python.autoComplete.extraPaths": [".venv"],
   "editor.minimap.enabled": false,
-  "prettier.documentSelectors": [
-    "*.md"
-  ],
+  "prettier.documentSelectors": ["*.md"],
   "editor.minimap.maxColumn": 80,
   "[markdown]": {
     "editor.quickSuggestions": {
@@ -31,9 +27,7 @@
     "*.ipynb": "jupyter.notebook.ipynb"
   },
   "go.lintTool": "golint",
-  "python.analysis.extraPaths": [
-    ".venv"
-  ],
+  "python.analysis.extraPaths": [".venv"],
   "editor.definitionLinkOpensInPeek": true,
   "editor.quickSuggestions": {
     "comments": "on",
@@ -146,5 +140,6 @@
   "errorLens.enabledDiagnosticLevels": [
     "error",
     "info"
-  ]
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
