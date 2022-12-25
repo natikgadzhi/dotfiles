@@ -44,7 +44,7 @@ brew "ykman"
 brew "ykpers"
 brew "heroku/brew/heroku"
 brew "koekeishiya/formulae/skhd"
-brew "koekeishiya/formulae/yabai", args: ["HEAD"]
+brew "koekeishiya/formulae/yabai"
 cask "1password"
 cask "discord"
 cask "firefox"
@@ -72,6 +72,7 @@ mas "Bear", id: 1091189122
 mas "Cardhop", id: 1290358394
 mas "DaisyDisk", id: 411643860
 mas "Developer", id: 640199958
+mas "Disk Speed Test", id: 425264550
 mas "Fantastical", id: 975937182
 mas "Hyperspace Desktop", id: 1454139710
 mas "Mastonaut", id: 1450757574
