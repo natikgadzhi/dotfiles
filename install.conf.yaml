@@ -29,4 +29,4 @@
     ~/Library/LaunchAgents/link-ssh-auth-sock.plist:
       path: Library/LaunchAgents/link-ssh-auth-sock.plist
 
-- shell:
+- shell: []
