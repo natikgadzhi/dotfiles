@@ -32,6 +32,12 @@ if not contains ".rbenv/shims" $PATH
   set -xg PATH "~/.rbenv/shims" $PATH
 end
 
+if [ -x (which pyenv) ]
+  set -Ux PYENV_ROOT $HOME/.pyenv
+  set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+  pyenv init - |source
+end
+
 if not contains "./bin" $PATH
   set -xg PATH ./bin $PATH
 end
