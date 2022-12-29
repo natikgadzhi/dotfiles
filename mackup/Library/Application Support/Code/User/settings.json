@@ -92,7 +92,12 @@
   "telemetry.telemetryLevel": "off",
   "customizeUI.font.regular": "Jetbrains Mono",
   "[ruby]": {
-    "editor.defaultFormatter": "castwide.solargraph"
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.semanticHighlighting.enabled": true
   },
   "python.formatting.provider": "yapf",
   "window.nativeTabs": true,
@@ -141,5 +146,14 @@
     "error",
     "info"
   ],
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "byesig.fold": false,
+  "byesig.enabled": true,
+  "byesig.opacity": 0.5,
+  "byesig.showIcon": false,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "editor.rulers": [
+    120
+  ],
+  "rubyLsp.rubyVersionManager": "rbenv"
 }
