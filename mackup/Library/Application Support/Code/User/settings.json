@@ -1,8 +1,6 @@
 {
-  "solargraph.useBundler": true,
   "git.allowNoVerifyCommit": true,
   "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.fontFamily": "JetBrains Mono",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 16,
   "python.autoComplete.extraPaths": [".venv"],
@@ -78,8 +76,6 @@
   "git.autofetch": true,
   "editor.minimap.renderCharacters": false,
   "editor.multiCursorModifier": "ctrlCmd",
-  "solargraph.checkGemVersion": false,
-  "solargraph.transport": "stdio",
   "workbench.preferredDarkColorTheme": "GitHub Dark Default",
   "workbench.colorTheme": "Catppuccin Mocha",
   "workbench.preferredLightColorTheme": "GitHub Light Default",
@@ -95,11 +91,11 @@
     "editor.defaultFormatter": "Shopify.ruby-lsp",
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.tabSize": 2,
     "editor.insertSpaces": true,
+    "editor.tabSize": 2,
     "editor.semanticHighlighting.enabled": true
   },
-  "python.formatting.provider": "yapf",
+  "python.formatting.provider": "black",
   "window.nativeTabs": true,
   "customizeUI.activityBar": "regular",
   "customizeUI.font.monospace": "Jetbrains Mono",
@@ -108,7 +104,6 @@
     "13px": "13px",
     "monospace": "13px"
   },
-  "ruby.intellisense": "rubyLocate",
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
@@ -117,7 +112,6 @@
   "workbench.startupEditor": "none",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
-  "python.linting.pylintEnabled": true,
   "python.linting.flake8Enabled": true,
   "cmake.configureOnOpen": true,
   "diffEditor.ignoreTrimWhitespace": false,
@@ -142,10 +136,9 @@
   "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
   "C_Cpp.formatting": "disabled",
   "C_Cpp.clang_format_fallbackStyle": "LLVM",
-  "errorLens.enabledDiagnosticLevels": [
-    "error",
-    "info"
-  ],
+  "errorLens.enabledDiagnosticLevels": ["error", "info"],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "githubPullRequests.pullBranch": "never",
   "byesig.fold": false,
   "byesig.enabled": true,
   "byesig.opacity": 0.5,
@@ -155,5 +148,5 @@
   "editor.rulers": [
     120
   ],
-  "rubyLsp.rubyVersionManager": "rbenv"
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono"
 }
