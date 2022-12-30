@@ -24,7 +24,7 @@ set -xg GPG_TTY (tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # rbenv
-if test -d ~/.rbenv
+if [ -d ~/.rbenv ]
   source (rbenv init -|psub)
 end
 
@@ -34,7 +34,7 @@ end
 
 if [ -x (which pyenv) ]
   set -Ux PYENV_ROOT $HOME/.pyenv
-  set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+  set -g fish_user_paths $PYENV_ROOT/shims $fish_user_paths
   pyenv init - |source
 end
 
@@ -51,9 +51,15 @@ if [ -x (which gh) ]
   eval (gh completion -s fish)
 end
 
+# Direnv loads .env file into environment in trusted directories
+# Ruby's dotenv does similar.
 if [ -x (which direnv) ]
   direnv hook fish | source
   direnv export fish |source
+end
+
+if [ -x (which shadowenv) ]
+  shadowenv init fish | source
 end
 
 # Git aliases
