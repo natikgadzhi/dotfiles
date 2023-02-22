@@ -69,6 +69,7 @@ yabai -m rule --add label="Firefox" app="Firefox" title="^Sign\ in\ -" manage=of
 yabai -m rule --add label="Simulator" app="Simulator" manage=off
 yabai -m rule --add label="Zoom" app="zoom.us" manage=off
 yabai -m rule --add label="Zoom Meeting" app="zoom.us" title="^Zoom Meeting" manage=on
+yabai -m rule --add label="Facetime" app="FaceTime" manage=off
 yabai -m rule --add label="Raycast" app="Raycast" manage=off
 yabai -m rule --add label="1Password" app="1Password" manage=off
 yabai -m rule --add label="Logi Options" app="Logi Options+" manage=off
@@ -79,6 +80,7 @@ yabai -m rule --add label="Battle.net" app="Battle.net" manage=off
 yabai -m rule --add label="Loom" app="Loom" manage=off
 yabai -m rule --add label="Spaceman" app="Spaceman" manage=off
 yabai -m rule --add label="Lunar" app="Lunar" manage=off
+yabai -m rule --add label="Ivory" app="Ivory" manage=off
 yabai -m rule --add label="Webex" app="Webex" manage=off
 
 yabai -m rule --add label="Fantastical Settings" app="Fantastical" title="^(General|Appearance|Alerts|Accounts|Calendars|Openings|Weather|Advanced)" manage=off
