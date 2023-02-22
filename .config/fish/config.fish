@@ -17,6 +17,8 @@ if [ -d (echo ~)"/go/bin" ]; set -g fish_user_paths (echo ~)"/go/bin" $fish_user
 
 if [ -d (echo ~)"/.local/bin" ]; set -g fish_user_paths (echo ~)"/.local/bin" $fish_user_paths; end
 
+if [ -d (echo ~)"/.cargo/bin" ]; set -g fish_user_paths (echo ~)"/.cargo/bin" $fish_user_paths; end
+
 # When GPG wants the key passphrase, but can't figure out which TTY to use to get it.
 set -e SSH_AGENT_PID
 set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
