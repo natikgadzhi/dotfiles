@@ -53,6 +53,9 @@ brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 cask "1password"
 cask "arc"
+cask "autodesk-fusion360"
+cask "balenaetcher"
+cask "copilot-for-xcode"
 cask "discord"
 cask "firefox"
 cask "font-fira-code"
@@ -66,9 +69,11 @@ cask "keybase"
 cask "little-snitch"
 cask "loom"
 cask "lunar"
+cask "microsoft-edge"
 cask "microsoft-teams"
 cask "mullvadvpn"
 cask "obsidian"
+cask "raspberry-pi-imager"
 cask "raycast"
 cask "skype"
 cask "spaceman"
@@ -89,5 +94,6 @@ mas "Mastonaut", id: 1450757574
 mas "Pixelmator Pro", id: 1289583905
 mas "Playgrounds", id: 1496833156
 mas "Slack", id: 803453959
+mas "TestFlight", id: 899247664
 mas "Things", id: 904280696
 mas "Xcode", id: 497799835
