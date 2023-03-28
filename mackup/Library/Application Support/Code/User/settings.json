@@ -21,9 +21,6 @@
   "debug.console.fontSize": 16,
   "git.enableCommitSigning": true,
   "editor.suggestSelection": "first",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
   "go.lintTool": "golint",
   "python.analysis.extraPaths": [".venv"],
   "editor.definitionLinkOpensInPeek": true,
@@ -50,12 +47,10 @@
   },
   "explorer.confirmDragAndDrop": false,
   "editor.inlineSuggest.enabled": true,
-  "jupyter.sendSelectionToInteractiveWindow": false,
   "go.toolsManagement.autoUpdate": true,
   "prettier.proseWrap": "always",
   "editor.formatOnSaveMode": "file",
   "go.enableCodeLens": {},
-  "window.titleSeparator": " • ",
   "[go]": {
     "editor.insertSpaces": false,
     "editor.formatOnSave": true,
@@ -71,24 +66,18 @@
     "markdown": false,
     "go": true,
     "python": true,
-    "proto3": false
   },
   "git.autofetch": true,
   "editor.minimap.renderCharacters": false,
   "editor.multiCursorModifier": "ctrlCmd",
-  "workbench.preferredDarkColorTheme": "GitHub Dark Default",
-  "workbench.colorTheme": "Catppuccin Mocha",
-  "workbench.preferredLightColorTheme": "GitHub Light Default",
   "editor.guides.indentation": false,
   "editor.mouseWheelScrollSensitivity": 0.7,
   "editor.smoothScrolling": true,
   "workbench.fontAliasing": "antialiased",
-  "window.autoDetectColorScheme": true,
   "explorer.confirmDelete": false,
   "telemetry.telemetryLevel": "off",
   "customizeUI.font.regular": "Jetbrains Mono",
   "[ruby]": {
-    "editor.defaultFormatter": "Shopify.ruby-lsp",
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "editor.insertSpaces": true,
@@ -96,14 +85,6 @@
     "editor.semanticHighlighting.enabled": true
   },
   "python.formatting.provider": "black",
-  "window.nativeTabs": true,
-  "customizeUI.activityBar": "regular",
-  "customizeUI.font.monospace": "Jetbrains Mono",
-  "customizeUI.titleBar": "inline",
-  "customizeUI.fontSizeMap": {
-    "13px": "13px",
-    "monospace": "13px"
-  },
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
@@ -124,7 +105,6 @@
   "python.terminal.focusAfterLaunch": true,
   "remote.SSH.showLoginTerminal": true,
   "remote.SSH.useLocalServer": false,
-  // ...your other settings...
   "catppuccin.colorOverrides": {
     // make Mocha "OLEDppuccin" - use black editor background
     // "mocha": {
@@ -136,7 +116,6 @@
   "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
   "C_Cpp.formatting": "disabled",
   "C_Cpp.clang_format_fallbackStyle": "LLVM",
-  "errorLens.enabledDiagnosticLevels": ["error", "info"],
   "typescript.updateImportsOnFileMove.enabled": "always",
   "githubPullRequests.pullBranch": "never",
   "byesig.fold": false,
@@ -145,8 +124,40 @@
   "byesig.showIcon": false,
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
-  "editor.rulers": [
-    120
-  ],
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono"
+  "editor.rulers": [120],
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+  "rubyLsp.rubyVersionManager": "rbenv",
+  "rubyLsp.enabledFeatures": {
+    "codeActions": true,
+    "diagnostics": true,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": true,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true
+  },
+  "ruby.useBundler": true,
+  "ruby.useLanguageServer": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "python.analysis.autoImportUserSymbols": true,
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.linting.mypyEnabled": true,
+  "projectManager.git.baseFolders": ["~/src/"],
+  "solargraph.diagnostics": true,
+  "solargraph.useBundler": true,
+  "solargraph.commandPath": "/Users/natikgadzhi/.rbenv/shims/solargraph",
+  "solargraph.bundlerPath": "/Users/natikgadzhi/.rbenv/shims/bundle",
+  "standardRuby.commandPath": "${userHome}/.rbenv/shims/standardrb",
+  "jupyter.interactiveWindow.textEditor.executeSelection": false,
+  "standardRuby.mode": "enableViaGemfile",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "window.dialogStyle": "custom",
+  "window.commandCenter": true,
 }
