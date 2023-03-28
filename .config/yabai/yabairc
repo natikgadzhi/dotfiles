@@ -82,6 +82,7 @@ yabai -m rule --add label="Spaceman" app="Spaceman" manage=off
 yabai -m rule --add label="Lunar" app="Lunar" manage=off
 yabai -m rule --add label="Ivory" app="Ivory" manage=off
 yabai -m rule --add label="Webex" app="Webex" manage=off
+yabai -m rule --add label="Balend Etcher" app="balenaEtcher" manage=off
 
 yabai -m rule --add label="Fantastical Settings" app="Fantastical" title="^(General|Appearance|Alerts|Accounts|Calendars|Openings|Weather|Advanced)" manage=off
 yabai -m rule --add label="Fantastical Helper" app="Fantastical Helper" border=off manage=off
