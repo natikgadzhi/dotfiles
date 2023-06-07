@@ -25,6 +25,8 @@ set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 set -xg GPG_TTY (tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
+set -xg PINENTRY_USER_DATA "USE_CURSES=1"
+
 # rbenv
 if [ -d ~/.rbenv ]
   source (rbenv init -|psub)
