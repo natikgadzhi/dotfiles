@@ -23,9 +23,9 @@ if [ -d (echo ~)"/.cargo/bin" ]; set -g fish_user_paths (echo ~)"/.cargo/bin" $f
 set -e SSH_AGENT_PID
 set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 set -xg GPG_TTY (tty)
-gpg-connect-agent updatestartuptty /bye >/dev/null
+#gpg-connect-agent updatestartuptty /bye >/dev/null
 
-set -xg PINENTRY_USER_DATA "USE_CURSES=1"
+#set -xg PINENTRY_USER_DATA "USE_CURSES=1"
 
 # rbenv
 if [ -d ~/.rbenv ]
@@ -77,14 +77,7 @@ alias b="bundle exec"
 # If iTerm shell integration is there, source it
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
-# if starship prompt is installed, source it's config.
-# brew install starship
-if [ -x (which starship) ]
-  starship init fish | source
-end
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/xnutsive/code/google-cloud-sdk/path.fish.inc' ]; . '/Users/xnutsive/code/google-cloud-sdk/path.fish.inc'; end
 
 ulimit -n 2048
-
