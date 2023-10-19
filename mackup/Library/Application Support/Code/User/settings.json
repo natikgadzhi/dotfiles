@@ -3,9 +3,10 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 16,
-  "python.autoComplete.extraPaths": [".venv"],
+  "python.autoComplete.extraPaths": [
+    ".venv"
+  ],
   "editor.minimap.enabled": false,
-  "prettier.documentSelectors": ["*.md"],
   "editor.minimap.maxColumn": 80,
   "[markdown]": {
     "editor.quickSuggestions": {
@@ -14,15 +15,16 @@
       "other": "off"
     },
     "editor.formatOnSave": true,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
   },
   "editor.renderLineHighlight": "none",
-  "solargraph.formatting": true,
   "debug.console.fontSize": 16,
   "git.enableCommitSigning": true,
   "editor.suggestSelection": "first",
   "go.lintTool": "golint",
-  "python.analysis.extraPaths": [".venv"],
+  "python.analysis.extraPaths": [
+    ".venv"
+  ],
   "editor.definitionLinkOpensInPeek": true,
   "editor.quickSuggestions": {
     "comments": "on",
@@ -32,14 +34,11 @@
   "gopls": {
     "formatting.gofumpt": true
   },
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "editor.formatOnSave": true,
   "editor.fontFamily": "JetBrains Mono",
   "editor.accessibilitySupport": "off",
   "editor.fontWeight": "400",
   "editor.fontLigatures": true,
   "remote.SSH.connectTimeout": 30,
-  "oneDarkPro.vivid": true,
   "vsicons.dontShowNewVersionMessage": true,
   "editor.suggest.showStatusBar": true,
   "files.exclude": {
@@ -48,8 +47,7 @@
   "explorer.confirmDragAndDrop": false,
   "editor.inlineSuggest.enabled": true,
   "go.toolsManagement.autoUpdate": true,
-  "prettier.proseWrap": "always",
-  "editor.formatOnSaveMode": "file",
+  "editor.formatOnSaveMode": "modifications",
   "go.enableCodeLens": {},
   "[go]": {
     "editor.insertSpaces": false,
@@ -65,18 +63,16 @@
     "plaintext": true,
     "markdown": false,
     "go": true,
-    "python": true,
+    "python": true
   },
   "git.autofetch": true,
   "editor.minimap.renderCharacters": false,
-  "editor.multiCursorModifier": "ctrlCmd",
   "editor.guides.indentation": false,
   "editor.mouseWheelScrollSensitivity": 0.7,
   "editor.smoothScrolling": true,
   "workbench.fontAliasing": "antialiased",
   "explorer.confirmDelete": false,
   "telemetry.telemetryLevel": "off",
-  "customizeUI.font.regular": "Jetbrains Mono",
   "[ruby]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
@@ -84,7 +80,6 @@
     "editor.tabSize": 2,
     "editor.semanticHighlighting.enabled": true
   },
-  "python.formatting.provider": "black",
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
@@ -93,71 +88,34 @@
   "workbench.startupEditor": "none",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
-  "python.linting.flake8Enabled": true,
-  "cmake.configureOnOpen": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "redhat.telemetry.enabled": false,
-  "remote.SSH.remotePlatform": {
-    "rpi": "linux"
-  },
-  "prettier.bracketSameLine": true,
   "remote.SSH.enableRemoteCommand": true,
   "python.terminal.focusAfterLaunch": true,
   "remote.SSH.showLoginTerminal": true,
   "remote.SSH.useLocalServer": false,
-  "catppuccin.colorOverrides": {
-    // make Mocha "OLEDppuccin" - use black editor background
-    // "mocha": {
-    //   "base": "#050505",
-    //   "mantle": "#010101",
-    //   "crust": "#020202"
-    // }
-  },
-  "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
-  "C_Cpp.formatting": "disabled",
-  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "lldb.library": "/Applications/Xcode-beta.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "githubPullRequests.pullBranch": "never",
-  "byesig.fold": false,
-  "byesig.enabled": true,
-  "byesig.opacity": 0.5,
-  "byesig.showIcon": false,
-  "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
-  "editor.rulers": [120],
+  "editor.rulers": [
+    80,
+    120
+  ],
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
-  "rubyLsp.rubyVersionManager": "rbenv",
-  "rubyLsp.enabledFeatures": {
-    "codeActions": true,
-    "diagnostics": true,
-    "documentHighlights": true,
-    "documentLink": true,
-    "documentSymbols": true,
-    "foldingRanges": true,
-    "formatting": true,
-    "hover": true,
-    "inlayHint": true,
-    "onTypeFormatting": true,
-    "selectionRanges": true,
-    "semanticHighlighting": true
-  },
-  "ruby.useBundler": true,
-  "ruby.useLanguageServer": true,
   "security.workspace.trust.untrustedFiles": "open",
-  "python.analysis.autoImportUserSymbols": true,
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.analysis.inlayHints.variableTypes": true,
   "python.analysis.typeCheckingMode": "basic",
-  "python.linting.mypyEnabled": true,
-  "projectManager.git.baseFolders": ["~/src/"],
-  "solargraph.diagnostics": true,
-  "solargraph.useBundler": true,
-  "solargraph.commandPath": "/Users/natikgadzhi/.rbenv/shims/solargraph",
-  "solargraph.bundlerPath": "/Users/natikgadzhi/.rbenv/shims/bundle",
-  "standardRuby.commandPath": "${userHome}/.rbenv/shims/standardrb",
-  "jupyter.interactiveWindow.textEditor.executeSelection": false,
-  "standardRuby.mode": "enableViaGemfile",
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "projectManager.git.baseFolders": [
+    "~/src/"
+  ],
   "window.dialogStyle": "custom",
   "window.commandCenter": true,
+  "git.enableSmartCommit": true,
+  "swift.diagnostics": true,
+  "editor.formatOnSave": true,
+  "lldb.launch.expressions": "native",
+  "swift.searchSubfoldersForPackages": true,
+  "editor.tabSize": 2,
+  "editor.find.loop": false
 }
