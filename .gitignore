@@ -19,6 +19,9 @@
 .wget-hsts
 .htoprc
 
+# Tide shites all over this file frequently, no need to save it then.
+.config/fish/fish_variables
+
 # Yarnrc is mostly useless to me
 .yarnrc
 
