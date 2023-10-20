@@ -7,6 +7,8 @@ return require('packer').startup(function(use)
   -- surround quotes and ( manipulation
   use "tpope/vim-surround"
 
+  use "christoomey/vim-tmux-navigator"
+
   -- UI to navigate the project
   use {
     "nvim-telescope/telescope.nvim", tag = '0.1.4',
@@ -35,6 +37,16 @@ return require('packer').startup(function(use)
   use {
     "nvim-lualine/lualine.nvim",
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
+  use {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
   }
 
   use {
