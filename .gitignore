@@ -33,3 +33,6 @@
 
 # nvim undo and tem files
 undodir
+
+# no need to sync log files
+**/*.log
