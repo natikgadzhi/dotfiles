@@ -117,5 +117,6 @@
   "lldb.launch.expressions": "native",
   "swift.searchSubfoldersForPackages": true,
   "editor.tabSize": 2,
-  "editor.find.loop": false
+  "editor.find.loop": false,
+  "workbench.colorTheme": "Catppuccin Mocha"
 }
