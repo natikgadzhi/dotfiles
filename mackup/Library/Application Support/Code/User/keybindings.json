@@ -28,4 +28,14 @@
         "command": "-workbench.action.terminal.clear",
         "when": "terminalFocus && terminalProcessSupported"
     },
+    {
+        "key": "ctrl+a t",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+shift+`",
+        "command": "-workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
 ]

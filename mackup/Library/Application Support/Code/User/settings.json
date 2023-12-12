@@ -34,7 +34,7 @@
   "gopls": {
     "formatting.gofumpt": true
   },
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "Jetbrains Mono",
   "editor.accessibilitySupport": "off",
   "editor.fontWeight": "400",
   "editor.fontLigatures": true,
@@ -53,7 +53,7 @@
     "editor.insertSpaces": false,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     }
   },
   "editor.fontSize": 16,
@@ -70,7 +70,6 @@
   "editor.guides.indentation": false,
   "editor.mouseWheelScrollSensitivity": 0.7,
   "editor.smoothScrolling": true,
-  "workbench.fontAliasing": "antialiased",
   "explorer.confirmDelete": false,
   "telemetry.telemetryLevel": "off",
   "[ruby]": {
@@ -88,13 +87,12 @@
   "workbench.startupEditor": "none",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
-  "diffEditor.ignoreTrimWhitespace": false,
   "redhat.telemetry.enabled": false,
   "remote.SSH.enableRemoteCommand": true,
   "python.terminal.focusAfterLaunch": true,
   "remote.SSH.showLoginTerminal": true,
   "remote.SSH.useLocalServer": false,
-  "lldb.library": "/Applications/Xcode-beta.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+  "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "files.insertFinalNewline": true,
   "editor.rulers": [
@@ -117,6 +115,37 @@
   "lldb.launch.expressions": "native",
   "swift.searchSubfoldersForPackages": true,
   "editor.tabSize": 2,
-  "editor.find.loop": false,
-  "workbench.colorTheme": "Catppuccin Mocha"
+  "workbench.preferredLightColorTheme": "Atom One Light",
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "cody.inlineChat.enabled": false,
+  "cody.experimental.chatPanel": true,
+  "cody.experimental.new-search": true,
+  "git.confirmSync": false,
+  "vim.enableNeovim": true,
+  "vim.hlsearch": true,
+  "vim.leader": " ",
+  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
+  "workbench.fontAliasing": "antialiased",
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "go.alternateTools": {
+    "customFormatter": "gofmt -s"
+  },
+  "editor.renderWhitespace": "none",
+  "rubyLsp.formatter": "syntax_tree",
+  "rubyLsp.enableExperimentalFeatures": true,
+  "rdbg.rubyVersionManager": "rbenv",
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "python.languageServer": "Pylance",
+  "python.venvFolders": [
+    "${workspaceFolder}/.venv"
+  ],
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.defaultModel": "foldingProviderModel",
+  "workbench.colorTheme": "Atom One Light",
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
+  "diffEditor.ignoreTrimWhitespace": false
 }
