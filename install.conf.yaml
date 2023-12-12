@@ -8,7 +8,7 @@
 
 - link:
     ~/.tmux.conf:
-      path: .tmux.conf
+      path: .config/tmux/.tmux.conf
     ~/.gitconfig:
       path: .gitconfig
     ~/.config/:
