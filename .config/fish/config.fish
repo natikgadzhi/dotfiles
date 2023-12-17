@@ -17,6 +17,7 @@ if [ -d (echo ~)"/go/bin" ]; set -g fish_user_paths (echo ~)"/go/bin" $fish_user
 
 if [ -d (echo ~)"/.local/bin" ]; set -g fish_user_paths (echo ~)"/.local/bin" $fish_user_paths; end
 
+
 if [ -d (echo ~)"/.cargo/bin" ]; set -g fish_user_paths (echo ~)"/.cargo/bin" $fish_user_paths; end
 
 # When GPG wants the key passphrase, but can't figure out which TTY to use to get it.
@@ -72,13 +73,9 @@ alias gs="git status"
 # alias gb="git branch"
 # alias gp="git push"
 # alias gl="git pull"
-alias b="bundle exec"
 
 # If iTerm shell integration is there, source it
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/xnutsive/code/google-cloud-sdk/path.fish.inc' ]; . '/Users/xnutsive/code/google-cloud-sdk/path.fish.inc'; end
 
 ulimit -n 2048
 
