@@ -1,5 +1,9 @@
 # Keyboard shortcuts config, 
 
+.blacklist [
+    "kitty"
+]
+
 # Put the system to sleep
 cmd + shift + ctrl - escape : osascript -e 'tell application "Finder" to sleep'
 
