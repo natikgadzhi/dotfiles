@@ -83,3 +83,5 @@ ulimit -n 2048
 status is-login; and pyenv init --path | source
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
+
+export PATH="$PATH:$HOME/.local/bin"
