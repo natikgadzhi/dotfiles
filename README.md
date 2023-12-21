@@ -2,7 +2,6 @@
 
 After cloning this repository, run `./install` to apply the dotfiles, that will work for both Mac and Linux boxes.
 
-
 ## Mac
 
 This repository is structured to provide a way to roll dotfiles for generic Unix boxes, and then some extra settings for Mac systems:
@@ -13,4 +12,10 @@ This repository is structured to provide a way to roll dotfiles for generic Unix
 
 ## Raycast
 
-**Note**: Raycast config is using `yubico-auth.sh` script command that is currently just a shell file in this repo, but should be put in `~/src/raycast/` to work correctly.
+Raycast settings moved to Raycast cloud account. Raycast needs `~/src/raycast/yubico-oath.sh` to be present to support yubikey 2FA command.
+
+## Nvim
+
+Nvim configuration does not bootstrap itself automatically, because the packer bundle is not committed (or should not be?)
+
+See [nvim quickstart guide](https://github.com/wbthomason/packer.nvim#quickstart)

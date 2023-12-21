@@ -147,5 +147,9 @@
   "workbench.colorTheme": "Atom One Light",
   "window.autoDetectColorScheme": true,
   "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "git.openRepositoryInParentFolders": "never"
 }
