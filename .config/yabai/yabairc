@@ -97,5 +97,7 @@ yabai -m rule --add label="Cardhop" app="Cardhop" manage=off
 yabai -m rule --add label="Spotify" app="Spotify" manage=off
 yabai -m rule --add label="Music" app="Music" manage=off
 
+yabai -m rule --add label="Okta Verify" app="Okta Verify" manage=off
+
 
 echo "yabai configuration loaded.."
