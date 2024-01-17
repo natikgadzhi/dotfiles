@@ -1,6 +1,6 @@
 {
   "git.allowNoVerifyCommit": true,
-  "terminal.external.osxExec": "iTerm.app",
+  "terminal.external.osxExec": "Kitty",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontSize": 16,
   "python.autoComplete.extraPaths": [
@@ -16,6 +16,7 @@
     },
     "editor.formatOnSave": true,
     "editor.wordWrap": "on",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "editor.renderLineHighlight": "none",
   "debug.console.fontSize": 16,
@@ -111,7 +112,6 @@
   "window.commandCenter": true,
   "git.enableSmartCommit": true,
   "swift.diagnostics": true,
-  "editor.formatOnSave": true,
   "lldb.launch.expressions": "native",
   "swift.searchSubfoldersForPackages": true,
   "editor.tabSize": 2,
@@ -137,19 +137,27 @@
   "rubyLsp.formatter": "syntax_tree",
   "rubyLsp.enableExperimentalFeatures": true,
   "rdbg.rubyVersionManager": "rbenv",
-  "editor.defaultFormatter": "ms-python.black-formatter",
-  "python.languageServer": "Pylance",
   "python.venvFolders": [
     "${workspaceFolder}/.venv"
   ],
   "editor.stickyScroll.enabled": true,
   "editor.stickyScroll.defaultModel": "foldingProviderModel",
-  "workbench.colorTheme": "Atom One Light",
+  "workbench.colorTheme": "One Dark Pro Darker",
   "window.autoDetectColorScheme": true,
   "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
   "diffEditor.ignoreTrimWhitespace": false,
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  "git.openRepositoryInParentFolders": "never"
+  "git.openRepositoryInParentFolders": "never",
+  "oneDarkPro.editorTheme": "One Dark Pro Darker",
+  "prettier.printWidth": 100,
+  "prettier.proseWrap": "always",
+  "markdown.validate.enabled": true,
+  "prettier.documentSelectors": [
+    "*.md",
+    "**/*.md"
+  ],
+  "prettier.useEditorConfig": false,
+  "editor.formatOnSave": true
 }
