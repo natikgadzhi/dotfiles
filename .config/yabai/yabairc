@@ -99,7 +99,7 @@ yabai -m rule --add label="Music" app="Music" manage=off
 
 yabai -m rule --add label="Okta Verify" app="Okta Verify" manage=off
 
-yabai -m rule --add label="Arc" app="Arc" title="^(Natik|General|Max|Shortcuts|Links|Advanced)" manage=off
+yabai -m rule --add label="Arc" app="Arc" title="^(Natik|General|Max|Profiles|Shortcuts|Links|Advanced)" manage=off
 
 
 echo "yabai configuration loaded.."
