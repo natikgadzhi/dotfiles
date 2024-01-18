@@ -91,13 +91,15 @@ yabai -m rule --add label="Webex" app="Webex" manage=off
 yabai -m rule --add label="Balena Etcher" app="balenaEtcher" manage=off
 
 yabai -m rule --add label="Fantastical Settings" app="Fantastical" title="^(General|Appearance|Alerts|Accounts|Calendars|Openings|Weather|Advanced)" manage=off
-yabai -m rule --add label="Fantastical Helper" app="Fantastical Helper" border=off manage=off
+yabai -m rule --add label="Fantastical Helper" app="Fantastical Helper" title="Fantastical"  border=off manage=off
 yabai -m rule --add label="Cardhop" app="Cardhop" manage=off
 
 yabai -m rule --add label="Spotify" app="Spotify" manage=off
 yabai -m rule --add label="Music" app="Music" manage=off
 
 yabai -m rule --add label="Okta Verify" app="Okta Verify" manage=off
+
+yabai -m rule --add label="Arc" app="Arc" title="^(Natik|General|Max|Shortcuts|Links|Advanced)" manage=off
 
 
 echo "yabai configuration loaded.."
