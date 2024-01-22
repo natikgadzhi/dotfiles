@@ -17,7 +17,6 @@ if [ -d (echo ~)"/go/bin" ]; set -g fish_user_paths (echo ~)"/go/bin" $fish_user
 
 if [ -d (echo ~)"/.local/bin" ]; set -g fish_user_paths (echo ~)"/.local/bin" $fish_user_paths; end
 
-
 if [ -d (echo ~)"/.cargo/bin" ]; set -g fish_user_paths (echo ~)"/.cargo/bin" $fish_user_paths; end
 
 # When GPG wants the key passphrase, but can't figure out which TTY to use to get it.
@@ -29,7 +28,7 @@ set -xg GPG_TTY (tty)
 #set -xg PINENTRY_USER_DATA "USE_CURSES=1"
 
 # rbenv
-if [ -d ~/.rbenv ]
+if [ -d (echo ~)"/.rbenv" ]
   source (rbenv init -|psub)
 end
 
@@ -84,4 +83,7 @@ status is-login; and pyenv init --path | source
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 
-export PATH="$PATH:$HOME/.local/bin"
+if [ -d /opt/homebrew/opt/openjdk/ ];
+  set -gx JAVA_HOME /opt/homebrew/opt/openjdk
+  set -gx PATH $JAVA_HOME/bin $PATH
+end
