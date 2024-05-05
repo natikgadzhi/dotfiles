@@ -14,7 +14,10 @@
 # Compiled nvim plugin bundle
 .config/nvim/plugin/packer_compiled.lua
 
-
+# Zed makes temp files
+.config/zed/.tmp*
+.config/zed/embeddings
+.config/zed/conversations
 
 # Too noisy
 .tmux-status.conf

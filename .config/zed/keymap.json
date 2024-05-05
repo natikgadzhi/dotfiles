@@ -1,0 +1,8 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-k t": "workspace::NewTerminal"
+    }
+  }
+]
