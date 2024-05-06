@@ -12,7 +12,7 @@
 #  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
 #
 
-# The --load-sa line loads the scripting addition, and it's currently 
+# The --load-sa line loads the scripting addition, and it's currently
 # disabled anyway
 #
 # sudo yabai --load-sa
@@ -71,6 +71,8 @@ yabai -m rule --add label="Software Update" title="Software Update" manage=off
 yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
 
 yabai -m rule --add label="Music" app="Music" manage=off
+
+yabai -m rule --add label="WhatsApp" app="WhatsApp" manage=off
 
 yabai -m rule --add label="Firefox" app="Firefox" title="^Sign\ in\ -" manage=off
 yabai -m rule --add label="Simulator" app="Simulator" manage=off
