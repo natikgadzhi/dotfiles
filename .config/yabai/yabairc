@@ -20,18 +20,12 @@
 
 # global settings
 yabai -m config mouse_follows_focus          off
-yabai -m config focus_follows_mouse          on
 yabai -m config window_origin_display        default
 yabai -m config window_placement             second_child
-yabai -m config window_topmost               on
 yabai -m config window_shadow                off
 yabai -m config window_opacity               on
 yabai -m config active_window_opacity        1.0
 yabai -m config normal_window_opacity        0.8
-yabai -m config window_border                off
-yabai -m config window_border_width          4
-yabai -m config active_window_border_color   0x6ba4f8ff
-yabai -m config normal_window_border_color   0xff555555
 yabai -m config insert_feedback_color        0xffd75f5f
 yabai -m config split_ratio                  0.20
 yabai -m config auto_balance                 on
@@ -72,9 +66,6 @@ yabai -m rule --add label="About This Mac" app="System Information" title="About
 
 yabai -m rule --add label="Music" app="Music" manage=off
 
-yabai -m rule --add label="WhatsApp" app="WhatsApp" manage=off
-
-yabai -m rule --add label="Firefox" app="Firefox" title="^Sign\ in\ -" manage=off
 yabai -m rule --add label="Simulator" app="Simulator" manage=off
 yabai -m rule --add label="Zoom" app="zoom.us" manage=off
 yabai -m rule --add label="Zoom Meeting" app="zoom.us" title="^Zoom Meeting" manage=on
@@ -82,7 +73,7 @@ yabai -m rule --add label="Facetime" app="FaceTime" manage=off
 yabai -m rule --add label="Archive Utility" app="Archive Utility" manage=off
 
 ## Apps that should not be tiled & small utility apps
-yabai -m rule --add label="Mullvad VPN" app="Mullvad VPN" border=off manage=off
+yabai -m rule --add label="Mullvad VPN" app="Mullvad VPN" manage=off
 yabai -m rule --add label="Logi Options" app="Logi Options+" manage=off
 yabai -m rule --add label="1Password" app="1Password" manage=off
 yabai -m rule --add label="Raycast" app="Raycast" manage=off
