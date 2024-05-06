@@ -97,5 +97,6 @@ yabai -m rule --add label="Okta Verify" app="Okta Verify" manage=off
 
 yabai -m rule --add label="Arc" app="Arc" title="^(Natik|General|Max|Profiles|Shortcuts|Links|Advanced)" manage=off
 
+yabai -m rule --add label="WhatsApp" app="WhatsApp" manage=off
 
 echo "yabai configuration loaded.."
