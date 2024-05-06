@@ -8,14 +8,7 @@ This repository is structured to provide a way to roll dotfiles for generic Unix
 
 - `./install` to setup dotfiles.
 - `brew bundle install` to install most apps on a Mac. This will install apps from both Casks, and Mac App Store.
-- `mackup restore` will restore most Mac-specific settings from this repository. Settings are backed up in `mackup` folder.
 
 ## Raycast
 
 Raycast settings moved to Raycast cloud account. Raycast needs `~/src/raycast/yubico-oath.sh` to be present to support yubikey 2FA command.
-
-## Nvim
-
-Nvim configuration does not bootstrap itself automatically, because the packer bundle is not committed (or should not be?)
-
-See [nvim quickstart guide](https://github.com/wbthomason/packer.nvim#quickstart)
