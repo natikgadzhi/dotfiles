@@ -9,9 +9,9 @@
 {
   "show_wrap_guides": true,
   "preferred_line_length": 100,
-  "theme": "Andromeda",
+  "theme": "XY-Zed",
   "vim_mode": true,
-  "ui_font_size": 16,
+  "ui_font_size": 18,
   "buffer_font_size": 16,
   "active_pane_magnification": 1.1,
   "git": {
