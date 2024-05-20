@@ -1,7 +1,7 @@
 # Basics
-set EDITOR nvim
-set VISUAL nvim
-set GIT_EDITOR nvim
+set EDITOR zed
+set VISUAL zed
+set GIT_EDITOR "zed --wait"
 
 # LC_CTYPE bug
 set LC_CTYPE "en_US.UTF-8"
@@ -25,7 +25,7 @@ set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 set -xg GPG_TTY (tty)
 #gpg-connect-agent updatestartuptty /bye >/dev/null
 
-#set -xg PINENTRY_USER_DATA "USE_CURSES=1"
+set -xg PINENTRY_USER_DATA "USE_CURSES=1"
 
 # rbenv
 if [ -d (echo ~)"/.rbenv" ]
