@@ -7,8 +7,8 @@
 - clean: ["~"]
 
 - link:
-    ~/.tmux.conf:
-      path: .config/tmux/.tmux.conf
+    ~/.local/bin/pinentry-wrapper.sh:
+      path: bin/pinentry-wrapper.sh
     ~/.gitconfig:
       path: .gitconfig
     ~/.config/:
@@ -18,8 +18,6 @@
       path: gpg-agent.conf
     ~/.ansible.cfg:
       path: .ansible.cfg
-    ~/.mackup.cfg:
-      path: .mackup.cfg
 
     # These two launchctl agents are only required on Mac OS
     # to make gpg-agent play nice with ssh auth in apps that don't start
