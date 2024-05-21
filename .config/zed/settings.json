@@ -11,6 +11,7 @@
   "preferred_line_length": 100,
   "theme": "XY-Zed",
   "vim_mode": true,
+  "buffer_font_family": "JetBrains Mono",
   "ui_font_size": 18,
   "buffer_font_size": 16,
   "active_pane_magnification": 1.1,
@@ -19,6 +20,7 @@
     "gutter_debounce": 1000
   },
   "terminal": {
+    "font_family": "JetBrainsMono Nerd Font",
     "detect_venv": {
       "on": {
         "directories": ["venv", ".venv"],
