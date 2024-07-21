@@ -32,6 +32,10 @@ if [ -d (echo ~)"/.rbenv" ]
   source (rbenv init -|psub)
 end
 
+if [ -d (echo ~)"/.jenv" ]
+  status --is-interactive; and jenv init - | source
+end
+
 if not contains ".rbenv/shims" $PATH
   set -xg PATH "~/.rbenv/shims" $PATH
 end
@@ -87,3 +91,7 @@ if [ -d /opt/homebrew/opt/openjdk/ ];
   set -gx JAVA_HOME /opt/homebrew/opt/openjdk
   set -gx PATH $JAVA_HOME/bin $PATH
 end
+
+# Wasmer
+export WASMER_DIR="/Users/natikgadzhi/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
