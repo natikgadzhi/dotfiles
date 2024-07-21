@@ -42,3 +42,4 @@ undodir
 
 # no need to sync log files
 **/*.log
+.config/zed/prompts
