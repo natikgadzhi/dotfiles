@@ -7,6 +7,8 @@ set GIT_EDITOR "zed --wait"
 set LC_CTYPE "en_US.UTF-8"
 set LC_ALL "en_US"
 
+if [ -x (which fzf) ]; fzf --fish | source; end
+
 # Only set some paths if those dirs exist
 #
 if [ -d "/opt/homebrew/bin" ]; set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths; end
