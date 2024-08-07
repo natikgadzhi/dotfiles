@@ -7,7 +7,6 @@ set GIT_EDITOR "zed --wait"
 set LC_CTYPE "en_US.UTF-8"
 set LC_ALL "en_US"
 
-if [ -x (which fzf) ]; fzf --fish | source; end
 
 # Only set some paths if those dirs exist
 #
@@ -41,6 +40,8 @@ end
 if not contains ".rbenv/shims" $PATH
   set -xg PATH "~/.rbenv/shims" $PATH
 end
+
+if [ -x (which fzf) ]; fzf --fish | source; end
 
 if [ -x (which pyenv) ]
   set -Ux PYENV_ROOT $HOME/.pyenv
