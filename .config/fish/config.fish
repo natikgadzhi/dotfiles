@@ -20,6 +20,14 @@ if [ -d (echo ~)"/.local/bin" ]; set -g fish_user_paths (echo ~)"/.local/bin" $f
 
 if [ -d (echo ~)"/.cargo/bin" ]; set -g fish_user_paths (echo ~)"/.cargo/bin" $fish_user_paths; end
 
+if not contains "./bin" $PATH
+  set -xg PATH ./bin $PATH
+end
+
+if not contains "node_modules/.bin" $PATH
+  set -xg PATH node_modules/.bin $PATH
+end
+
 # When GPG wants the key passphrase, but can't figure out which TTY to use to get it.
 set -e SSH_AGENT_PID
 set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
@@ -33,28 +41,21 @@ if [ -d (echo ~)"/.rbenv" ]
   source (rbenv init -|psub)
 end
 
-if [ -d (echo ~)"/.jenv" ]
-  status --is-interactive; and jenv init - | source
-end
-
 if not contains ".rbenv/shims" $PATH
   set -xg PATH "~/.rbenv/shims" $PATH
 end
 
+if [ -d (echo ~)"/.jenv" ]
+  status --is-interactive; and jenv init - | source
+end
+
+# Use fzf in Fish ctrl-r
 if [ -x (which fzf) ]; fzf --fish | source; end
 
 if [ -x (which pyenv) ]
   set -Ux PYENV_ROOT $HOME/.pyenv
   set -g fish_user_paths $PYENV_ROOT/shims $fish_user_paths
   pyenv init - |source
-end
-
-if not contains "./bin" $PATH
-  set -xg PATH ./bin $PATH
-end
-
-if not contains "node_modules/.bin" $PATH
-  set -xg PATH node_modules/.bin $PATH
 end
 
 # Add gh completions
@@ -88,8 +89,11 @@ ulimit -n 2048
 # pyenv init
 status is-login; and pyenv init --path | source
 set -gx VOLTA_HOME "$HOME/.volta"
+
+# TODO: Spicy, Volta might not be there.
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 
+# TODO: Should be removed in favor of jenv?
 if [ -d /opt/homebrew/opt/openjdk/ ];
   set -gx JAVA_HOME /opt/homebrew/opt/openjdk
   set -gx PATH $JAVA_HOME/bin $PATH
