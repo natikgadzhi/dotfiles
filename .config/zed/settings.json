@@ -27,7 +27,7 @@
   },
   "show_wrap_guides": true,
   "preferred_line_length": 100,
-  "theme": "One Dark Pro",
+  "theme": "Xcode Default Light",
   "vim_mode": true,
   // stock font is honestly pretty cool
   // "buffer_font_family": "JetBrains Mono",
