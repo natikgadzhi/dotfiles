@@ -25,7 +25,6 @@
 .htoprc
 
 # Tide shites all over this file frequently, no need to save it then.
-.config/fish/fish_variables
 .config/fish/fishd*
 
 # Yarnrc is mostly useless to me
