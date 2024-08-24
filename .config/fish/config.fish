@@ -76,6 +76,7 @@ end
 
 # Git aliases
 alias gs="git status"
+alias k="kubectl"
 # alias gco="git checkout"
 # alias gb="git branch"
 # alias gp="git push"
