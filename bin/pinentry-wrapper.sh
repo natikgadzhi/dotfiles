@@ -18,6 +18,7 @@ get_current_tty() {
 if [[ -n "$SSH_TTY" ]] || [[ -n "$TMUX" ]] || [[ -n "$STY" ]] || [[ -t 0 ]]; then
     # Running in a terminal environment (SSH, tmux, screen, or interactive shell)
     export GPG_TTY=$(get_current_tty)
+    gpg-connect-agent reloadagent /bye
     /opt/homebrew/bin/pinentry-curses "$@"
 else
     # Assume GUI environment otherwise
