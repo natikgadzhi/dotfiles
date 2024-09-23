@@ -103,3 +103,4 @@ end
 # Wasmer
 export WASMER_DIR="/Users/natikgadzhi/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+source (brew --prefix asdf)/libexec/asdf.fish

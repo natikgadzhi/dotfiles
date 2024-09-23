@@ -9,7 +9,7 @@
 {
   "assistant": {
     "default_model": {
-      "provider": "anthropic",
+      "provider": "zed.dev",
       "model": "claude-3-5-sonnet-20240620"
     },
     "version": "2",
@@ -27,7 +27,7 @@
   },
   "show_wrap_guides": true,
   "preferred_line_length": 100,
-  "theme": "Xcode Default Light",
+  "theme": "Zedokai Darker (Filter Octagon)",
   "vim_mode": true,
   // stock font is honestly pretty cool
   // "buffer_font_family": "JetBrains Mono",
