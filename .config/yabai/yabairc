@@ -99,4 +99,7 @@ yabai -m rule --add label="Arc" app="Arc" title="^(Natik|General|Max|Profiles|Sh
 
 yabai -m rule --add label="WhatsApp" app="WhatsApp" manage=off
 
+yabai -m rule --add label="Unblocked" app="Unblocked" manage=off
+yabai -m rule --add label="IntelliJ IDEA" app="IntelliJ IDEA" manage=off
+
 echo "yabai configuration loaded.."
