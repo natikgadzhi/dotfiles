@@ -25,6 +25,15 @@
       "show": "never"
     }
   },
+  "collaboration_panel": {
+    "button": false
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
   "show_wrap_guides": true,
   "preferred_line_length": 100,
   "theme": "Zedokai Darker (Filter Octagon)",
