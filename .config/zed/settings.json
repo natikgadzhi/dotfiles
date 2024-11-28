@@ -10,7 +10,7 @@
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
+      "model": "claude-3-5-sonnet-latest"
     },
     "version": "2",
     "default_open_ai_model": null,
@@ -20,11 +20,13 @@
       "available_models": []
     }
   },
+
   "project_panel": {
     "scrollbar": {
       "show": "never"
     }
   },
+
   "collaboration_panel": {
     "button": false
   },
@@ -34,10 +36,12 @@
   "notification_panel": {
     "button": false
   },
+
   "show_wrap_guides": true,
   "preferred_line_length": 100,
-  "theme": "Zedokai Darker (Filter Octagon)",
+  "theme": "Zedokai (Filter Octagon)",
   "vim_mode": true,
+
   // stock font is honestly pretty cool
   // "buffer_font_family": "JetBrains Mono",
   "ui_font_size": 16,
@@ -46,6 +50,7 @@
     "git_gutter": "tracked_files",
     "gutter_debounce": 500
   },
+
   "terminal": {
     "font_family": "JetBrainsMono Nerd Font",
     "detect_venv": {
@@ -55,12 +60,40 @@
       }
     }
   },
+
+  "file_finder": {
+    "modal_max_width": "large"
+  },
+
+  // Language-specific stuff
+  //
+  // Enable pylsp with Python and use mypy.
+  "lsp": {
+    "pylsp": {
+      "settings": {
+        "plugins": {
+          "mypy": {
+            "enabled": true
+          }
+        }
+      }
+    }
+  },
+
   // Override formatting on Python using Ruff
   "languages": {
     "Markdown": {
+      "format_on_save": "off",
+      "soft_wrap": "preferred_line_length"
+    },
+    "TOML": {
       "format_on_save": "off"
     },
     "Python": {
+      "language_servers": ["!pyright", "pylsp"],
+      "inlay_hints": {
+        "enabled": true
+      },
       "format_on_save": "on",
       "formatter": {
         "external": {
