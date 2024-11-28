@@ -102,4 +102,7 @@ yabai -m rule --add label="WhatsApp" app="WhatsApp" manage=off
 yabai -m rule --add label="Unblocked" app="Unblocked" manage=off
 yabai -m rule --add label="IntelliJ IDEA" app="IntelliJ IDEA" manage=off
 
+
+yabai -m rule --add label="Croissant" app="Croissant" manage=off
+
 echo "yabai configuration loaded.."
