@@ -6,20 +6,9 @@
 // To see all of Zed's default settings without changing your
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
+
 {
-  "assistant": {
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
-    },
-    "version": "2",
-    "default_open_ai_model": null,
-    "provider": {
-      "name": "openai",
-      "default_model": "gpt-4o",
-      "available_models": []
-    }
-  },
+  "base_keymap": "VSCode",
 
   "project_panel": {
     "scrollbar": {
@@ -65,6 +54,20 @@
     "modal_max_width": "large"
   },
 
+  "assistant": {
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2",
+    "default_open_ai_model": null,
+    "provider": {
+      "name": "openai",
+      "default_model": "gpt-4o",
+      "available_models": []
+    }
+  },
+
   // Language-specific stuff
   //
   // Enable pylsp with Python and use mypy.
@@ -74,6 +77,9 @@
         "plugins": {
           "mypy": {
             "enabled": true
+          },
+          "pycodestyle": {
+            "enabled": false
           }
         }
       }
