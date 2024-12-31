@@ -5,10 +5,16 @@
 .blacklist [
     "kitty"
     "iTerm2"
+    "ghostty"
 ]
 
-# Put the system to sleep
+# Global shortcuts to manage the system
+#
+# Sleep
 cmd + shift + ctrl - escape : osascript -e 'tell application "Finder" to sleep'
+
+# Open a new terminal window with ghostty
+shift + ctrl - escape : osascript -e 'tell application "Ghostty" to activate'
 
 # Yabai settings below
 #

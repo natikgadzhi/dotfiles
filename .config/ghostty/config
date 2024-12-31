@@ -9,6 +9,8 @@
 
 keybind = ctrl+z=close_surface
 keybind = ctrl+d=new_split:right
+keybind = ctrl+v=new_split:down
+keybind = global:ctrl+`=toggle_quick_terminal
 keybind = ctrl+shift+.=reload_config
 
 # Empty values reset the configuration to the default value
@@ -26,6 +28,7 @@ macos-option-as-alt = true
 
 auto-update = download
 
-keybind = global:ctrl+`=toggle_quick_terminal
+
+
 
 term=xterm-256color
