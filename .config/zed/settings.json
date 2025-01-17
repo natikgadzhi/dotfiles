@@ -28,13 +28,27 @@
 
   "show_wrap_guides": true,
   "preferred_line_length": 100,
-  "theme": "Zedokai (Filter Octagon)",
+  "theme": "Andromeda",
   "vim_mode": true,
 
   // stock font is honestly pretty cool
   // "buffer_font_family": "JetBrains Mono",
   "ui_font_size": 16,
   "buffer_font_size": 15,
+
+  "scrollbar": {
+    "show": "auto",
+    "cursors": true,
+    "git_diff": true,
+    "search_results": true,
+    "selected_symbol": true,
+    "diagnostics": "all",
+    "axes": {
+      "horizontal": false,
+      "vertical": true
+    }
+  },
+
   "git": {
     "git_gutter": "tracked_files",
     "gutter_debounce": 500
