@@ -14,7 +14,7 @@ keybind = global:ctrl+`=toggle_quick_terminal
 keybind = ctrl+shift+.=reload_config
 
 # Empty values reset the configuration to the default value
-font-family = "JetBrains Mono"
+font-family = "IBM Plex Mono"
 font-size = 16
 
 theme = andromeda
@@ -27,8 +27,5 @@ macos-titlebar-style = tabs
 macos-option-as-alt = true
 
 auto-update = download
-
-
-
 
 term=xterm-256color
