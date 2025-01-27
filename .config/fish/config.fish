@@ -94,11 +94,11 @@ set -gx VOLTA_HOME "$HOME/.volta"
 # TODO: Spicy, Volta might not be there.
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 
-# TODO: Should be removed in favor of jenv?
-if [ -d /opt/homebrew/opt/openjdk/ ];
-  set -gx JAVA_HOME /opt/homebrew/opt/openjdk
-  set -gx PATH $JAVA_HOME/bin $PATH
-end
+# # TODO: Should be removed in favor of jenv?
+# if [ -d /opt/homebrew/opt/openjdk/ ];
+#   set -gx JAVA_HOME /opt/homebrew/opt/openjdk
+#   set -gx PATH $JAVA_HOME/bin $PATH
+# end
 
 # Wasmer
 export WASMER_DIR="/Users/natikgadzhi/.wasmer"
