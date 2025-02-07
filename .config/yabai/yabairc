@@ -104,5 +104,6 @@ yabai -m rule --add label="IntelliJ IDEA" app="IntelliJ IDEA" manage=off
 
 
 yabai -m rule --add label="Croissant" app="Croissant" manage=off
+yabai -m rule --add label= "Screen Studio" app="Screen Studio" manage=off
 
 echo "yabai configuration loaded.."
