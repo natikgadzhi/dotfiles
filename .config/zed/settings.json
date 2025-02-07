@@ -8,6 +8,9 @@
 // from the command palette or from `Zed` application menu.
 
 {
+  "features": {
+    "inline_completion_provider": "zed"
+  },
   "base_keymap": "VSCode",
 
   "project_panel": {
@@ -34,7 +37,7 @@
   // stock font is honestly pretty cool
   "buffer_font_family": "JetBrains Mono",
   "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "buffer_font_size": 16,
 
   "scrollbar": {
     "show": "auto",
@@ -61,7 +64,8 @@
         "directories": ["venv", ".venv"],
         "activate_script": "fish"
       }
-    }
+    },
+    "working_directory": "current_project_directory"
   },
 
   "file_finder": {
@@ -85,7 +89,7 @@
 
   // Language-specific stuff
   //
-  // Enable pylsp with Python and use mypy.
+  // PyLSP is disabled later on pylsp with Python and use mypy.
   "lsp": {
     "pylsp": {
       "settings": {
@@ -111,7 +115,7 @@
       "format_on_save": "off"
     },
     "Python": {
-      "language_servers": ["!pyright", "pylsp"],
+      "language_servers": ["pyright", "!pylsp"],
       "inlay_hints": {
         "enabled": true
       },

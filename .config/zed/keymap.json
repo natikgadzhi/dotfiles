@@ -2,7 +2,8 @@
   {
     "context": "Workspace",
     "bindings": {
-      "cmd-k t": "workspace::NewTerminal"
+      "cmd-k t": "workspace::NewTerminal",
+      "cmd-k a": "assistant::ToggleFocus"
     }
   }
 ]
