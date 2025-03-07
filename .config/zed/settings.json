@@ -8,8 +8,10 @@
 // from the command palette or from `Zed` application menu.
 
 {
+  "theme": "Xcode Default Darker",
+  "icon_theme": "Catppuccin Latte",
   "features": {
-    "inline_completion_provider": "zed"
+    "edit_prediction_provider": "zed"
   },
   "base_keymap": "VSCode",
 
@@ -31,7 +33,6 @@
 
   "show_wrap_guides": true,
   "preferred_line_length": 100,
-  "theme": "Andromeda",
   "vim_mode": true,
 
   // stock font is honestly pretty cool
@@ -75,7 +76,7 @@
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2",
     "default_open_ai_model": null,
