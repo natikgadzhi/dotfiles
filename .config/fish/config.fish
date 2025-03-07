@@ -77,10 +77,6 @@ end
 # Git aliases
 alias gs="git status"
 alias k="kubectl"
-# alias gco="git checkout"
-# alias gb="git branch"
-# alias gp="git push"
-# alias gl="git pull"
 
 # If iTerm shell integration is there, source it
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
@@ -89,15 +85,17 @@ ulimit -n 2048
 
 # pyenv init
 status is-login; and pyenv init --path | source
-set -gx VOLTA_HOME "$HOME/.volta"
-
-# TODO: Spicy, Volta might not be there.
-set -gx PATH "$VOLTA_HOME/bin" $PATH
-
 
 # Wasmer
-export WASMER_DIR="/Users/natikgadzhi/.wasmer"
+set -gx WASMER_DIR "/Users/natikgadzhi/.wasmer"
+# This line checks if the file $WASMER_DIR/wasmer.sh exists and has a size greater than zero
+# (using the -s test flag). If it exists, the script is sourced, which loads Wasmer's
+# environment variables and functions into the current shell session
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 
 # TODO: Unsure why, this started failing around January 2025s
 # source (brew --prefix asdf)/libexec/asdf.fish
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init2.fish 2>/dev/null || :
