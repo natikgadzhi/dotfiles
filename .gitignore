@@ -18,6 +18,7 @@
 .config/zed/.tmp*
 .config/zed/embeddings
 .config/zed/conversations
+.config/zed/settings_backup.json
 
 # Too noisy
 .tmux-status.conf
