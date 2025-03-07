@@ -1,31 +1,43 @@
 
-# The syntax is "key = value". The whitespace around the
-# equals doesn't matter.
-# background = 282c34
-# foreground = ffffff
-
-# Comments start with a `#` and are only valid on their own line.
-# Blank lines are ignored!
-
+# Keybinds
+#
 keybind = ctrl+z=close_surface
 keybind = ctrl+d=new_split:right
 keybind = ctrl+v=new_split:down
 keybind = global:ctrl+`=toggle_quick_terminal
 keybind = ctrl+shift+.=reload_config
+keybind = cmd+shift+w=close_window
 
-# Empty values reset the configuration to the default value
-font-family = "IBM Plex Mono"
+
+# Visual: font, theme, cursors
+#
+font-family = "JetBrains Mono"
 font-size = 16
 
-theme = andromeda
-cursor-style = block
+# Try `xcodedarkhc` for higher contrast
+theme = xcodedark
+cursor-style = underline
 
+
+# Shell and OS integration
+#
+term=xterm-256color
 shell-integration = fish
 shell-integration-features = cursor, sudo, title
-
 macos-titlebar-style = tabs
 macos-option-as-alt = true
 
+
+# Don't show a dialog when I'm slamming cmd+q
+#
+confirm-close-surface = false
+
+
+# Auto-update settings
+#
 auto-update = download
 
-term=xterm-256color
+
+# Quick Terminal
+#
+quick-terminal-animation-duration = 0
