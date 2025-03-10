@@ -109,3 +109,15 @@ yabai -m rule --add label="Screen Studio" app="Screen Studio" manage=off
 yabai -m rule --add label="TurboTax" app="TurboTax" manage=off
 
 echo "yabai configuration loaded.."
+
+
+# borders hidpi=on active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 &
+
+# move some apps automatically to specific spaces
+# yabai -m rule --add app="Arc" space=^1
+# yabai -m rule --add app="Slack" space=^2
+# yabai -m rule --add app="Ghostty" space=^3
+# yabai -m rule --add app="Code" space=^4
+# yabai -m rule --add app="Cursor" space=^4
+# yabai -m rule --add app="Zed" space=^4
+# yabai -m rule --add app="Obsidian" space=^5
