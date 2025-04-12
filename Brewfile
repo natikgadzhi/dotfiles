@@ -45,6 +45,7 @@ brew "imagemagick"
 brew "jenv"
 brew "jpeg"
 brew "jq"
+brew "k9s"
 brew "kubernetes-cli"
 brew "kube-ps1"
 brew "kubectx"
@@ -97,6 +98,7 @@ brew "ykman"
 brew "yq"
 brew "zig"
 brew "airbytehq/tap/abctl"
+brew "felixkratz/formulae/borders"
 brew "gdubw/gng/gng"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
@@ -105,6 +107,7 @@ cask "1password"
 cask "1password-cli"
 cask "arc"
 cask "bluesnooze"
+cask "calibre"
 cask "chromedriver"
 cask "cursor"
 cask "discord"
@@ -136,40 +139,13 @@ cask "raycast"
 cask "screen-studio"
 cask "sf-symbols"
 cask "spaceman"
+cask "superwhisper"
 cask "telegram"
 cask "tuist"
 cask "via"
 cask "visual-studio-code"
 cask "webex"
 cask "zed"
-mas "AdGuard for Safari", id: 1440147259
-mas "Bear", id: 1091189122
-mas "Cardhop", id: 1290358394
-mas "Copilot", id: 1447330651
-mas "Croissant", id: 6670288979
-mas "CrystalFetch", id: 6454431289
-mas "DaisyDisk", id: 411643860
-mas "Dato", id: 1470584107
-mas "DetailsPro", id: 1524366536
-mas "Developer", id: 640199958
-mas "Disk Speed Test", id: 425264550
-mas "Fabula", id: 1591155142
-mas "Fantastical", id: 975937182
-mas "Flighty", id: 1358823008
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Ivory", id: 6444602274
-mas "Kagi for Safari", id: 1622835804
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Okta Verify", id: 490179405
-mas "Pages", id: 409201541
-mas "Parcel", id: 639968404
-mas "Pixelmator Pro", id: 1289583905
-mas "TestFlight", id: 899247664
-mas "Things", id: 904280696
-mas "WhatsApp (old)", id: 1147396723
-mas "Xcode", id: 497799835
 vscode "alefragnani.project-manager"
 vscode "augment.vscode-augment"
 vscode "bierner.markdown-mermaid"
