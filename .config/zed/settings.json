@@ -8,6 +8,14 @@
 // from the command palette or from `Zed` application menu.
 
 {
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_assistant": false
+  },
   "theme": "Xcode Default Darker",
   "icon_theme": "Catppuccin Latte",
   "features": {
