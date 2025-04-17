@@ -8,6 +8,13 @@
 // from the command palette or from `Zed` application menu.
 
 {
+  "assistant": {
+    "default_model": {
+      "provider": "openai",
+      "model": "deepseek-v3-0324"
+    },
+    "version": "2"
+  },
   "edit_predictions": {
     "mode": "subtle",
     "copilot": {
@@ -16,8 +23,8 @@
     },
     "enabled_in_assistant": false
   },
-  "theme": "Xcode Default Darker",
-  "icon_theme": "Catppuccin Latte",
+  "theme": "Ayu Mirage",
+  "icon_theme": "Colored Zed Icons Theme Dark",
   "features": {
     "edit_prediction_provider": "zed"
   },
@@ -81,19 +88,18 @@
     "modal_max_width": "large"
   },
 
-  "assistant": {
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
-    },
-    "version": "2",
-    "default_open_ai_model": null,
-    "provider": {
-      "name": "openai",
-      "default_model": "gpt-4o",
-      "available_models": []
-    },
-    "enable_experimental_live_diffs": true
+  "language_models": {
+    "openai": {
+      "api_url": "https://api.lambda.ai/v1",
+      "available_models": [
+        {
+          "name": "deepseek-v3-0324",
+          "display_name": "Lambda DeepSeek V3",
+          "max_tokens": 164000
+        }
+      ],
+      "version": "1"
+    }
   },
 
   // Language-specific stuff

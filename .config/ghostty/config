@@ -2,10 +2,10 @@
 # Keybinds
 #
 keybind = ctrl+z=close_surface
-keybind = ctrl+d=new_split:right
-keybind = ctrl+v=new_split:down
+keybind = shift+ctrl+d=new_split:right
+keybind = shift+ctrl+v=new_split:down
 keybind = global:ctrl+`=toggle_quick_terminal
-keybind = ctrl+shift+.=reload_config
+keybind = shift+ctrl+.=reload_config
 keybind = cmd+shift+w=close_window
 
 
@@ -22,6 +22,7 @@ cursor-style = underline
 # Shell and OS integration
 #
 term=xterm-256color
+command = /opt/homebrew/bin/fish --login --interactive
 shell-integration = fish
 shell-integration-features = cursor, sudo, title
 macos-titlebar-style = tabs
