@@ -108,6 +108,8 @@ yabai -m rule --add label="Screen Studio" app="Screen Studio" manage=off
 
 yabai -m rule --add label="TurboTax" app="TurboTax" manage=off
 
+yabai -m rule --add label="ChatGPT" app="ChatGPT" manage=off
+
 echo "yabai configuration loaded.."
 
 
