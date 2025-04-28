@@ -12,6 +12,12 @@
 # Sleep
 cmd + shift + ctrl - escape : osascript -e 'tell application "Finder" to sleep'
 
+# Universal mute for Google Meet app
+cmd + shift - a: osascript -e 'tell application "System Events" to set frontApp to name of first application process whose frontmost is true' \
+    -e 'tell application "Google Meet" to activate' -e 'delay 0.25' \
+    -e 'tell application "System Events" to key code 2 using command down' \
+    -e 'tell application frontApp to activate'
+
 # Open a new terminal window with ghostty
 shift + ctrl - escape : osascript -e 'tell application "Ghostty" to activate'
 

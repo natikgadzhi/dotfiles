@@ -10,8 +10,8 @@
 {
   "assistant": {
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "provider": "openai",
+      "model": "deepseek-v3-0324"
     },
     "version": "2"
   },
