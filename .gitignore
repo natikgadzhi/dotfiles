@@ -11,6 +11,8 @@
 # iTerm2 makes sockets and puts them in it's config path
 .config/iterm2/AppSupport
 
+.config/fish/fish_variables
+
 # Compiled nvim plugin bundle
 .config/nvim/plugin/packer_compiled.lua
 
