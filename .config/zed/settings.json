@@ -8,10 +8,12 @@
 // from the command palette or from `Zed` application menu.
 
 {
-  "assistant": {
+  "agent": {
+    "default_profile": "write",
+    "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "openai",
-      "model": "deepseek-v3-0324"
+      "provider": "zed.dev",
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2"
   },
@@ -21,7 +23,7 @@
       "proxy": null,
       "proxy_no_verify": null
     },
-    "enabled_in_assistant": false
+    "enabled_in_text_threads": false
   },
   "theme": "Ayu Mirage",
   "icon_theme": "Colored Zed Icons Theme Dark",
@@ -140,7 +142,7 @@
           "command": "bash",
           "arguments": [
             "-c",
-            "ruff check --select=I --fix --stdin-filename {buffer_path} | ruff format --stdin-filename {buffer_path}"
+            "uv run ruff check --select=I --fix --stdin-filename {buffer_path} | uv run ruff format --stdin-filename {buffer_path}"
           ]
         }
       }
