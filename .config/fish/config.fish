@@ -28,6 +28,11 @@ if not contains "node_modules/.bin" $PATH
   set -xg PATH node_modules/.bin $PATH
 end
 
+set -e Z_DATA
+set -e Z_DATA_DIR
+set -xg Z_DATA (echo ~)/.local/share/z/data
+set -xg Z_DATA_DIR (echo ~)/.local/share/z
+
 # When GPG wants the key passphrase, but can't figure out which TTY to use to get it.
 # set -e SSH_AGENT_PID
 # set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
@@ -98,6 +103,3 @@ set -gx WASMER_DIR "/Users/natikgadzhi/.wasmer"
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
-
-set -xg Z_DATA (echo ~)/.local/share/z/data
-set -xg Z_DATA_DIR (echo ~)/.local/share/z
