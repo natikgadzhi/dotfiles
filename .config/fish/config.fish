@@ -28,10 +28,19 @@ if not contains "node_modules/.bin" $PATH
   set -xg PATH node_modules/.bin $PATH
 end
 
+# These are hacks to support multiple laptops with slightly
+# different home directory layouts
 set -e Z_DATA
 set -e Z_DATA_DIR
 set -xg Z_DATA (echo ~)/.local/share/z/data
 set -xg Z_DATA_DIR (echo ~)/.local/share/z
+
+# Set git signing key based on home directory
+# Lambda laptop has natik.gadzhi home, and this is the key it should use.
+if string match -q "*natik.gadzhi*" (echo ~)
+  set -xg GIT_CONFIG_USER_SIGNINGKEY 9D9EC67DDA83961A
+end
+
 
 # When GPG wants the key passphrase, but can't figure out which TTY to use to get it.
 # set -e SSH_AGENT_PID
