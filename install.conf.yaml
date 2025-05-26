@@ -11,6 +11,8 @@
       path: bin/pinentry-wrapper.sh
     ~/.gitconfig:
       path: .gitconfig
+    ~/.aerospace.toml:
+      path: .aerospace.toml
     ~/.config/:
       glob: true
       path: .config/*
