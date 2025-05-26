@@ -1,7 +1,7 @@
 [user]
 	name = Natik Gadzhi
 	email = natik@respawn.io
-	signingkey = 9D9EC67DDA83961A
+	signingkey = 19337530F90ACEC5
 [push]
 	default = matching
 	autoSetupRemote = true
