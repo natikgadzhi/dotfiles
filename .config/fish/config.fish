@@ -66,7 +66,7 @@ end
 if [ -x (which fzf) ]; fzf --fish | source; end
 
 if [ -x (which pyenv) ]
-  set -Ux PYENV_ROOT $HOME/.pyenv
+  set -gx PYENV_ROOT $HOME/.pyenv
   set -g fish_user_paths $PYENV_ROOT/shims $fish_user_paths
   pyenv init - |source
 end
