@@ -15,7 +15,7 @@ font-family = "JetBrains Mono"
 font-size = 16
 
 # Try `xcodedarkhc` for higher contrast
-theme = flexoki-dark
+theme = xcodedark
 cursor-style = underline
 
 
@@ -42,4 +42,3 @@ auto-update = download
 # Quick Terminal
 #
 quick-terminal-animation-duration = 0
-keybind = shift+enter=text:\n
