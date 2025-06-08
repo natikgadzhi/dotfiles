@@ -49,7 +49,10 @@ set -xg GPG_TTY (tty)
 # gpg-connect-agent updatestartuptty /bye >/dev/null
 # set -xg PINENTRY_USER_DATA "USE_CURSES=1"
 
-eval (ssh-agent -c)
+# Check if ssh-agent is already running, if not start it
+# if not set -q SSH_AGENT_PID; or not ps -p $SSH_AGENT_PID > /dev/null 2>&1
+#     eval (ssh-agent -c) > /dev/null 2>&1
+# end
 
 # rbenv
 if [ -d (echo ~)"/.rbenv" ]
