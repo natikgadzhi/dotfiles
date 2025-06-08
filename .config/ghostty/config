@@ -15,7 +15,7 @@ font-family = "JetBrains Mono"
 font-size = 16
 
 # Try `xcodedarkhc` for higher contrast
-theme = xcodedark
+theme = flexoki-dark
 cursor-style = underline
 
 
