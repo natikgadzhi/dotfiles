@@ -49,6 +49,8 @@ set -xg GPG_TTY (tty)
 # gpg-connect-agent updatestartuptty /bye >/dev/null
 # set -xg PINENTRY_USER_DATA "USE_CURSES=1"
 
+eval (ssh-agent -c)
+
 # rbenv
 if [ -d (echo ~)"/.rbenv" ]
   source (rbenv init -|psub)
