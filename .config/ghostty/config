@@ -25,14 +25,15 @@ term=xterm-256color
 command = /opt/homebrew/bin/fish --login --interactive
 shell-integration = fish
 shell-integration-features = cursor, sudo, title
-macos-titlebar-style = tabs
+macos-titlebar-style = hidden
+# window-decoration = false
+window-theme = system
 macos-option-as-alt = true
 
 
 # Don't show a dialog when I'm slamming cmd+q
 #
 confirm-close-surface = false
-
 
 # Auto-update settings
 #
