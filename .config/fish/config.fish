@@ -45,7 +45,7 @@ end
 # When GPG wants the key passphrase, but can't figure out which TTY to use to get it.
 # set -e SSH_AGENT_PID
 # set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-set -xg GPG_TTY (tty)
+# set -xg GPG_TTY (tty)
 # gpg-connect-agent updatestartuptty /bye >/dev/null
 # set -xg PINENTRY_USER_DATA "USE_CURSES=1"
 
@@ -94,7 +94,10 @@ end
 
 # Git aliases
 alias gs="git status"
-alias k="kubectl"
+alias gc="git commit"
+alias ga="git add"
+alias gp="git pull --ff origin $(git rev-parse --abbrev-ref HEAD)"
+alias gpu="git push origin $(git rev-parse --abbrev-ref HEAD)"
 
 # If iTerm shell integration is there, source it
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
