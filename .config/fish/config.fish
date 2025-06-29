@@ -96,8 +96,24 @@ end
 alias gs="git status"
 alias gc="git commit"
 alias ga="git add"
-alias gp="git pull --ff origin $(git rev-parse --abbrev-ref HEAD)"
-alias gpu="git push origin $(git rev-parse --abbrev-ref HEAD)"
+
+function gp
+    if git rev-parse --git-dir > /dev/null 2>&1
+        git pull --ff origin (git rev-parse --abbrev-ref HEAD)
+    else
+        echo "Not in a git repository"
+        return 1
+    end
+end
+
+function gpu
+    if git rev-parse --git-dir > /dev/null 2>&1
+        git push origin (git rev-parse --abbrev-ref HEAD)
+    else
+        echo "Not in a git repository"
+        return 1
+    end
+end
 
 # If iTerm shell integration is there, source it
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
