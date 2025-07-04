@@ -13,20 +13,23 @@ vt title "Current action - project context"
 - Ignore errors if `vt` command fails
 
 ### Examples
-# Starting a task
-vt title "Setting up Git app integration"
 
-# Debugging
-vt title "Debugging CI failures - playwright tests"
+```
+  # Starting a task
+  vt title "Setting up Git app integration"
 
-# Working on a PR
-vt title "Implementing unique session names - github.com/amantus-ai/vibetunnel/pull/456"
+  # Debugging
+  vt title "Debugging CI failures - playwright tests"
 
-# Analyzing code
-vt title "Analyzing session-manager.ts for race conditions"
+  # Working on a PR
+  vt title "Implementing unique session names - github.com/amantus-ai/vibetunnel/pull/456"
 
-# Writing tests
-vt title "Adding tests for GitAppLauncher"
+  # Analyzing code
+  vt title "Analyzing session-manager.ts for race conditions"
+
+  # Writing tests
+  vt title "Adding tests for GitAppLauncher"
+```
 
 ### When to Update
 - Start of each new task/subtask
@@ -34,5 +37,6 @@ vt title "Adding tests for GitAppLauncher"
 - Changing from coding to testing/debugging
 - Waiting for long-running operations
 - Whenever user might wonder "what is Claude doing right now?"
+
 # Project Rules
 @/Users/natikgadzhi/src/steipete/agent-rules/project-rules
