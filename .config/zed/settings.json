@@ -17,7 +17,7 @@
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-thinking"
+      "model": "claude-opus-4-thinking"
     },
     "version": "2"
   },
