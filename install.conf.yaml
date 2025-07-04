@@ -20,6 +20,8 @@
       path: gpg-agent.conf
     ~/.ansible.cfg:
       path: .ansible.cfg
+    ~/.claude/CLAUDE.md:
+      path: .claude/CLAUDE.md
 
     # These two launchctl agents are only required on Mac OS
     # to make gpg-agent play nice with ssh auth in apps that don't start
