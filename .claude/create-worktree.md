@@ -14,6 +14,13 @@ This instruction file is for creating git worktrees for todos. Use it as a slash
 - Extract organization name and repo name from path (format: `~/src/{org}/{repo}`). You may be running in core repo, or within a worktree already. Worktrees are in `~/src/worktrees/{org}/{repo}`.
 - Get current git remote URL to confirm organization/repo names.
 
+
+### 2. Determine the todo details
+
+1. Check if the repository already has an `rfd` directory or `agent/rfd` directory.
+2. Check if there already is a todo file with a name that matches the user's request. The todo filename format should be `{date|yyyy-mm-dd}-{todo}.md`.
+3. If the file does not exist and there is no close match, recommend that user runs /rfd to define it first.
+
 ### 2. Get Current User
 ```bash
 git config user.name
