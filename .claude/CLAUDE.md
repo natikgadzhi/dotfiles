@@ -1,4 +1,16 @@
+# Natik's CLAUDE.md
+
+This file contains a set of rules for Claude and other agents to follow.
+
+## Machines
+
+This CLAUDE.md and rules are shared between Natik's personal machine, homelab, and work machine.
+- Consider all machines running MacOS that are otherwise not described personal IF the username is `natikgadzhi`.
+- Work machine is defined as the machine with hostname `A02559`. Username on the work machine is  `natik.gadzhi`, different from the personal machine. This machine has stricter firewall rules and some utilities and rules are not available.
+
 ## VibeTunnel Terminal Title Management
+
+**Note**: VibeTunnel is not available on Lambda work machine, do not use it there.
 
 When working in VibeTunnel sessions, actively use the `vt title` command to communicate actions and progress:
 
@@ -38,5 +50,12 @@ vt title "Current action - project context"
 - Waiting for long-running operations
 - Whenever user might wonder "what is Claude doing right now?"
 
-# Project Rules
+## Git Workflow Notes
+Available commands:
+@~/.claude/create-worktree.md
+
+
+**Note**: GitHub automatically deletes remote branches after PR merges (when configured). Do not manually delete remote branches with `git push origin --delete`.
+
+## Project Rules
 @/Users/natikgadzhi/src/steipete/agent-rules/project-rules
