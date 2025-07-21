@@ -36,7 +36,7 @@ git worktree add ~/src/worktrees/{organization}/{repo-name}/{todo-name} -b {user
 cd ~/src/worktrees/{organization}/{repo-name}/{todo-name}
 ```
 
-Check if the repo the user was in has `.claude/todos/` directory. If so, check if it has a file that matches your todo name. If you are not sure or the match is partial, ask the user if they want to work on that todo. If the todo file does NOT exist, warn the user, ask if they want to proceed and create the worktree still.
+Check if the repo the user was in has `agent/rfc` directory. If so, check if it has a file that matches your todo name. If you are not sure or the match is partial, ask the user if they want to work on that todo. If the todo file does NOT exist, warn the user, ask if they want to proceed and create the worktree still.
 
 ### 6. Verify Setup
 ```bash

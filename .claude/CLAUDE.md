@@ -51,9 +51,11 @@ vt title "Current action - project context"
 - Whenever user might wonder "what is Claude doing right now?"
 
 ## Git Workflow Notes
-Available commands:
-@~/.claude/create-worktree.md
 
+- All worktrees should be in `~/src/worktrees/`.
+- IF you are invoked within a worktree, but the project root directory appears to be empty and not a git repository, it's likely that something else deleted that worktree. When this happens, do NOT attempt to generate the project or task files from scratch. Tell the user that the worktree likely has been removed and ask what to do next.
+- Available commands:
+  @~/.claude/create-worktree.md
 
 **Note**: GitHub automatically deletes remote branches after PR merges (when configured). Do not manually delete remote branches with `git push origin --delete`.
 
