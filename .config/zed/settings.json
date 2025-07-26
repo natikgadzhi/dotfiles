@@ -19,7 +19,6 @@
       "provider": "zed.dev",
       "model": "claude-opus-4-thinking"
     },
-    "version": "2"
   },
   "edit_predictions": {
     "mode": "subtle",
@@ -29,7 +28,7 @@
     },
     "enabled_in_text_threads": false
   },
-  "theme": "Flexoki Dark",
+  "theme": "Flexoki Light",
   "icon_theme": "Colored Zed Icons Theme Dark",
   "features": {
     "edit_prediction_provider": "zed"
@@ -104,7 +103,6 @@
           "max_tokens": 164000
         }
       ],
-      "version": "1"
     }
   },
 
