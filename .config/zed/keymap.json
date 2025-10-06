@@ -1,16 +1,9 @@
 [
   {
-    "context": "Workspace",
-    "bindings": {
-      "cmd-~": "workspace::NewTerminal",
-      "shift-cmd-k": "assistant::ToggleFocus"
-    }
-  },
-  {
     "context": "Editor",
     "bindings": {
       "cmd-k": "assistant::InlineAssist",
-      "shift-cmd-k": "assistant::ToggleFocus"
+      "shift-cmd-k": "agent::ToggleFocus"
     }
   }
 ]

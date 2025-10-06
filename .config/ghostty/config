@@ -4,7 +4,7 @@
 keybind = ctrl+z=close_surface
 keybind = shift+ctrl+d=new_split:right
 keybind = shift+ctrl+v=new_split:down
-keybind = global:ctrl+`=toggle_quick_terminal
+keybind = global:shift+ctrl+`=toggle_quick_terminal
 keybind = shift+ctrl+.=reload_config
 keybind = cmd+shift+w=close_window
 
@@ -15,8 +15,13 @@ font-family = "JetBrains Mono"
 font-size = 16
 
 # Try `xcodedarkhc` for higher contrast
-theme = flexoki-dark
+# theme = "Flexoki Dark"
 cursor-style = underline
+
+quick-terminal-position = center
+quick-terminal-autohide = true
+
+initial-window = false
 
 
 # Shell and OS integration
