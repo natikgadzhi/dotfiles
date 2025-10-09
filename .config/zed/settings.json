@@ -11,14 +11,14 @@
   "agent": {
     "inline_assistant_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "model": "claude-sonnet-4.5"
     },
     "default_profile": "write",
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-opus-4-thinking"
-    },
+      "model": "claude-opus-4.1-thinking"
+    }
   },
   "edit_predictions": {
     "mode": "eager",
@@ -28,7 +28,7 @@
     },
     "enabled_in_text_threads": false
   },
-  "theme": "Flexoki Light",
+  "theme": "Ayu Dark",
   "icon_theme": "Colored Zed Icons Theme Dark",
   "features": {
     "edit_prediction_provider": "zed"
@@ -102,7 +102,7 @@
           "display_name": "Lambda DeepSeek V3",
           "max_tokens": 164000
         }
-      ],
+      ]
     }
   },
 
