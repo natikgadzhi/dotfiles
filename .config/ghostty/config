@@ -4,7 +4,7 @@
 keybind = ctrl+z=close_surface
 keybind = shift+ctrl+d=new_split:right
 keybind = shift+ctrl+v=new_split:down
-keybind = global:shift+ctrl+`=toggle_quick_terminal
+keybind = global:ctrl+`=toggle_quick_terminal
 keybind = shift+ctrl+.=reload_config
 keybind = cmd+shift+w=close_window
 
