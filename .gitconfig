@@ -1,3 +1,9 @@
+# Will include lambda-specific config if it exists
+# that config overrides gpg signingkey
+
+[includeIf "gitdir:~/src/lambdal/"]
+    path = ~/src/lambdal/.gitconfig
+
 [user]
 	name = Natik Gadzhi
 	email = natik@respawn.io
