@@ -93,6 +93,7 @@ if [ -x (which shadowenv) ]
 end
 
 # Git aliases
+alias k="kubectl"
 alias gs="git status"
 alias gc="git commit"
 alias ga="git add"

@@ -39,6 +39,20 @@
   "inlay_hints": {
     "enabled": true
   },
+  "ssh_connections": [
+    {
+      "host": "clownas.local",
+      "username": "natikgadzhi",
+      "projects": [
+        {
+          "paths": ["/etc/ssh"]
+        },
+        {
+          "paths": ["/home/natikgadzhi"]
+        }
+      ]
+    }
+  ],
   "agent": {
     "inline_assistant_model": {
       "provider": "zed.dev",
@@ -48,7 +62,7 @@
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-opus-4.1-thinking"
+      "model": "claude-sonnet-4.5-thinking"
     }
   },
   "edit_predictions": {
@@ -60,9 +74,9 @@
     "enabled_in_text_threads": false
   },
   "theme": {
-    "mode": "dark",
-    "light": "Ayu Light",
-    "dark": "Ayu Dark"
+    "mode": "system",
+    "dark": "Flexoki Dark",
+    "light": "Flexoki Light"
   },
   "icon_theme": {
     "mode": "system",
@@ -83,9 +97,6 @@
 
   "collaboration_panel": {
     "button": false
-  },
-  "chat_panel": {
-    "button": "when_in_call"
   },
   "notification_panel": {
     "button": false
@@ -153,11 +164,6 @@
   //
   // PyLSP is disabled later on pylsp with Python and use mypy.
   "lsp": {
-    "biome": {
-      "require_config_file": true,
-      "config_path": "./biome.json"
-    },
-
     "pylsp": {
       "settings": {
         "plugins": {
