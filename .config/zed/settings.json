@@ -8,6 +8,9 @@
 // from the command palette or from `Zed` application menu.
 
 {
+  "lsp_highlight_debounce": 75,
+  "buffer_line_height": "comfortable",
+  "buffer_font_weight": 400.0,
   "preview_tabs": {
     "enable_preview_from_file_finder": false
   },
@@ -29,6 +32,13 @@
     "button": false
   },
   "diagnostics": {
+    "lsp_pull_diagnostics": {
+      "debounce_ms": 50
+    },
+    "inline": {
+      "update_debounce_ms": 1050,
+      "enabled": true
+    },
     "button": true
   },
   "telemetry": {
@@ -160,24 +170,6 @@
     }
   },
 
-  // Language-specific stuff
-  //
-  // PyLSP is disabled later on pylsp with Python and use mypy.
-  "lsp": {
-    "pylsp": {
-      "settings": {
-        "plugins": {
-          "mypy": {
-            "enabled": true
-          },
-          "pycodestyle": {
-            "enabled": false
-          }
-        }
-      }
-    }
-  },
-
   // Override formatting on Python using Ruff
   "languages": {
     "Markdown": {
@@ -188,20 +180,10 @@
       "format_on_save": "off"
     },
     "Python": {
-      "language_servers": ["pyright", "!pylsp"],
       "inlay_hints": {
         "enabled": true
       },
-      "format_on_save": "on",
-      "formatter": {
-        "external": {
-          "command": "bash",
-          "arguments": [
-            "-c",
-            "uv run ruff check --select=I --fix --stdin-filename {buffer_path} | uv run ruff format --stdin-filename {buffer_path}"
-          ]
-        }
-      }
+      "format_on_save": "on"
     }
   }
 }

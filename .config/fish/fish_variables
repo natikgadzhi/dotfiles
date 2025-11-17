@@ -2,6 +2,8 @@
 # VERSION: 3.0
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
+SETUVAR Z_DATA:/Users/natik\x2egadzhi/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:/Users/natik\x2egadzhi/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:\x5e/Users/natik\x2egadzhi\x24
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
