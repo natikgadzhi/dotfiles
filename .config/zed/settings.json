@@ -65,14 +65,14 @@
   ],
   "agent": {
     "inline_assistant_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4.5"
+      "provider": "anthropic",
+      "model": "claude-opus-4-5-latest"
     },
     "default_profile": "write",
     "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4.5-thinking"
+      "provider": "anthropic",
+      "model": "claude-opus-4-5-latest"
     }
   },
   "edit_predictions": {
@@ -86,7 +86,7 @@
   "theme": {
     "mode": "system",
     "dark": "Flexoki Dark",
-    "light": "Flexoki Light"
+    "light": "Gruvbox Dark Hard"
   },
   "icon_theme": {
     "mode": "system",
@@ -157,19 +157,6 @@
     "modal_max_width": "large"
   },
 
-  "language_models": {
-    "openai": {
-      "api_url": "https://api.lambda.ai/v1",
-      "available_models": [
-        {
-          "name": "deepseek-v3-0324",
-          "display_name": "Lambda DeepSeek V3",
-          "max_tokens": 164000
-        }
-      ]
-    }
-  },
-
   // Override formatting on Python using Ruff
   "languages": {
     "Markdown": {
@@ -180,10 +167,21 @@
       "format_on_save": "off"
     },
     "Python": {
+      "preferred_line_length": 120,
+      "tab_size": 2,
       "inlay_hints": {
         "enabled": true
       },
-      "format_on_save": "on"
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "bash",
+          "arguments": [
+            "-c",
+            "uv run ruff format check --select=I --fix --stdin-filename {buffer_path} | uv run ruff format --stdin-filename {buffer_path}"
+          ]
+        }
+      }
     }
   }
 }

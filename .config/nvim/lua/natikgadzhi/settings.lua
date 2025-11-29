@@ -1,4 +1,4 @@
-# Settings go here
+-- Settings go here
 
 vim.opt.guicursor = ""
 
