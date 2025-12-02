@@ -102,7 +102,7 @@ require("lazy").setup({
         dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {},
         keys = {
-            { "<leader>xq", "<cmd>Trouble quickfix toggle<cr>", desc = "Quickfix List (Trouble)" },
+            { "<leader>xq", "<cmd>Trouble quickfix toggle<cr>",    desc = "Quickfix List (Trouble)" },
             { "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", desc = "Diagnostics (Trouble)" },
         },
     },
