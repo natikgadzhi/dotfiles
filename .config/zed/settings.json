@@ -8,6 +8,7 @@
 // from the command palette or from `Zed` application menu.
 
 {
+  "relative_line_numbers": "enabled",
   "lsp_highlight_debounce": 75,
   "buffer_line_height": "comfortable",
   "buffer_font_weight": 400.0,
@@ -86,7 +87,7 @@
   "theme": {
     "mode": "system",
     "dark": "Flexoki Dark",
-    "light": "Gruvbox Dark Hard"
+    "light": "Catppuccin Mocha"
   },
   "icon_theme": {
     "mode": "system",
