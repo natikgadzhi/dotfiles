@@ -7,18 +7,17 @@ set GIT_EDITOR "zed --wait"
 set LC_CTYPE "en_US.UTF-8"
 set LC_ALL "en_US"
 
-
 # Only set some paths if those dirs exist
 #
 if [ -d "/opt/homebrew/bin" ]; set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths; end
 if [ -d "/opt/homebrew/sbin" ]; set -g fish_user_paths "/opt/homebrew/sbin" $fish_user_paths; end
 
 if [ -d "/usr/local/go/bin" ]; set -g fish_user_paths "/usr/local/go/bin" $fish_user_paths; end
-if [ -d (echo ~)"/go/bin" ]; set -g fish_user_paths (echo ~)"/go/bin" $fish_user_paths; end
+if [ -d "$HOME/go/bin" ]; set -g fish_user_paths "$HOME/go/bin" $fish_user_paths; end
 
-if [ -d (echo ~)"/.local/bin" ]; set -g fish_user_paths (echo ~)"/.local/bin" $fish_user_paths; end
+if [ -d "$HOME/.local/bin" ]; set -g fish_user_paths "$HOME/.local/bin" $fish_user_paths; end
 
-if [ -d (echo ~)"/.cargo/bin" ]; set -g fish_user_paths (echo ~)"/.cargo/bin" $fish_user_paths; end
+if [ -d "$HOME/.cargo/bin" ]; set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths; end
 
 if not contains "./bin" $PATH
   set -xg PATH ./bin $PATH
@@ -32,12 +31,12 @@ end
 # different home directory layouts
 set -e Z_DATA
 set -e Z_DATA_DIR
-set -xg Z_DATA (echo ~)/.local/share/z/data
-set -xg Z_DATA_DIR (echo ~)/.local/share/z
+set -xg Z_DATA $HOME/.local/share/z/data
+set -xg Z_DATA_DIR $HOME/.local/share/z
 
 # Set git signing key based on home directory
 # Lambda laptop has natik.gadzhi home, and this is the key it should use.
-if string match -q "*natik.gadzhi*" (echo ~)
+if string match -q "*natik.gadzhi*" $HOME
   set -xg GIT_CONFIG_USER_SIGNINGKEY 9D9EC67DDA83961A
 end
 
@@ -54,42 +53,23 @@ end
 #     eval (ssh-agent -c) > /dev/null 2>&1
 # end
 
-# rbenv
-if [ -d (echo ~)"/.rbenv" ]
-  source (rbenv init -|psub)
-end
+# pyenv setup was here, but this shit takes too long to load.
+# use `uv` instead.
 
-if not contains ".rbenv/shims" $PATH
-  set -xg PATH "~/.rbenv/shims" $PATH
-end
-
-if [ -d (echo ~)"/.jenv" ]
-  status --is-interactive; and jenv init - | source
-end
-
-# Use fzf in Fish ctrl-r
-if [ -x (which fzf) ]; fzf --fish | source; end
-
-if [ -x (which pyenv) ]
-  set -gx PYENV_ROOT $HOME/.pyenv
-  set -g fish_user_paths $PYENV_ROOT/shims $fish_user_paths
-  pyenv init - |source
-end
-
-# Add gh completions
-if [ -x (which gh) ]
-  eval (gh completion -s fish)
+# gh completions - cached to file (saves ~24ms)
+if command -q gh
+  set -l gh_completion_cache "$HOME/.cache/fish/gh_completion.fish"
+  if not test -f $gh_completion_cache
+    mkdir -p (dirname $gh_completion_cache)
+    gh completion -s fish > $gh_completion_cache
+  end
+  source $gh_completion_cache
 end
 
 # Direnv loads .env file into environment in trusted directories
-# Ruby's dotenv does similar.
-if [ -x (which direnv) ]
+# Only need the hook, not the separate export call
+if command -q direnv
   direnv hook fish | source
-  direnv export fish |source
-end
-
-if [ -x (which shadowenv) ]
-  shadowenv init fish | source
 end
 
 # Git aliases
@@ -119,21 +99,15 @@ end
 # If iTerm shell integration is there, source it
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
-ulimit -n 2048
-
-# pyenv init
-status is-login; and pyenv init --path | source
-
 # Wasmer
-set -gx WASMER_DIR "/Users/natikgadzhi/.wasmer"
+set -gx WASMER_DIR "$HOME/.wasmer"
 # This line checks if the file $WASMER_DIR/wasmer.sh exists and has a size greater than zero
 # (using the -s test flag). If it exists, the script is sourced, which loads Wasmer's
 # environment variables and functions into the current shell session
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 
-# TODO: Unsure why, this started failing around January 2025s
-# source (brew --prefix asdf)/libexec/asdf.fish
-
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
-source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+if [ -d ~/.orbstack ];
+    source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+end
