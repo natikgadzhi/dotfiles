@@ -34,13 +34,6 @@ set -e Z_DATA_DIR
 set -xg Z_DATA $HOME/.local/share/z/data
 set -xg Z_DATA_DIR $HOME/.local/share/z
 
-# Set git signing key based on home directory
-# Lambda laptop has natik.gadzhi home, and this is the key it should use.
-if string match -q "*natik.gadzhi*" $HOME
-  set -xg GIT_CONFIG_USER_SIGNINGKEY 9D9EC67DDA83961A
-end
-
-
 # When GPG wants the key passphrase, but can't figure out which TTY to use to get it.
 # set -e SSH_AGENT_PID
 # set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)

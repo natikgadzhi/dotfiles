@@ -1,13 +1,10 @@
 # Will include lambda-specific config if it exists
 # that config overrides gpg signingkey
 
-[includeIf "gitdir:~/src/lambdal/"]
-    path = ~/src/lambdal/.gitconfig
-
 [user]
 	name = Natik Gadzhi
 	email = natik@respawn.io
-	signingkey = 19337530F90ACEC5
+	signingkey = ~/.ssh/id_ed25519.pub
 [push]
 	default = matching
 	autoSetupRemote = true
@@ -31,4 +28,6 @@
 [init]
 	defaultBranch = main
 [gpg]
-	program = /opt/homebrew/bin/gpg
+	format = ssh
+[tag]
+	gpgsign = true
