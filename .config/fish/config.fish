@@ -41,10 +41,13 @@ set -xg Z_DATA_DIR $HOME/.local/share/z
 # gpg-connect-agent updatestartuptty /bye >/dev/null
 # set -xg PINENTRY_USER_DATA "USE_CURSES=1"
 
-# # Check if ssh-agent is already running, if not start it
-# if not set -q SSH_AGENT_PID; or not ps -p $SSH_AGENT_PID > /dev/null 2>&1
-#     eval (ssh-agent -c) > /dev/null 2>&1
-# end
+# Start ssh-agent if not running, then load keys from macOS Keychain
+if status is-interactive
+    if not set -q SSH_AUTH_SOCK; or not test -S "$SSH_AUTH_SOCK"
+        eval (ssh-agent -c) >/dev/null 2>&1
+    end
+    ssh-add --apple-load-keychain 2>/dev/null
+end
 
 # pyenv setup was here, but this shit takes too long to load.
 # use `uv` instead.
