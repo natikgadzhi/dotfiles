@@ -41,7 +41,7 @@ set -xg Z_DATA_DIR $HOME/.local/share/z
 # gpg-connect-agent updatestartuptty /bye >/dev/null
 # set -xg PINENTRY_USER_DATA "USE_CURSES=1"
 
-# Check if ssh-agent is already running, if not start it
+# # Check if ssh-agent is already running, if not start it
 # if not set -q SSH_AGENT_PID; or not ps -p $SSH_AGENT_PID > /dev/null 2>&1
 #     eval (ssh-agent -c) > /dev/null 2>&1
 # end
