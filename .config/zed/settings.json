@@ -37,7 +37,7 @@
       "debounce_ms": 50
     },
     "inline": {
-      "update_debounce_ms": 1050,
+      "update_debounce_ms": 550,
       "enabled": true
     },
     "button": true
@@ -48,7 +48,10 @@
   },
   "redact_private_values": false,
   "inlay_hints": {
-    "enabled": true
+    "show_value_hints": true,
+    "show_other_hints": false,
+    "show_parameter_hints": false,
+    "enabled": false
   },
   "ssh_connections": [
     {
@@ -160,6 +163,11 @@
 
   // Override formatting on Python using Ruff
   "languages": {
+    "TypeScript": {
+      "inlay_hints": {
+        "show_background": false
+      }
+    },
     "Markdown": {
       "format_on_save": "off",
       "soft_wrap": "preferred_line_length"
