@@ -1,12 +1,12 @@
 # Basics
 if test (uname) = "Linux"
-    set EDITOR nvim
-    set VISUAL nvim
-    set GIT_EDITOR nvim
+    set -gx EDITOR nvim
+    set -gx VISUAL nvim
+    set -gx GIT_EDITOR nvim
 else
-    set EDITOR zed
-    set VISUAL zed
-    set GIT_EDITOR "zed --wait"
+    set -gx EDITOR zed
+    set -gx VISUAL zed
+    set -gx GIT_EDITOR "zed --wait"
 end
 
 # LC_CTYPE bug
