@@ -1,7 +1,13 @@
 # Basics
-set EDITOR zed
-set VISUAL zed
-set GIT_EDITOR "zed --wait"
+if test (uname) = "Linux"
+    set EDITOR nvim
+    set VISUAL nvim
+    set GIT_EDITOR nvim
+else
+    set EDITOR zed
+    set VISUAL zed
+    set GIT_EDITOR "zed --wait"
+end
 
 # LC_CTYPE bug
 set LC_CTYPE "en_US.UTF-8"
