@@ -97,9 +97,6 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 
 # Wasmer
 set -gx WASMER_DIR "$HOME/.wasmer"
-# This line checks if the file $WASMER_DIR/wasmer.sh exists and has a size greater than zero
-# (using the -s test flag). If it exists, the script is sourced, which loads Wasmer's
-# environment variables and functions into the current shell session
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
 
 # Added by OrbStack: command-line tools and integration

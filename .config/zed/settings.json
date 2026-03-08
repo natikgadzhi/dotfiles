@@ -76,7 +76,11 @@
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
+<<<<<<< HEAD
       "model": "claude-opus-4-5"
+=======
+      "model": "claude-sonnet-4"
+>>>>>>> 237c970 (nvim)
     }
   },
   "edit_predictions": {
