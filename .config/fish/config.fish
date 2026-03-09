@@ -25,6 +25,8 @@ if [ -d "$HOME/.local/bin" ]; set -g fish_user_paths "$HOME/.local/bin" $fish_us
 
 if [ -d "$HOME/.cargo/bin" ]; set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths; end
 
+if [ -d "/Applications/Obsidian.app/Contents/MacOS" ]; set -g fish_user_paths "/Applications/Obsidian.app/Contents/MacOS" $fish_user_paths; end
+
 if not contains "./bin" $PATH
   set -xg PATH ./bin $PATH
 end
