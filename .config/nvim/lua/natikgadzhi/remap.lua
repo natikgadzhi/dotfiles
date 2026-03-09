@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>-", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>-", "<cmd>NvimTreeToggle<cr>")
 
 -- Move chunks of code with automatic indentation
 vim.keymap.set("n", "J", "mzJ`z")

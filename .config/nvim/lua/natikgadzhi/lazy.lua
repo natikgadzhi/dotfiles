@@ -24,14 +24,28 @@ require("lazy").setup({
         end
     },
 
-    -- Tmux navigation
-    "christoomey/vim-tmux-navigator",
+    -- File tree
+    {
+        "nvim-tree/nvim-tree.lua",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        keys = {
+            { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle file tree" },
+        },
+        opts = {},
+    },
 
     -- Telescope fuzzy finder
     {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.8",
-        dependencies = { "nvim-lua/plenary.nvim" }
+        dependencies = { "nvim-lua/plenary.nvim" },
+        keys = {
+            { "<leader>pf", function() require("telescope.builtin").find_files() end, desc = "Find files" },
+            { "<C-p>", function() require("telescope.builtin").git_files() end, desc = "Git files" },
+            { "<leader>pg", function() require("telescope.builtin").live_grep() end, desc = "Live grep" },
+            { "<leader>pb", function() require("telescope.builtin").buffers() end, desc = "Buffers" },
+            { "<leader>ps", function() require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") }) end, desc = "Grep string" },
+        },
     },
 
     -- GitHub theme
@@ -41,7 +55,7 @@ require("lazy").setup({
         priority = 1000,
         config = function()
             require("github-theme").setup({})
-            -- vim.cmd("colorscheme github_dark_tritanopia")
+            vim.cmd("colorscheme github_dark_tritanopia")
         end,
     },
 
@@ -155,6 +169,14 @@ require("lazy").setup({
 
             vim.diagnostic.config({
                 virtual_text = true,
+                signs = {
+                    text = {
+                        [vim.diagnostic.severity.ERROR] = "E",
+                        [vim.diagnostic.severity.WARN] = "W",
+                        [vim.diagnostic.severity.HINT] = "H",
+                        [vim.diagnostic.severity.INFO] = "I",
+                    },
+                },
             })
         end,
     },
@@ -166,16 +188,12 @@ require("lazy").setup({
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-nvim-lsp",
-            "hrsh7th/cmp-nvim-lua",
             "L3MON4D3/LuaSnip",
             "saadparwaiz1/cmp_luasnip",
-            "rafamadriz/friendly-snippets",
         },
         config = function()
             local cmp = require("cmp")
             local cmp_select = { behavior = cmp.SelectBehavior.Select }
-
-            require("luasnip.loaders.from_vscode").lazy_load()
 
             cmp.setup({
                 snippet = {
@@ -192,7 +210,6 @@ require("lazy").setup({
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },
                     { name = "luasnip" },
-                    { name = "nvim_lua" },
                 }, {
                     { name = "buffer" },
                     { name = "path" },

@@ -8,6 +8,7 @@
 // from the command palette or from `Zed` application menu.
 
 {
+  "theme": "Ayu Dark",
   "relative_line_numbers": "enabled",
   "lsp_highlight_debounce": 75,
   "buffer_line_height": "comfortable",
