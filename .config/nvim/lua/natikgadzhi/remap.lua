@@ -24,8 +24,14 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete to void regi
 vim.keymap.set("n", "Q", "<nop>", { desc = "Disable ex mode" })
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format buffer" })
 
+-- Navigate splits / windows
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left split" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to split below" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to split above" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right split" })
+
 -- Navigate quickfix and location lists
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz", { desc = "Next quickfix item" })
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz", { desc = "Prev quickfix item" })
+vim.keymap.set("n", "]q", "<cmd>cnext<CR>zz", { desc = "Next quickfix item" })
+vim.keymap.set("n", "[q", "<cmd>cprev<CR>zz", { desc = "Prev quickfix item" })
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz", { desc = "Next location list item" })
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", { desc = "Prev location list item" })
