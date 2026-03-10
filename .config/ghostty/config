@@ -11,11 +11,11 @@ keybind = cmd+shift+w=close_window
 
 # Visual font, theme, cursors
 #
-# font-family = "JetBrains Mono"
-# font-size = 16
+font-family = "JetBrains Mono"
+font-size = 16
 
 # Try `xcodedarkhc` for higher contrast
-theme = "Ayu"
+theme = "Xcode Dark hc"
 cursor-style = underline
 
 quick-terminal-position = top
