@@ -11,7 +11,7 @@ keybind = cmd+shift+w=close_window
 
 # Visual font, theme, cursors
 #
-font-family = "JetBrains Mono"
+font-family = "Doom One"
 font-size = 16
 
 # Try `xcodedarkhc` for higher contrast
