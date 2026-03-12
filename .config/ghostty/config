@@ -8,6 +8,7 @@ keybind = global:ctrl+`=toggle_quick_terminal
 keybind = shift+ctrl+.=reload_config
 keybind = cmd+shift+w=close_window
 
+keybind = shift+enter=text:\n
 
 # Visual font, theme, cursors
 #
@@ -16,10 +17,7 @@ font-size = 16
 
 # Try `xcodedarkhc` for higher contrast
 theme = "Horizon"
-cursor-style = underline
-
-quick-terminal-position = top
-quick-terminal-autohide = true
+cursor-style = block
 
 initial-window = false
 
@@ -27,12 +25,14 @@ initial-window = false
 # Shell and OS integration
 #
 term=xterm-256color
+
+# Fish is set as system shell so the config is portable
 # command = /opt/homebrew/bin/fish --login --interactive
 shell-integration = fish
-shell-integration-features = cursor, sudo, title
+shell-integration-features = cursor, sudo, title, ssh-env, ssh-terminfo
 
 # Decoration was broken on MacOS 26
-# macos-titlebar-style = hidden
+macos-titlebar-style = tabs
 # window-decoration = false
 window-theme = system
 macos-option-as-alt = true
@@ -53,4 +53,7 @@ auto-update = download
 # Quick Terminal
 #
 quick-terminal-animation-duration = 0
-keybind = shift+enter=text:\n
+quick-terminal-position = center
+quick-terminal-autohide = true
+quick-terminal-size = 50%
+quick-terminal-screen = main
