@@ -31,5 +31,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
+vim.opt.clipboard = "unnamedplus"
+
 -- Colored vertical bar at the given column. Empty string disables it.
 vim.opt.colorcolumn = ""

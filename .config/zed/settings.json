@@ -14,45 +14,45 @@
   "buffer_line_height": "comfortable",
   "buffer_font_weight": 400.0,
   "preview_tabs": {
-    "enable_preview_from_file_finder": false
+    "enable_preview_from_file_finder": false,
   },
   "tabs": {
     "file_icons": false,
-    "git_status": true
+    "git_status": true,
   },
   "title_bar": {
     "show_menus": false,
     "show_user_picture": false,
     "show_onboarding_banner": false,
     "show_project_items": true,
-    "show_branch_icon": false
+    "show_branch_icon": false,
   },
   "debugger": {
-    "button": false
+    "button": false,
   },
   "search": {
-    "button": false
+    "button": false,
   },
   "diagnostics": {
     "lsp_pull_diagnostics": {
-      "debounce_ms": 50
+      "debounce_ms": 50,
     },
     "inline": {
       "update_debounce_ms": 550,
-      "enabled": true
+      "enabled": true,
     },
-    "button": true
+    "button": true,
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "redact_private_values": false,
   "inlay_hints": {
     "show_value_hints": true,
     "show_other_hints": false,
     "show_parameter_hints": false,
-    "enabled": false
+    "enabled": false,
   },
   "ssh_connections": [
     {
@@ -60,65 +60,53 @@
       "username": "natikgadzhi",
       "projects": [
         {
-          "paths": ["/etc/ssh"]
+          "paths": ["/etc/ssh"],
         },
         {
-          "paths": ["/home/natikgadzhi"]
-        }
-      ]
-    }
+          "paths": ["/home/natikgadzhi"],
+        },
+      ],
+    },
   ],
   "agent": {
     "inline_assistant_model": {
       "provider": "anthropic",
-      "model": "claude-opus-4-5-latest"
+      "model": "claude-opus-4-5-latest",
     },
     "default_profile": "write",
-    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
-<<<<<<< HEAD
-      "model": "claude-opus-4-5"
-=======
-      "model": "claude-sonnet-4"
->>>>>>> 237c970 (nvim)
-    }
+      "model": "claude-opus-4-6",
+    },
   },
   "edit_predictions": {
     "mode": "eager",
     "copilot": {
       "proxy": null,
-      "proxy_no_verify": null
+      "proxy_no_verify": null,
     },
-    "enabled_in_text_threads": false
-  },
-  "theme": {
-    "mode": "system",
-    "dark": "Flexoki Dark",
-    "light": "Catppuccin Mocha"
+    "enabled_in_text_threads": false,
   },
   "icon_theme": {
     "mode": "system",
     "light": "Colored Zed Icons Theme Dark",
-    "dark": "Colored Zed Icons Theme Dark"
+    "dark": "Colored Zed Icons Theme Dark",
   },
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
+
   "base_keymap": "Cursor",
 
   "project_panel": {
     "button": true,
     "scrollbar": {
-      "show": "never"
-    }
+      "show": "never",
+    },
   },
 
   "collaboration_panel": {
-    "button": false
+    "button": false,
   },
   "notification_panel": {
-    "button": false
+    "button": false,
   },
 
   "show_wrap_guides": true,
@@ -139,52 +127,52 @@
     "diagnostics": "all",
     "axes": {
       "horizontal": false,
-      "vertical": true
-    }
+      "vertical": true,
+    },
   },
 
   "git": {
     "git_gutter": "tracked_files",
-    "gutter_debounce": 500
+    "gutter_debounce": 500,
   },
 
   "terminal": {
     "shell": {
-      "program": "/opt/homebrew/bin/fish"
+      "program": "/opt/homebrew/bin/fish",
     },
     "font_family": "JetBrainsMono Nerd Font",
     "detect_venv": {
       "on": {
         "directories": ["venv", ".venv"],
-        "activate_script": "fish"
-      }
+        "activate_script": "fish",
+      },
     },
-    "working_directory": "current_project_directory"
+    "working_directory": "current_project_directory",
   },
 
   "file_finder": {
-    "modal_max_width": "large"
+    "modal_max_width": "large",
   },
 
   // Override formatting on Python using Ruff
   "languages": {
     "TypeScript": {
       "inlay_hints": {
-        "show_background": false
-      }
+        "show_background": false,
+      },
     },
     "Markdown": {
       "format_on_save": "off",
-      "soft_wrap": "preferred_line_length"
+      "soft_wrap": "preferred_line_length",
     },
     "TOML": {
-      "format_on_save": "off"
+      "format_on_save": "off",
     },
     "Python": {
       "preferred_line_length": 120,
       "tab_size": 2,
       "inlay_hints": {
-        "enabled": true
+        "enabled": true,
       },
       "format_on_save": "on",
       "formatter": {
@@ -192,10 +180,10 @@
           "command": "bash",
           "arguments": [
             "-c",
-            "uv run ruff format check --select=I --fix --stdin-filename {buffer_path} | uv run ruff format --stdin-filename {buffer_path}"
-          ]
-        }
-      }
-    }
-  }
+            "uv run ruff format check --select=I --fix --stdin-filename {buffer_path} | uv run ruff format --stdin-filename {buffer_path}",
+          ],
+        },
+      },
+    },
+  },
 }
