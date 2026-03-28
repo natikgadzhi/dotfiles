@@ -31,18 +31,7 @@ require("lazy").setup({
     opts = {},
   },
 
-  -- File tree
-  {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    keys = {
-      { "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle file tree" },
-      { "<leader>-", "<cmd>NvimTreeToggle<cr>", desc = "Toggle file tree" },
-    },
-    opts = {},
-  },
-
-  -- Telescope fuzzy finder
+-- Telescope fuzzy finder
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.8",
@@ -57,15 +46,15 @@ require("lazy").setup({
   },
 
   -- GitHub theme
-  -- {
-  --     "projekt0n/github-nvim-theme",
-  --     lazy = false,
-  --     priority = 1000,
-  --     config = function()
-  --         require("github-theme").setup({})
-  --         vim.cmd("colorscheme github_dark_tritanopia")
-  --     end,
-  -- },
+  {
+      "projekt0n/github-nvim-theme",
+      lazy = false,
+      priority = 1000,
+      config = function()
+          require("github-theme").setup({})
+          vim.cmd("colorscheme github_dark_tritanopia")
+      end,
+  },
 
   -- Treesitter for syntax highlighting
   {
@@ -74,7 +63,7 @@ require("lazy").setup({
     event = "BufReadPost",
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "typescript" },
+        ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "typescript", "swift" },
         sync_install = false,
         auto_install = true,
         highlight = {
@@ -214,6 +203,14 @@ require("lazy").setup({
           end,
         },
       })
+
+      -- sourcekit-lsp (Swift) — ships with the Swift toolchain, not managed by Mason
+      vim.lsp.config('sourcekit', {
+        cmd = { 'sourcekit-lsp' },
+        filetypes = { 'swift' },
+        root_markers = { 'Package.swift', '.git' },
+      })
+      vim.lsp.enable('sourcekit')
 
       -- LSP keymaps
       vim.api.nvim_create_autocmd("LspAttach", {
