@@ -8,7 +8,8 @@
 // from the command palette or from `Zed` application menu.
 
 {
-  "theme": "Ayu Dark",
+  "disable_ai": true,
+  "theme": "Flexoki Light",
   "relative_line_numbers": "enabled",
   "lsp_highlight_debounce": 75,
   "buffer_line_height": "comfortable",
@@ -69,6 +70,8 @@
     },
   ],
   "agent": {
+    "enable_feedback": false,
+    "single_file_review": true,
     "inline_assistant_model": {
       "provider": "anthropic",
       "model": "claude-opus-4-5-latest",
