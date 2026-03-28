@@ -2,12 +2,96 @@
   "env": {
     "SHELL": "/opt/homebrew/bin/fish"
   },
+  "permissions": {
+    "allow": [
+      "mcp__github__get_me",
+      "mcp__github__pull_request_read",
+      "mcp__github__list_pull_requests",
+      "mcp__github__search_pull_requests",
+      "mcp__github__search_code",
+      "mcp__github__search_issues",
+      "mcp__github__get_commit",
+      "mcp__github__list_commits",
+      "mcp__github__list_branches",
+      "mcp__github__get_file_contents",
+      "mcp__github__get_label",
+      "mcp__github__get_tag",
+      "mcp__github__list_tags",
+      "mcp__github__list_releases",
+      "mcp__github__get_latest_release",
+      "mcp__github__get_release_by_tag",
+      "mcp__github__list_issues",
+      "mcp__github__issue_read",
+      "mcp__github__get_teams",
+      "mcp__github__get_team_members",
+      "mcp__claude_ai_Atlassian__atlassianUserInfo",
+      "mcp__claude_ai_Atlassian__fetchAtlassian",
+      "mcp__claude_ai_Atlassian__getAccessibleAtlassianResources",
+      "mcp__claude_ai_Atlassian__getIssueLinkTypes",
+      "mcp__claude_ai_Atlassian__getJiraIssue",
+      "mcp__claude_ai_Atlassian__getJiraIssueRemoteIssueLinks",
+      "mcp__claude_ai_Atlassian__getJiraIssueTypeMetaWithFields",
+      "mcp__claude_ai_Atlassian__getJiraProjectIssueTypesMetadata",
+      "mcp__claude_ai_Atlassian__getTransitionsForJiraIssue",
+      "mcp__claude_ai_Atlassian__getVisibleJiraProjects",
+      "mcp__claude_ai_Atlassian__lookupJiraAccountId",
+      "mcp__claude_ai_Atlassian__searchAtlassian",
+      "mcp__claude_ai_Atlassian__searchJiraIssuesUsingJql",
+      "mcp__claude_ai_Notion__notion-fetch",
+      "mcp__claude_ai_Notion__notion-get-comments",
+      "mcp__claude_ai_Notion__notion-get-teams",
+      "mcp__claude_ai_Notion__notion-get-users",
+      "mcp__claude_ai_Notion__notion-search",
+      "mcp__claude_ai_Google_Calendar__gcal_list_calendars",
+      "mcp__claude_ai_Google_Calendar__gcal_list_events",
+      "mcp__claude_ai_Google_Calendar__gcal_get_event",
+      "mcp__claude_ai_Google_Calendar__gcal_find_meeting_times",
+      "mcp__claude_ai_Google_Calendar__gcal_find_my_free_time",
+      "mcp__claude_ai_Gmail__gmail_get_profile",
+      "mcp__claude_ai_Gmail__gmail_search_messages",
+      "mcp__claude_ai_Gmail__gmail_read_message",
+      "mcp__claude_ai_Gmail__gmail_read_thread",
+      "mcp__claude_ai_Gmail__gmail_list_labels",
+      "Bash(slack-cli *)",
+      "Bash(gdrive-cli *)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  },
+  "model": "opus[1m]",
   "enabledPlugins": {
     "obsidian@obsidian-skills": true,
     "feature-dev@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
     "playwright@claude-plugins-official": true,
     "greptile@claude-plugins-official": true,
-    "code-simplifier@claude-plugins-official": true
-  }
+    "code-simplifier@claude-plugins-official": true,
+    "autonatik@autonatik": true,
+    "lambdal-skills@lambdal-skills": true,
+    "claude-md-management@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "telegram@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "lambdal-skills": {
+      "source": {
+        "source": "github",
+        "repo": "lambdal/skills"
+      },
+      "autoUpdate": true
+    },
+    "autonatik": {
+      "source": {
+        "source": "github",
+        "repo": "natikgadzhi/autonatik",
+        "path": "/Users/natik.gadzhi/src/natikgadzhi/autonatik/.claude-plugin/marketplace.json"
+      },
+      "autoUpdate": true
+    }
+  },
+  "effortLevel": "high",
+  "voiceEnabled": true,
+  "skipDangerousModePermissionPrompt": true
 }
