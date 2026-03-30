@@ -30,6 +30,9 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to split below" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to split above" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right split" })
 
+-- File explorer
+vim.keymap.set("n", "<leader>-", vim.cmd.Ex, { desc = "Open netrw" })
+
 -- Navigate quickfix and location lists
 vim.keymap.set("n", "]q", "<cmd>cnext<CR>zz", { desc = "Next quickfix item" })
 vim.keymap.set("n", "[q", "<cmd>cprev<CR>zz", { desc = "Prev quickfix item" })
