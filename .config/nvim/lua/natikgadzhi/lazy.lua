@@ -34,7 +34,7 @@ require("lazy").setup({
 -- Telescope fuzzy finder
   {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.8",
+    branch = "master",
     dependencies = { "nvim-lua/plenary.nvim" },
     keys = {
       { "<leader>pf", function() require("telescope.builtin").find_files() end,                                      desc = "Find files" },
@@ -63,14 +63,10 @@ require("lazy").setup({
     build = ":TSUpdate",
     event = "BufReadPost",
     config = function()
-      require("nvim-treesitter.configs").setup({
+      require("nvim-treesitter").setup({
         ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "typescript", "swift" },
         sync_install = false,
         auto_install = true,
-        highlight = {
-          enable = true,
-          additional_vim_regex_highlighting = false,
-        },
       })
     end,
   },
