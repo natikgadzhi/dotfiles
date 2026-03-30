@@ -59,6 +59,7 @@ require("lazy").setup({
   -- Treesitter for syntax highlighting
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
     build = ":TSUpdate",
     event = "BufReadPost",
     config = function()
