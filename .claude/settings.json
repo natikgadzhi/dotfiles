@@ -67,7 +67,6 @@
     "playwright@claude-plugins-official": true,
     "greptile@claude-plugins-official": true,
     "code-simplifier@claude-plugins-official": true,
-    "autonatik@autonatik": true,
     "lambdal-skills@lambdal-skills": true,
     "claude-md-management@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
@@ -81,17 +80,10 @@
         "repo": "lambdal/skills"
       },
       "autoUpdate": true
-    },
-    "autonatik": {
-      "source": {
-        "source": "github",
-        "repo": "natikgadzhi/autonatik",
-        "path": "/Users/natik.gadzhi/src/natikgadzhi/autonatik/.claude-plugin/marketplace.json"
-      },
-      "autoUpdate": true
     }
   },
   "effortLevel": "high",
   "voiceEnabled": true,
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true
 }

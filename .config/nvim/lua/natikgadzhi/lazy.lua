@@ -45,14 +45,23 @@ require("lazy").setup({
     },
   },
 
-  -- GitHub theme
+  -- Doom One theme
   {
-      "projekt0n/github-nvim-theme",
+      "NTBBloodbath/doom-one.nvim",
       lazy = false,
       priority = 1000,
       config = function()
-          require("github-theme").setup({})
-          vim.cmd("colorscheme github_dark_tritanopia")
+          vim.g.doom_one_cursor_coloring = false
+          vim.g.doom_one_terminal_colors = true
+          vim.g.doom_one_italic_comments = true
+          vim.g.doom_one_enable_treesitter = true
+          vim.g.doom_one_diagnostics_text_color = true
+          vim.g.doom_one_pumblend_enable = false
+          vim.g.doom_one_pumblend_transparency = 20
+          vim.g.doom_one_plugin_telescope = true
+          vim.g.doom_one_plugin_trouble = true
+          vim.g.doom_one_plugin_whichkey = true
+          vim.cmd("colorscheme doom-one")
       end,
   },
 

@@ -9,7 +9,11 @@
 
 {
   "disable_ai": true,
-  "theme": "Flexoki Light",
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark Pro"
+  },
   "relative_line_numbers": "enabled",
   "lsp_highlight_debounce": 75,
   "buffer_line_height": "comfortable",
@@ -91,7 +95,7 @@
     "enabled_in_text_threads": false,
   },
   "icon_theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Colored Zed Icons Theme Dark",
     "dark": "Colored Zed Icons Theme Dark",
   },
