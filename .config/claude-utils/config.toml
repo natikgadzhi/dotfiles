@@ -1,0 +1,25 @@
+vault = "~/Documents/Obsidian/Personal"
+
+[[source]]
+name = "lambdal-weekly-review"
+from = "~/.local/share/lambdal/derived/weekly-review"
+to = "Synced/Weekly Reviews"
+pattern = "*/summary.md"
+rename = "{parent}.md"
+
+[[source]]
+name = "lambdal-research"
+from = "~/.local/share/lambdal/derived/research"
+to = "Synced/Research"
+
+[[source]]
+name = "autonatik-references"
+from = "~/src/natikgadzhi/autonatik/references"
+to = "Synced/References"
+
+[[source]]
+name = "autonatik-skills"
+from = "~/src/natikgadzhi/autonatik/skills"
+to = "Synced/Skills"
+pattern = "*/SKILL.md"
+rename = "{parent} skill.md"
