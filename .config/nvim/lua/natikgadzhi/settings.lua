@@ -35,3 +35,18 @@ vim.opt.clipboard = "unnamedplus"
 
 -- Colored vertical bar at the given column. Empty string disables it.
 vim.opt.colorcolumn = ""
+
+-- Hide tmux status bar when nvim is active (lualine replaces it).
+-- Tmux hooks in tmux.conf handle the case when switching between windows/panes.
+if vim.env.TMUX then
+  vim.api.nvim_create_autocmd({ "VimEnter", "VimResume" }, {
+    callback = function()
+      vim.fn.system("tmux set status off")
+    end,
+  })
+  vim.api.nvim_create_autocmd({ "VimLeave", "VimSuspend" }, {
+    callback = function()
+      vim.fn.system("tmux set status on")
+    end,
+  })
+end
