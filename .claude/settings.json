@@ -1,6 +1,7 @@
 {
   "env": {
-    "SHELL": "/opt/homebrew/bin/fish"
+    "SHELL": "/opt/homebrew/bin/fish",
+    "CLAUDE_CODE_NO_FLICKER": "1"
   },
   "permissions": {
     "allow": [
@@ -59,7 +60,7 @@
       "/tmp"
     ]
   },
-  "model": "opus[1m]",
+  "model": "sonnet[1m]",
   "hooks": {
     "SessionEnd": [
       {
@@ -67,13 +68,7 @@
           {
             "type": "command",
             "command": "/Users/natik.gadzhi/src/natikgadzhi/scripts/claude-session-export.py",
-            "timeout": 30
-          },
-          {
-            "type": "agent",
-            "prompt": "A session just ended. A preceding hook extracted metadata and wrote a session note to ~/.local/share/claude-sessions/.\n\n1. Read /tmp/claude-session-export-note-path.txt to get the note file path\n2. Read /tmp/claude-session-export-transcript.md to get the condensed session transcript\n3. Read the note itself to see the metadata and structure\n4. Generate a structured summary with these sections (omit any that have nothing noteworthy):\n   - **Goal**: What was the user trying to accomplish? (1-2 sentences)\n   - **Outcome**: What was accomplished? Was the goal met? (1-3 sentences)\n   - **Key Decisions**: Important decisions and rationale — architectural choices, tool selections, trade-offs\n   - **Problems & Resolutions**: Bugs, errors, wrong approaches — what happened and how it was resolved\n   - **Learnings**: Non-obvious insights, patterns, techniques discovered\n   - **Skills & Tools Assessment**: How tools/skills performed — issues, limitations, effective combinations\n5. Edit the note to replace the line '<!-- SUMMARY_PLACEHOLDER -->' and the placeholder text below it with the actual summary. Keep the '## Summary' heading.\n\nUse bullet points. Be concise — this is a reference document, not a narrative. No preamble.",
-            "timeout": 120,
-            "model": "claude-haiku-4-5-20251001"
+            "timeout": 120
           }
         ]
       }
@@ -109,7 +104,7 @@
       "autoUpdate": true
     }
   },
-  "effortLevel": "high",
+  "effortLevel": "medium",
   "voiceEnabled": true,
   "skipDangerousModePermissionPrompt": true,
   "skipAutoPermissionPrompt": true
