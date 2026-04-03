@@ -82,6 +82,10 @@ require("lazy").setup({
   {
     "nvim-treesitter/nvim-treesitter-context",
     event = "BufReadPost",
+    opts = {
+      throttle = true,
+      max_lines = 10000,
+    },
   },
 
   -- Undotree
@@ -123,23 +127,6 @@ require("lazy").setup({
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      local function tmux_windows()
-        if not vim.env.TMUX then return "" end
-        local output = vim.fn.system("tmux list-windows -F '#{window_index}:#{window_name}:#{window_active}'")
-        local windows = {}
-        for line in output:gmatch("[^\n]+") do
-          local idx, name, active = line:match("(%d+):(.+):(%d)")
-          if idx then
-            if active == "1" then
-              table.insert(windows, "[" .. idx .. ":" .. name .. "]")
-            else
-              table.insert(windows, idx .. ":" .. name)
-            end
-          end
-        end
-        return table.concat(windows, " ")
-      end
-
       require("lualine").setup({
         options = { section_separators = "", component_separators = "" },
         sections = {
@@ -147,7 +134,7 @@ require("lazy").setup({
           lualine_b = { "branch", "diff", "diagnostics" },
           lualine_c = { "filename" },
           lualine_x = { "filetype" },
-          lualine_y = { tmux_windows },
+          lualine_y = {},
           lualine_z = { "location" },
         },
       })

@@ -60,7 +60,7 @@
       "/tmp"
     ]
   },
-  "model": "opus[1m]",
+  "model": "Opus",
   "hooks": {
     "SessionEnd": [
       {
