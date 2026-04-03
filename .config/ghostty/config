@@ -10,6 +10,9 @@ keybind = cmd+shift+w=close_window
 
 keybind = shift+enter=text:\n
 
+# Copy on select, matching tmux behavior
+copy-on-select = clipboard
+
 # Visual font, theme, cursors
 #
 font-family = "Doom One"
