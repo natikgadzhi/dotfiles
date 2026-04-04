@@ -39,6 +39,7 @@ macos-titlebar-style = tabs
 # window-decoration = false
 window-theme = system
 macos-option-as-alt = true
+macos-non-native-fullscreen = true
 
 # YOLO updates
 auto-update-channel = tip
