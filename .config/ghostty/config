@@ -18,11 +18,12 @@ copy-on-select = clipboard
 
 # Visual font, theme, cursors
 #
-font-family = "Doom One"
+font-family = "Jetbrains Mono"
 font-size = 16
+font-feature = "liga"
 
 # Try `xcodedarkhc` for higher contrast
-theme = "Horizon"
+theme = "Doom One"
 cursor-style = block
 
 initial-window = false

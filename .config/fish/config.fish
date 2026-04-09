@@ -112,3 +112,10 @@ set -gx WASMER_DIR "$HOME/.wasmer"
 if [ -d ~/.orbstack ];
     source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 end
+
+# pnpm
+set -gx PNPM_HOME "/Users/natik.gadzhi/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
