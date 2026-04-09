@@ -18,9 +18,17 @@ copy-on-select = clipboard
 
 # Visual font, theme, cursors
 #
-font-family = "Jetbrains Mono"
+font-family = "JetBrains Mono Regular"
 font-size = 16
 font-feature = "liga"
+
+font-family-bold = "JetBrains Mono SemiBold"
+font-family-italic = "JetBrains Mono Italic"
+font-family-bold-italic = "JetBrains Mono SemiBold Italic"
+
+# Optional: Adjust spacing for a more comfortable look
+adjust-cell-height = 1.5%
+# font-thicken = true
 
 # Try `xcodedarkhc` for higher contrast
 theme = "Doom One"
