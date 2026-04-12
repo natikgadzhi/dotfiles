@@ -96,6 +96,17 @@ require("lazy").setup({
     },
   },
 
+  -- Diff viewer for git diffs and merge conflicts
+  {
+    "sindrets/diffview.nvim",
+    cmd = { "DiffviewOpen", "DiffviewFileHistory" },
+    keys = {
+      { "<leader>gd", "<cmd>DiffviewOpen<cr>",          desc = "Diffview open" },
+      { "<leader>gh", "<cmd>DiffviewFileHistory %<cr>",  desc = "File history" },
+    },
+    opts = {},
+  },
+
   -- Copy GitHub permalink to current line or selection
   {
     "linrongbin16/gitlinker.nvim",
