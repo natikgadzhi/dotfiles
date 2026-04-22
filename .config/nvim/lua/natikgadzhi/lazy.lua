@@ -173,7 +173,6 @@ require("lazy").setup({
   -- Python virtualenv selector
   {
     "linux-cultist/venv-selector.nvim",
-    branch = "regexp",
     dependencies = { "neovim/nvim-lspconfig", "nvim-telescope/telescope.nvim" },
     ft = "python",
     keys = {

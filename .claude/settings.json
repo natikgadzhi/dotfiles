@@ -72,6 +72,26 @@
           }
         ]
       }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -n \"$TMUX\" ] && tmux display-message -d 5000 'Claude: needs your input' 2>/dev/null || true"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -n \"$TMUX\" ] && tmux display-message -d 3000 'Claude: done' 2>/dev/null || true"
+          }
+        ]
+      }
     ]
   },
   "enabledPlugins": {
