@@ -1,18 +1,18 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "provider": {
-    "ollama": {
+    "lmstudio": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "Ollama (Local)",
+      "name": "LM Studio (MLX)",
       "options": {
-        "baseURL": "http://localhost:11434/v1"
+        "baseURL": "http://localhost:1234/v1"
       },
       "models": {
-        "qwen3.6:27b-coding-nvfp4": {
+        "qwen/qwen3.6-27b": {
           "tools": true
         }
       }
     }
   },
-  "model": "ollama/qwen3.6:27b-coding-nvfp4"
+  "model": "lmstudio/qwen/qwen3.6-27b"
 }
