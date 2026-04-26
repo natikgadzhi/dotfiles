@@ -20,7 +20,7 @@
       path: .claude/CLAUDE.md
     ~/.claude/settings.json:
       path: .claude/settings.json
-    ~/.claude/create-worktree.md:
-      path: .claude/create-worktree.md
+    ~/.local/share/opencode/auth.json:
+      path: .local/share/opencode/auth.json
 
 - shell: []
