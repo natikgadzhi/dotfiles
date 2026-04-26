@@ -42,20 +42,8 @@ set -e Z_DATA_DIR
 set -xg Z_DATA $HOME/.local/share/z/data
 set -xg Z_DATA_DIR $HOME/.local/share/z
 
-# When GPG wants the key passphrase, but can't figure out which TTY to use to get it.
-# set -e SSH_AGENT_PID
-# set -xg SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-# set -xg GPG_TTY (tty)
-# gpg-connect-agent updatestartuptty /bye >/dev/null
-# set -xg PINENTRY_USER_DATA "USE_CURSES=1"
-
-# Start ssh-agent if not running, then load keys from macOS Keychain
-if status is-interactive
-    if not set -q SSH_AUTH_SOCK; or not test -S "$SSH_AUTH_SOCK"
-        eval (ssh-agent -c) >/dev/null 2>&1
-    end
-    ssh-add --apple-load-keychain 2>/dev/null
-end
+# macOS launchd manages ssh-agent on demand; passphrase comes from Keychain
+# via `UseKeychain yes` in ~/.ssh/config. To save it: `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
 
 # pyenv setup was here, but this shit takes too long to load.
 # use `uv` instead.
