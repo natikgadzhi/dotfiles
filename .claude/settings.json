@@ -58,7 +58,8 @@
     ],
     "additionalDirectories": [
       "/tmp"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "model": "Opus",
   "hooks": {
@@ -127,6 +128,7 @@
   },
   "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
-  "skipAutoPermissionPrompt": true,
-  "voiceEnabled": true
+  "editorMode": "vim",
+  "voiceEnabled": true,
+  "skipAutoPermissionPrompt": true
 }
