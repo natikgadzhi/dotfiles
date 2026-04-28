@@ -31,3 +31,5 @@
 	format = ssh
 [tag]
 	gpgsign = true
+[url "git@github.com:lambdal/"]
+	insteadOf = https://github.com/lambdal/
