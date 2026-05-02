@@ -38,6 +38,7 @@
 .config/hub
 .ngrok2
 .kube
+.local/share/opencode/auth.json
 
 # nvim undo and tem files
 undodir
