@@ -10,16 +10,16 @@
 {
   "cli_default_open_behavior": "new_window",
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "git_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "disable_ai": true,
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "One Light",
-    "dark": "Nordfox - opaque"
+    "dark": "New Darcula",
   },
   "relative_line_numbers": "enabled",
   "lsp_highlight_debounce": 75,
@@ -38,7 +38,6 @@
     "show_user_picture": false,
     "show_onboarding_banner": false,
     "show_project_items": true,
-    "show_branch_icon": false,
   },
   "debugger": {
     "button": false,
@@ -101,7 +100,6 @@
       "proxy": null,
       "proxy_no_verify": null,
     },
-    "enabled_in_text_threads": false,
   },
   "icon_theme": {
     "mode": "light",
@@ -121,9 +119,6 @@
 
   "collaboration_panel": {
     "dock": "left",
-    "button": false,
-  },
-  "notification_panel": {
     "button": false,
   },
 
@@ -181,7 +176,7 @@
     },
     "Markdown": {
       "format_on_save": "off",
-      "soft_wrap": "preferred_line_length",
+      "soft_wrap": "prefer_line",
     },
     "TOML": {
       "format_on_save": "off",
