@@ -38,7 +38,18 @@ require("lazy").setup({
     dependencies = { "nvim-lua/plenary.nvim" },
     keys = {
       { "<leader>pf", function() require("telescope.builtin").find_files() end,                                      desc = "Find files" },
-      { "<C-p>",      function() require("telescope.builtin").git_files() end,                                       desc = "Git files" },
+      { "<C-p>",      function()
+          local builtin = require("telescope.builtin")
+          local dir = vim.b.netrw_curdir
+            or (vim.bo.buftype == "" and vim.fn.expand("%:p:h"))
+            or vim.fn.getcwd()
+          local git_root = vim.fs.root(dir, ".git")
+          if git_root then
+            builtin.git_files({ cwd = git_root })
+          else
+            builtin.find_files({ cwd = dir })
+          end
+        end, desc = "Git files (smart: buffer dir → git root, else find_files)" },
       { "<leader>pg", function() require("telescope.builtin").live_grep() end,                                       desc = "Live grep" },
       { "<leader>pb", function() require("telescope.builtin").buffers() end,                                         desc = "Buffers" },
       { "<leader>ps", function() require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") }) end, desc = "Grep string" },
