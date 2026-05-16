@@ -38,3 +38,12 @@ vim.opt.colorcolumn = ""
 
 -- Collapse the command line into the statusline when not in use.
 vim.opt.cmdheight = 0
+
+-- Markdown-specific settings
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.opt_local.wrap = true
+    vim.opt_local.colorcolumn = "80,120"
+  end,
+})

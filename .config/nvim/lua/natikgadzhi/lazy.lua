@@ -323,6 +323,11 @@ require("lazy").setup({
           { name = "path" },
         }),
       })
+
+      -- Disable completion in markdown files
+      cmp.setup.filetype("markdown", {
+        sources = {},
+      })
     end,
   },
 })
