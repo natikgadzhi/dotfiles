@@ -16,7 +16,7 @@
   "git_panel": {
     "dock": "left",
   },
-  "disable_ai": true,
+  "disable_ai": false,
   "theme": {
     "mode": "dark",
     "light": "One Light",
