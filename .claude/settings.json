@@ -56,12 +56,11 @@
       "Bash(slack-cli *)",
       "Bash(gdrive-cli *)"
     ],
+    "defaultMode": "auto",
     "additionalDirectories": [
       "/tmp"
-    ],
-    "defaultMode": "auto"
+    ]
   },
-  "model": "Opus",
   "hooks": {
     "SessionEnd": [
       {
@@ -129,6 +128,6 @@
   "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
   "editorMode": "vim",
-  "voiceEnabled": true,
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "voiceEnabled": true
 }

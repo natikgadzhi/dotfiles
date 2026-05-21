@@ -8,6 +8,7 @@
 // from the command palette or from `Zed` application menu.
 
 {
+  "ui_font_weight": 300.0,
   "cli_default_open_behavior": "new_window",
   "outline_panel": {
     "dock": "left",
@@ -24,7 +25,7 @@
   "relative_line_numbers": "enabled",
   "lsp_highlight_debounce": 75,
   "buffer_line_height": "comfortable",
-  "buffer_font_weight": 400.0,
+  "buffer_font_weight": 300.0,
   "preview_tabs": {
     "enable_preview_from_file_finder": false,
   },
@@ -66,27 +67,13 @@
     "show_parameter_hints": false,
     "enabled": false,
   },
-  "ssh_connections": [
-    {
-      "host": "clownas.local",
-      "username": "natikgadzhi",
-      "projects": [
-        {
-          "paths": ["/etc/ssh"],
-        },
-        {
-          "paths": ["/home/natikgadzhi"],
-        },
-      ],
-    },
-  ],
   "agent": {
     "dock": "right",
     "enable_feedback": false,
     "single_file_review": true,
     "inline_assistant_model": {
       "provider": "anthropic",
-      "model": "claude-opus-4-5-latest",
+      "model": "claude-opus-4-7-latest",
     },
     "default_profile": "write",
     "default_model": {
@@ -128,8 +115,8 @@
 
   // stock font is honestly pretty cool
   "buffer_font_family": "JetBrains Mono",
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "ui_font_size": 15.0,
+  "buffer_font_size": 15.0,
 
   "scrollbar": {
     "show": "auto",
