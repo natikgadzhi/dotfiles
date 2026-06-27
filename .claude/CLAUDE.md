@@ -18,6 +18,13 @@ New machine: clone dotfiles, point ~/.claude/CLAUDE.md at this file, then:
 
 <!-- Guidance specific to the Claude Code CLI (and not in the general profile) goes here. -->
 
+## Where session data lives
+
+- **Raw transcripts** (Claude Code's own, JSONL): `~/.claude/projects/<slugified-cwd>/<session-id>.jsonl`.
+- **Generated markdown summaries**: `~/.local/share/claude-sessions/`, named `{date}-{project}-{short-id}.md`.
+  Produced by the `SessionEnd` hook `~/src/natikgadzhi/scripts/claude-session-export.py`; `obsidian-tools`
+  then syncs them into the Obsidian vault.
+
 # Personal profile
 
 @~/.claude/profile.local.md
