@@ -10,7 +10,8 @@ stops at whitespace, so the indirection through a no-space symlink is deliberate
 
 New machine: clone dotfiles, point ~/.claude/CLAUDE.md at this file, then:
     ln -sfn "$HOME/Documents/Obsidian/Personal/Claude Profile Prompt.md" "$HOME/.claude/profile.local.md"
-(adjust the note path if the vault lives elsewhere on that machine).
+    ln -sfn "$HOME/Documents/Obsidian/Personal/Claude Writing Style.md" "$HOME/.claude/writing-style.local.md"
+(adjust the note paths if the vault lives elsewhere on that machine).
 -->
 
 # Claude Code — CLI-specific notes
@@ -20,3 +21,7 @@ New machine: clone dotfiles, point ~/.claude/CLAUDE.md at this file, then:
 # Personal profile
 
 @~/.claude/profile.local.md
+
+# Writing style
+
+@~/.claude/writing-style.local.md
