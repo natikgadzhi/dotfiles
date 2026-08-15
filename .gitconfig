@@ -33,3 +33,8 @@
 	gpgsign = true
 [url "git@github.com:lambdal/"]
 	insteadOf = https://github.com/lambdal/
+
+# Machine-local overrides (editor, credential helper, work identity).
+# Not tracked; later includes win, so this overrides everything above.
+[include]
+	path = ~/.gitconfig.local
