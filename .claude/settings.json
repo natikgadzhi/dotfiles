@@ -67,7 +67,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/natik.gadzhi/src/natikgadzhi/scripts/claude-session-export.py",
+            "command": "$HOME/src/natikgadzhi/scripts/claude-session-export.py",
             "timeout": 120
           }
         ]
@@ -89,6 +89,19 @@
           {
             "type": "command",
             "command": "[ -n \"$TMUX\" ] && tmux display-message -d 3000 'Claude: done' 2>/dev/null || true"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Read|Grep|Glob|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 $HOME/.claude/hooks/etalon_golden_firewall.py",
+            "timeout": 10,
+            "statusMessage": "etalon firewall"
           }
         ]
       }

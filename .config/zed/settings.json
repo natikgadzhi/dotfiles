@@ -16,16 +16,16 @@
   "git_panel": {
     "dock": "left",
   },
-  "disable_ai": false,
+  "disable_ai": true,
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "New Darcula",
+    "dark": "Everforest Dark Hard (material)",
   },
   "relative_line_numbers": "enabled",
   "lsp_highlight_debounce": 75,
   "buffer_line_height": "comfortable",
-  "buffer_font_weight": 300.0,
+  "buffer_font_weight": 350.0,
   "preview_tabs": {
     "enable_preview_from_file_finder": false,
   },
@@ -89,9 +89,9 @@
     },
   },
   "icon_theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Colored Zed Icons Theme Dark",
-    "dark": "Colored Zed Icons Theme Dark",
+    "dark": "Colored Zed Icons Theme Dark"
   },
 
   "base_keymap": "Cursor",
@@ -115,7 +115,7 @@
 
   // stock font is honestly pretty cool
   "buffer_font_family": "JetBrains Mono",
-  "ui_font_size": 16.0,
+  "ui_font_size": 17.0,
   "buffer_font_size": 15.0,
 
   "scrollbar": {
