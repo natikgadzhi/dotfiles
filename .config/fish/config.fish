@@ -101,14 +101,21 @@ if [ -d ~/.orbstack ];
     source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 end
 
-# pnpm
-set -gx PNPM_HOME "/Users/natik.gadzhi/Library/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+# pnpm — installers hardcode an absolute path here; derive it from $HOME so it
+# is correct on every machine, and only set it when the directory exists.
+if [ -d "$HOME/Library/pnpm" ]
+    set -gx PNPM_HOME "$HOME/Library/pnpm"
+else if [ -d "$HOME/.local/share/pnpm" ]
+    set -gx PNPM_HOME "$HOME/.local/share/pnpm"
+end
+if set -q PNPM_HOME; and not string match -q -- $PNPM_HOME $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
 
 # Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/natikgadzhi/.lmstudio/bin
+if [ -d "$HOME/.lmstudio/bin" ]
+    set -gx PATH $PATH "$HOME/.lmstudio/bin"
+end
 # End of LM Studio CLI section
 
