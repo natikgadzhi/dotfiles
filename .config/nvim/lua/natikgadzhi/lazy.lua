@@ -56,24 +56,44 @@ require("lazy").setup({
     },
   },
 
-  -- Doom One theme
+  -- opencode's palette, matching Ghostty (themes/opencode) and Claude Code
+  -- (theme = dark-ansi). mini.base16 generates the full highlight set —
+  -- treesitter, LSP, telescope, gitsigns, lualine — from these 16 colours, so
+  -- the palette is the only thing to maintain.
+  --
+  -- Mapped from packages/tui/src/theme/assets/opencode.json upstream. base06 is
+  -- the one invention: opencode's dark theme has no step between #eeeeee and
+  -- #ffffff, so it is interpolated.
   {
-      "NTBBloodbath/doom-one.nvim",
-      lazy = false,
-      priority = 1000,
-      config = function()
-          vim.g.doom_one_cursor_coloring = false
-          vim.g.doom_one_terminal_colors = true
-          vim.g.doom_one_italic_comments = true
-          vim.g.doom_one_enable_treesitter = true
-          vim.g.doom_one_diagnostics_text_color = true
-          vim.g.doom_one_pumblend_enable = false
-          vim.g.doom_one_pumblend_transparency = 20
-          vim.g.doom_one_plugin_telescope = true
-          vim.g.doom_one_plugin_trouble = true
-          vim.g.doom_one_plugin_whichkey = true
-          vim.cmd("colorscheme doom-one")
-      end,
+    "echasnovski/mini.base16",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("mini.base16").setup({
+        palette = {
+          base00 = "#0a0a0a", -- background
+          base01 = "#141414", -- panel / status bar background
+          base02 = "#323232", -- selection background
+          base03 = "#606060", -- comments, invisibles
+          base04 = "#808080", -- muted text
+          base05 = "#eeeeee", -- default foreground
+          base06 = "#f5f5f5", -- light foreground (interpolated)
+          base07 = "#ffffff", -- lightest foreground
+          base08 = "#e06c75", -- variables, errors      (opencode error)
+          base09 = "#f5a742", -- constants, numbers     (opencode warning)
+          base0A = "#e5c07b", -- classes, search        (opencode yellow)
+          base0B = "#7fd88f", -- strings                (opencode success)
+          base0C = "#56b6c2", -- escapes, regex         (opencode info)
+          base0D = "#5c9cf5", -- functions              (opencode secondary)
+          base0E = "#9d7cd8", -- keywords               (opencode accent)
+          base0F = "#fab283", -- special                (opencode primary)
+        },
+        use_cterm = true,
+      })
+      -- mini.base16 applies highlights directly and leaves colors_name unset;
+      -- name it so :colorscheme and plugins that sniff it have an answer.
+      vim.g.colors_name = "opencode"
+    end,
   },
 
   -- Treesitter for syntax highlighting
