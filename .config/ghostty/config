@@ -17,9 +17,6 @@ keybind = super+c=copy_to_clipboard
 
 keybind = shift+enter=text:\n
 
-# Clear screen in tmux: send C-a C-l (prefix + C-l) which triggers tmux clear binding
-keybind = super+k=text:\x01\x0c
-
 # Copy on select, matching tmux behavior
 copy-on-select = clipboard
 
