@@ -54,5 +54,10 @@ undodir
 # ...and the backups left behind when that file gets repaired.
 .config/fish/*.bak
 
+# tpm clones plugins next to the tmux config, and ~/.config/tmux is symlinked
+# here too, so they land in this repo. They are upstream checkouts pinned by
+# tmux.conf's @plugin lines — reinstall with prefix+I, don't vendor them.
+.config/tmux/plugins/
+
 # Machine-local git overrides (editor, credential helper).
 .gitconfig.local
