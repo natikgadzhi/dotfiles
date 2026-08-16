@@ -51,6 +51,8 @@ undodir
 # ~/.config/fish is a symlinked directory those writes land in this repo —
 # which synced Homebrew paths onto Linux. Prompt config lives in conf.d/pure.fish.
 .config/fish/fish_variables
+# ...and the backups left behind when that file gets repaired.
+.config/fish/*.bak
 
 # Machine-local git overrides (editor, credential helper).
 .gitconfig.local

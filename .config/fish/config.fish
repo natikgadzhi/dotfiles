@@ -119,3 +119,10 @@ if [ -d "$HOME/.lmstudio/bin" ]
 end
 # End of LM Studio CLI section
 
+# opencode — its installer appends `fish_add_path /home/<user>/.opencode/bin`
+# with the path hardcoded, which is wrong on the other machine. Same treatment
+# as pnpm above: derive from $HOME, and only when the directory exists.
+if [ -d "$HOME/.opencode/bin" ]
+    fish_add_path "$HOME/.opencode/bin"
+end
+
