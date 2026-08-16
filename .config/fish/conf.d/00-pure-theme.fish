@@ -49,7 +49,7 @@ set -g pure_color_warning yellow
 set -g pure_enable_aws_profile true
 set -g pure_enable_container_detection true
 set -g pure_enable_git true
-set -g pure_enable_k8s true
+set -g pure_enable_k8s false
 set -g pure_enable_nixdevshell false
 set -g pure_enable_single_line_prompt false
 set -g pure_enable_virtualenv true
@@ -78,3 +78,14 @@ set -g pure_symbol_virtualenv_prefix ''
 set -g pure_threshold_command_duration 5
 set -g pure_truncate_prompt_current_directory_keeps 2
 set -g pure_truncate_window_title_current_directory_keeps -1
+
+# Show the machine name on every prompt, not just over SSH.
+#
+# Pure fills that slot with _pure_prompt_ssh, which prints user@host only
+# when $SSH_CONNECTION is set — useless in tmux, mosh, and console sessions
+# where the variable never reaches the shell. Defining the function here
+# shadows the vendored functions/_pure_prompt_ssh.fish, because fish only
+# autoloads a function that is not already defined.
+function _pure_prompt_ssh
+    echo (_pure_set_color $pure_color_hostname)$hostname
+end
