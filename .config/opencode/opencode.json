@@ -1,4 +1,18 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "openrouter/qwen3.7-max"
+  "provider": {
+    "lmstudio": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio (MLX)",
+      "options": {
+        "baseURL": "http://localhost:1234/v1"
+      },
+      "models": {
+        "qwen/qwen3.6-27b": {
+          "tools": true
+        }
+      }
+    }
+  },
+  "model": "openrouter/qwen/qwen3.7-max"
 }
