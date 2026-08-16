@@ -40,8 +40,10 @@ font-style-bold-italic = "SemiBold Italic"
 adjust-cell-height = 1.5%
 # font-thicken = true
 
-# Try `xcodedarkhc` for higher contrast
-theme = "Doom One"
+# `opencode` is a local theme in themes/ — opencode's own palette, so the TUI,
+# Ghostty and Claude Code (theme = dark-ansi) all agree. Was "Doom One"; try
+# `xcodedarkhc` for higher contrast.
+theme = opencode
 cursor-style = block
 
 initial-window = false

@@ -1,0 +1,37 @@
+# opencode's default dark theme, transcribed for Ghostty.
+#
+# Source of truth: packages/tui/src/theme/assets/opencode.json in
+# anomalyco/opencode. The upstream theme defines semantic roles (primary,
+# accent, error...) rather than a 16-colour ANSI ramp, so the palette below is
+# a mapping, not a copy: each ANSI slot takes the opencode colour that plays
+# that role. Backgrounds, foreground, cursor and selection are exact.
+
+background = #0a0a0a
+foreground = #eeeeee
+
+cursor-color = #fab283
+cursor-text = #0a0a0a
+
+selection-background = #323232
+selection-foreground = #eeeeee
+
+# normal
+palette = 0=#1e1e1e
+palette = 1=#e06c75
+palette = 2=#7fd88f
+palette = 3=#e5c07b
+palette = 4=#5c9cf5
+palette = 5=#9d7cd8
+palette = 6=#56b6c2
+palette = 7=#eeeeee
+
+# bright — 8 and 15 come from the upstream grey ramp; 11 uses opencode's
+# warning orange so bright yellow stays distinguishable from normal yellow.
+palette = 8=#606060
+palette = 9=#e06c75
+palette = 10=#7fd88f
+palette = 11=#f5a742
+palette = 12=#5c9cf5
+palette = 13=#9d7cd8
+palette = 14=#56b6c2
+palette = 15=#ffffff
