@@ -92,19 +92,6 @@
           }
         ]
       }
-    ],
-    "PreToolUse": [
-      {
-        "matcher": "Read|Grep|Glob|Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "python3 $HOME/.claude/hooks/etalon_golden_firewall.py",
-            "timeout": 10,
-            "statusMessage": "etalon firewall"
-          }
-        ]
-      }
     ]
   },
   "enabledPlugins": {
