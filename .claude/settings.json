@@ -107,7 +107,8 @@
     "skill-creator@claude-plugins-official": true,
     "telegram@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true,
-    "frontend-design@claude-plugins-official": true
+    "frontend-design@claude-plugins-official": true,
+    "i-have-adhd@i-have-adhd": true
   },
   "extraKnownMarketplaces": {
     "lambdal-skills": {
@@ -123,6 +124,12 @@
         "repo": "natikgadzhi/autonatik"
       },
       "autoUpdate": true
+    },
+    "i-have-adhd": {
+      "source": {
+        "source": "github",
+        "repo": "ayghri/i-have-adhd"
+      }
     }
   },
   "effortLevel": "high",
@@ -131,5 +138,6 @@
   "editorMode": "vim",
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "model": "fable"
 }
