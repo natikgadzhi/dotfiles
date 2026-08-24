@@ -62,5 +62,9 @@
       "*.env.*": "deny",
       "*.env.example": "allow"
     }
-  }
+  },
+  "plugin": [
+    "cc-safety-net@latest",
+    "/Users/natik.gadzhi/.config/opencode/vendor/i-have-adhd/.opencode/plugins/i-have-adhd.mjs"
+  ]
 }
