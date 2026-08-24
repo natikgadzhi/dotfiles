@@ -20,7 +20,7 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "opencode",
+    "dark": "Dracula",
   },
   "relative_line_numbers": "enabled",
   "lsp_highlight_debounce": 75,

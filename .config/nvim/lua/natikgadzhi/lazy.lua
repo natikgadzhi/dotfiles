@@ -56,14 +56,16 @@ require("lazy").setup({
     },
   },
 
-  -- opencode's palette, matching Ghostty (themes/opencode) and Claude Code
-  -- (theme = dark-ansi). mini.base16 generates the full highlight set —
-  -- treesitter, LSP, telescope, gitsigns, lualine — from these 16 colours, so
-  -- the palette is the only thing to maintain.
+  -- Dracula, matching opencode's `dracula` theme (set in the TUI, persisted
+  -- in ~/.local/state/opencode/kv.json) and Ghostty (theme = Dracula): full
+  -- #282a36 background, purple #bd93f9 accents. mini.base16 generates the
+  -- full highlight set — treesitter, LSP, telescope, gitsigns, lualine —
+  -- from these 16 colours, so the palette is the only thing to maintain.
   --
-  -- Mapped from packages/tui/src/theme/assets/opencode.json upstream. base06 is
-  -- the one invention: opencode's dark theme has no step between #eeeeee and
-  -- #ffffff, so it is interpolated.
+  -- Syntax colours are the official Dracula palette (keywords/numbers purple,
+  -- functions green, strings yellow, types cyan, operators pink); base04 is
+  -- the one invention: Dracula has no step between the comment blue-grey and
+  -- the foreground, so it is interpolated.
   {
     "echasnovski/mini.base16",
     lazy = false,
@@ -71,28 +73,28 @@ require("lazy").setup({
     config = function()
       require("mini.base16").setup({
         palette = {
-          base00 = "#0a0a0a", -- background
-          base01 = "#141414", -- panel / status bar background
-          base02 = "#323232", -- selection background
-          base03 = "#606060", -- comments, invisibles
-          base04 = "#808080", -- muted text
-          base05 = "#eeeeee", -- default foreground
-          base06 = "#f5f5f5", -- light foreground (interpolated)
+          base00 = "#282a36", -- background          (Dracula background)
+          base01 = "#21222c", -- panel / status bar background (Dracula darker bg)
+          base02 = "#44475a", -- selection background (Dracula current line)
+          base03 = "#6272a4", -- comments, invisibles (Dracula comment)
+          base04 = "#adb5cb", -- muted text (interpolated: comment → foreground)
+          base05 = "#f8f8f2", -- default foreground  (Dracula foreground)
+          base06 = "#fbfbfa", -- light foreground (interpolated)
           base07 = "#ffffff", -- lightest foreground
-          base08 = "#e06c75", -- variables, errors      (opencode error)
-          base09 = "#f5a742", -- constants, numbers     (opencode warning)
-          base0A = "#e5c07b", -- classes, search        (opencode yellow)
-          base0B = "#7fd88f", -- strings                (opencode success)
-          base0C = "#56b6c2", -- escapes, regex         (opencode info)
-          base0D = "#5c9cf5", -- functions              (opencode secondary)
-          base0E = "#9d7cd8", -- keywords               (opencode accent)
-          base0F = "#fab283", -- special                (opencode primary)
+          base08 = "#ff5555", -- variables, errors   (Dracula red)
+          base09 = "#bd93f9", -- constants, numbers  (Dracula purple)
+          base0A = "#8be9fd", -- classes, search     (Dracula cyan)
+          base0B = "#f1fa8c", -- strings             (Dracula yellow)
+          base0C = "#ff79c6", -- escapes, operators  (Dracula pink)
+          base0D = "#50fa7b", -- functions           (Dracula green)
+          base0E = "#bd93f9", -- keywords            (Dracula purple)
+          base0F = "#ffb86c", -- special             (Dracula orange)
         },
         use_cterm = true,
       })
       -- mini.base16 applies highlights directly and leaves colors_name unset;
       -- name it so :colorscheme and plugins that sniff it have an answer.
-      vim.g.colors_name = "opencode"
+      vim.g.colors_name = "dracula"
     end,
   },
 

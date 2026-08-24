@@ -37,10 +37,11 @@ font-style-bold-italic = "SemiBold Italic"
 adjust-cell-height = 1.5%
 # font-thicken = true
 
-# `opencode` is a local theme in themes/ — opencode's own palette, so the TUI,
-# Ghostty and Claude Code (theme = dark-ansi) all agree. Was "Doom One"; try
-# `xcodedarkhc` for higher contrast.
-theme = opencode
+# Dracula (built-in), matching opencode's `dracula` theme exactly — background
+# #282a36, purple accents #bd93f9. opencode's theme is picked in the TUI and
+# persisted in ~/.local/state/opencode/kv.json, not its config file. The old
+# local `opencode` theme is still in themes/ if we ever go back.
+theme = Dracula
 cursor-style = block
 
 initial-window = false
