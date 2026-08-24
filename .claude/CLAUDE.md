@@ -12,6 +12,11 @@ New machine: clone dotfiles, point ~/.claude/CLAUDE.md at this file, then:
     ln -sfn "$HOME/Documents/Obsidian/Personal/Claude Profile Prompt.md" "$HOME/.claude/profile.local.md"
     ln -sfn "$HOME/Documents/Obsidian/Personal/Claude Writing Style.md" "$HOME/.claude/writing-style.local.md"
 (adjust the note paths if the vault lives elsewhere on that machine).
+
+opencode consumes the same two symlinks via `instructions` in
+~/.config/opencode/opencode.json (it doesn't follow Claude's @import syntax,
+so the files are listed there directly). Missing files are tolerated, so
+machines without the vault still start fine.
 -->
 
 # Claude Code — CLI-specific notes
