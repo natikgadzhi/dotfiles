@@ -40,6 +40,11 @@
 .kube
 .local/share/opencode/auth.json
 
+# opencode runs bun/npm install inside its config dir for plugin deps
+.config/opencode/node_modules/
+.config/opencode/package-lock.json
+.config/opencode/bun.lock
+
 # nvim undo and tem files
 undodir
 

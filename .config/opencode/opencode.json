@@ -14,5 +14,49 @@
       }
     }
   },
-  "model": "openrouter/qwen/qwen3.7-max"
+  "model": "openrouter/qwen/qwen3.7-max",
+  "permission": {
+    "bash": {
+      "git status *": "allow",
+      "git diff *": "allow",
+      "git log *": "allow",
+      "git show *": "allow",
+      "git branch *": "allow",
+      "ls *": "allow",
+      "pwd": "allow",
+      "cat *": "allow",
+      "git push *": "ask",
+      "git commit *": "ask",
+      "git rebase *": "ask",
+      "git merge *": "ask",
+      "npm publish *": "ask",
+      "gh release *": "ask",
+      "kubectl delete *": "ask",
+      "rm -rf *": "deny",
+      "rm -fr *": "deny",
+      "git push --force *": "deny",
+      "git push -f *": "deny",
+      "git reset --hard *": "deny",
+      "git clean -f *": "deny",
+      "sudo *": "deny",
+      "dd *": "deny",
+      "mkfs *": "deny",
+      "chmod -R *": "deny",
+      "terraform destroy *": "deny",
+      "pulumi destroy *": "deny"
+    },
+    "external_directory": {
+      "*": "deny",
+      "~/.config/opencode/**": "allow",
+      "~/.claude/**": "allow",
+      "~/.agents/**": "allow",
+      "~/src/natikgadzhi/dotfiles/**": "allow"
+    },
+    "read": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow"
+    }
+  }
 }
