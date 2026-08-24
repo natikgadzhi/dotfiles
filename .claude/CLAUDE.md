@@ -23,6 +23,27 @@ machines without the vault still start fine.
 
 <!-- Guidance specific to the Claude Code CLI (and not in the general profile) goes here. -->
 
+## Datadog queries (Pup CLI)
+
+Use the Pup CLI (`pup`) for Datadog lookups from any agent. Always `--read-only`.
+Auth is OAuth via `pup auth login`; if OAuth is ever disabled on the org, fall back
+to a 1Password-stored API key resolved with `op read 'op://...'`.
+
+- Skills auto-installed under `~/.claude/skills/dd-*` by `pup skills install claude`.
+- APM endpoint/traffic questions: `pup apm services`, `pup traces metrics`, `pup traces search`.
+- Before deleting a backend endpoint/route (e.g. "dead code from LL"), confirm zero traffic in Datadog with `pup` first.
+
+## Secrets (1Password)
+
+1Password secrets are referenced as `op://vault/item/field` and resolved via the
+`op` CLI (`op read 'op://...'`). Never print resolved secret values into output
+or logs; never commit them.
+
+- `op whoami` must return signed-in before any `op read`. Re-sign with
+  `op signin lambdalabs.1password.com` if needed.
+- MCP headers in `~/src/lambdal/.mcp.json` that need 1Password secrets use
+  the `headersHelper` script at `~/src/natikgadzhi/scripts/op-mcp-bearer-header.sh`.
+
 ## Where session data lives
 
 - **Raw transcripts** (Claude Code's own, JSONL): `~/.claude/projects/<slugified-cwd>/<session-id>.jsonl`.
