@@ -24,11 +24,10 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete to void regi
 vim.keymap.set("n", "Q", "<nop>", { desc = "Disable ex mode" })
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format buffer" })
 
--- Navigate splits / windows
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left split" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to split below" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to split above" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right split" })
+-- Split navigation (<C-h/j/k/l>) lives in lazy.lua under vim-tmux-navigator,
+-- which falls through to the neighbouring tmux pane when there is no split
+-- in that direction. Plain <C-w>h here would shadow it and dead-end at the
+-- edge of the layout.
 
 -- File explorer
 vim.keymap.set("n", "<leader>-", vim.cmd.Ex, { desc = "Open netrw" })

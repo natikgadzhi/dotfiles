@@ -31,6 +31,29 @@ require("lazy").setup({
     opts = {},
   },
 
+  -- Seamless C-h/j/k/l between nvim splits and tmux panes. This is the nvim
+  -- half of a two-part plugin; the tmux half is loaded by TPM in tmux.conf.
+  -- tmux sniffs the pane's process and forwards the key into nvim whenever
+  -- nvim is running, so without this half nvim just gets a bare <C-w>h --
+  -- a no-op at the edge of the split layout, with no way back out to tmux.
+  {
+    "christoomey/vim-tmux-navigator",
+    cmd = {
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+      "TmuxNavigatePrevious",
+    },
+    keys = {
+      { "<C-h>", "<cmd>TmuxNavigateLeft<cr>",     desc = "Nav left (split or tmux pane)" },
+      { "<C-j>", "<cmd>TmuxNavigateDown<cr>",     desc = "Nav down (split or tmux pane)" },
+      { "<C-k>", "<cmd>TmuxNavigateUp<cr>",       desc = "Nav up (split or tmux pane)" },
+      { "<C-l>", "<cmd>TmuxNavigateRight<cr>",    desc = "Nav right (split or tmux pane)" },
+      { "<C-\\>", "<cmd>TmuxNavigatePrevious<cr>", desc = "Nav to previous split or tmux pane" },
+    },
+  },
+
 -- Telescope fuzzy finder
   {
     "nvim-telescope/telescope.nvim",
