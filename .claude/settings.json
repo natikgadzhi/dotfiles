@@ -61,7 +61,7 @@
       "/tmp"
     ]
   },
-  "model": "fable",
+  "model": "opus",
   "hooks": {
     "SessionEnd": [
       {
@@ -109,7 +109,8 @@
     "telegram@claude-plugins-official": true,
     "swift-lsp@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
-    "i-have-adhd@i-have-adhd": true
+    "i-have-adhd@i-have-adhd": true,
+    "da-skills@da-skills": true
   },
   "extraKnownMarketplaces": {
     "lambdal-skills": {
@@ -131,11 +132,17 @@
         "source": "github",
         "repo": "ayghri/i-have-adhd"
       }
+    },
+    "da-skills": {
+      "source": {
+        "source": "directory",
+        "path": "/home/natikgadzhi/src/natikgadzhi/da-skills"
+      }
     }
   },
   "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
-  "theme": "auto",
+  "theme": "dark-daltonized",
   "editorMode": "vim",
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
