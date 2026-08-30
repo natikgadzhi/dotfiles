@@ -132,12 +132,6 @@
         "source": "github",
         "repo": "ayghri/i-have-adhd"
       }
-    },
-    "da-skills": {
-      "source": {
-        "source": "directory",
-        "path": "/home/natikgadzhi/src/natikgadzhi/da-skills"
-      }
     }
   },
   "effortLevel": "high",
