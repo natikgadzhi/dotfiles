@@ -26,7 +26,8 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
+-- One cell of sign, the number, one cell of editor-coloured padding.
+require("natikgadzhi.statuscolumn").setup()
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 250
